@@ -1,0 +1,15 @@
+@import "../settings/all";
+@import "../Tools/all";
+$grid-gutter:1.5rem !default;
+.content-box {
+  background-color: #fff;
+  padding: $grid-gutter;
+  margin: $grid-gutter/4 0;
+  border-radius: $grid-gutter/4;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(32rem, 1fr));
+  grid-column-gap: $grid-gutter;
+}
