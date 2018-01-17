@@ -13,6 +13,27 @@ $grid-container-grid-columns-width: 32rem !default;
     max-width: 100%;
 }
 
+%fixed-width-at-tablet {
+    @include media-bp-min(tablet) {
+        width: $tablet;
+    }
+}
+%fixed-width-at-tablet-landscape {
+    @include media-bp-min(tablet-landscape) {
+        width: $tablet-landscape;
+    }
+}
+
+%fixed-width-at-desktop {
+    @include media-bp-min(desktop) {
+        width: $desktop;
+    }
+}
+%fixed-width-at-desktop-lg {
+    @include media-bp-min(desktop-lg) {
+        width: $desktop-lg;
+    }
+}
 %fixed-width-at-desktop-xl {
     @include media-bp-min(desktop-xl) {
         width: $desktop-xl;
