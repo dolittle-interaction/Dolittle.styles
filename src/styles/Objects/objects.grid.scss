@@ -1,13 +1,20 @@
 $grid-gutter:1.5rem !default;
 $grid-container-grid-columns-width: 32rem !default;
-
 .grid-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax($grid-container-grid-columns-width, 1fr));
-  grid-column-gap: $grid-gutter;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax($grid-container-grid-columns-width, 1fr));
+    grid-column-gap: $grid-gutter;
 }
 
-.flex-container{
-  display: flex;
-  flex-direction: row;
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    max-width: 100%;
+}
+
+%fixed-width-at-desktop-xl {
+    @include media-bp-min(desktop-xl) {
+        width: $desktop-xl;
+    }
 }
