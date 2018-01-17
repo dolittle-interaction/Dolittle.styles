@@ -1,0 +1,27 @@
+/* Basic styles */
+
+$button-basic-font-size: 0.875rem;
+$button-basic-height: 2.5rem;
+$button-basic-padding: 0 1.25rem;
+$button-basic-border-radius: 0.25rem;
+
+/* Small styles */
+
+$button-small-height: 1.4375rem;
+$button-small-padding: 0 0.75rem;
+$button-small-border-radius: 0.1875rem;
+
+/* Primary */
+
+$button-primary-background-color: #ccc;
+$button-primary-background-color-hover: #aaa;
+$button-primary-text-color: $color-light-grey;
+
+/* Secondary */
+
+$button-secondary-background-color: rgb(229, 229, 229);
+$button-secondary-background-color-hover: rgb(210, 210, 210);
+$button-secondary-text-color: #333;
+$button-secondary-text-color-hover: #222;
+
+/* End of variables*/

@@ -1,5 +1,9 @@
+$body-background-color: $color-light-grey !default;
+$body-text-color: $color-dark-grey !default;
+$background-body: $body-background-color no-repeat !default;
+
 body {
-  background: $body-background-color no-repeat;
+  background: $background-body;
   font-size: $font-size-default;
   font-family: $font-family-default;
 }

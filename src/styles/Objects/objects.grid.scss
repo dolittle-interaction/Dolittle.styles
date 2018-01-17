@@ -1,15 +1,13 @@
-@import "../settings/all";
-@import "../Tools/all";
 $grid-gutter:1.5rem !default;
-.content-box {
-  background-color: #fff;
-  padding: $grid-gutter;
-  margin: $grid-gutter/4 0;
-  border-radius: $grid-gutter/4;
+$grid-container-grid-columns-width: 32rem !default;
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax($grid-container-grid-columns-width, 1fr));
+  grid-column-gap: $grid-gutter;
 }
 
-.content {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(32rem, 1fr));
-  grid-column-gap: $grid-gutter;
+.flex-container{
+  display: flex;
+  flex-direction: row;
 }
