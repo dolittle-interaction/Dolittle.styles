@@ -8,7 +8,6 @@ $grid-container-grid-columns-width: 32rem !default;
 
 .flex-container {
     display: flex;
-    flex-direction: row;
     width: 100%;
     max-width: 100%;
 }
@@ -18,6 +17,7 @@ $grid-container-grid-columns-width: 32rem !default;
         width: $tablet;
     }
 }
+
 %fixed-width-at-tablet-landscape {
     @include media-bp-min(tablet-landscape) {
         width: $tablet-landscape;
@@ -29,13 +29,25 @@ $grid-container-grid-columns-width: 32rem !default;
         width: $desktop;
     }
 }
+
 %fixed-width-at-desktop-lg {
     @include media-bp-min(desktop-lg) {
         width: $desktop-lg;
     }
 }
+
 %fixed-width-at-desktop-xl {
     @include media-bp-min(desktop-xl) {
         width: $desktop-xl;
     }
+}
+
+%flex-center-horizontal {
+    flex-direction: row;
+    justify-content: center;
+}
+
+%flex-center-vertical {
+    flex-direction: row;
+    align-items: center;
 }
