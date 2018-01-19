@@ -51,3 +51,31 @@ $grid-container-grid-columns-width: 32rem !default;
     flex-direction: column;
     align-items: center;
 }
+
+%flex-two-columns {
+    flex-direction: row;
+    align-items: stretch;
+    flex-wrap: nowrap;
+    .column {
+        flex: 1 1 auto;
+        width: 50%;
+    }
+}
+%flex-three-columns {
+    flex-direction: row;
+    align-items: stretch;
+    flex-wrap: nowrap;
+    .column {
+        flex: 1 1 auto;
+        width: 33.33%;
+    }
+}
+%flex-four-columns {
+    flex-direction: row;
+    align-items: stretch;
+    flex-wrap: nowrap;
+    .column {
+        flex: 1 1 auto;
+        width: 25%;
+    }
+}
