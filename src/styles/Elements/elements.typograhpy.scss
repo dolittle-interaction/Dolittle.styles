@@ -1,30 +1,40 @@
 $margin-bottom-paragraph: 1.25em !default;
+$margin-bottom-h1: $margin-bottom-paragraph !default;
+$margin-bottom-h2: $margin-bottom-paragraph !default;
+$margin-bottom-h3: $margin-bottom-paragraph !default;
+$margin-bottom-h4: $margin-bottom-paragraph !default;
+$margin-bottom-h5: $margin-bottom-paragraph !default;
 
 h1 {
-  font-size: $font-size-h1;
-  font-weight: $font-wight-h1;
+    font-size: $font-size-h1;
+    font-weight: $font-wight-h1;
+    margin-bottom: $margin-bottom-h1;
 }
 
 h2 {
-  font-size: $font-size-h2;
-  font-weight: $font-wight-h2;
+    font-size: $font-size-h2;
+    font-weight: $font-wight-h2;
+    margin-bottom: $margin-bottom-h2;
 }
 
 h3 {
-  font-size: $font-size-h3;
-  font-weight: $font-wight-h3;
+    font-size: $font-size-h3;
+    font-weight: $font-wight-h3;
+    margin-bottom: $margin-bottom-h3;
 }
 
 h4 {
-  font-size: $font-size-h4;
-  font-weight: $font-wight-h4;
+    font-size: $font-size-h4;
+    font-weight: $font-wight-h4;
+    margin-bottom: $margin-bottom-h4;
 }
 
 h5 {
-  font-size: $font-size-h5;
-  font-weight: $font-wight-h5;
+    font-size: $font-size-h5;
+    font-weight: $font-wight-h5;
+    margin-bottom: $margin-bottom-h5;
 }
 
 p {
-  margin-bottom: $margin-bottom-paragraph;
+    margin-bottom: $margin-bottom-paragraph;
 }
