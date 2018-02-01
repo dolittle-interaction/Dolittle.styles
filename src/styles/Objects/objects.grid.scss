@@ -1,5 +1,3 @@
-$grid-gutter:1.5rem !default;
-$grid-container-grid-columns-width: 32rem !default;
 %grid-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax($grid-container-grid-columns-width, 1fr));

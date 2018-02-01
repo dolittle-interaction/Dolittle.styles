@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 
 let sassBuilder = new ExtractTextPlugin({
-    filename: "style.bundle.[hash:9].css",
+    filename: "style.bundle.[hash:5].css",
     allChunks: true
 });
 
@@ -48,7 +48,17 @@ module.exports = {
                 }
             }
         },
-
+        imageLoader: {
+            test: /\.(png|jpe?g|gif)(\?.*)?$/,
+            use: [{
+                loader: 'file-loader',
+                options: {
+                    name: "[name]-[hash:5].[ext]",
+                    outputPath: "images/"
+                }
+            }
+            ]
+        }
     },
     plugins: {
         cleanDistFolderAndIndexfile: new CleanWebpackPlugin(["dist/*"]),

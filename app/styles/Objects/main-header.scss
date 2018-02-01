@@ -1,0 +1,10 @@
+.main-header {
+    @extend %flex-container;
+    background: #fff;
+    padding: $grid-gutter;
+    border-bottom: 0.0625rem solid $color-brand-orange;
+    .site-logo {
+        width: 15rem;
+        display: block;
+    }
+}
