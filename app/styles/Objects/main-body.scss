@@ -1,4 +1,21 @@
 .site-section {
     background-color: #fff;
     padding: $grid-gutter;
+    box-shadow: 0 0 .25rem rgba(0, 0, 0, .3);
+    margin: $grid-gutter 0;
+}
+
+.example-box {
+    border-top: .0625rem solid #ccc;
+    margin: 3rem 0;
+    padding: 2rem 0;
+}
+
+.code-example {
+    @extend %flex-container;
+    @extend %flex-two-columns;
+    border: .0625rem solid #ccc;
+    >div {
+        padding: $grid-gutter/2;
+    }
 }

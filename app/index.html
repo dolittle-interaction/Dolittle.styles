@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
 
 <head>
     <meta charset="UTF-8">
@@ -15,9 +16,12 @@
         </a>
     </header>
     <main>
-            ${require('./Components/generic.html')}
+        ${require('./Components/settings.html')}
+        ${require('./Components/generic.html')}
+        ${require('./Components/elements.html')}
     </main>
-
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
 </body>
 
 </html>
