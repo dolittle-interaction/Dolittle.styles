@@ -10,6 +10,51 @@
     max-width: 100%;
 }
 
+%flex-center-horizontal {
+    @extend %flex-container;
+    flex-direction: row;
+    justify-content: center;
+}
+
+%flex-center-vertical {
+    @extend %flex-container;
+    flex-direction: column;
+    align-items: center;
+}
+
+%flex-two-columns {
+    @extend %flex-container;
+    flex-direction: row;
+    align-items: stretch;
+    flex-wrap: nowrap;
+    .column {
+        flex: 1 1 auto;
+        width: 50%;
+    }
+}
+
+%flex-three-columns {
+    @extend %flex-container;
+    flex-direction: row;
+    align-items: stretch;
+    flex-wrap: nowrap;
+    .column {
+        flex: 1 1 auto;
+        width: 33.33%;
+    }
+}
+
+%flex-four-columns {
+    @extend %flex-container;
+    flex-direction: row;
+    align-items: stretch;
+    flex-wrap: nowrap;
+    .column {
+        flex: 1 1 auto;
+        width: 25%;
+    }
+}
+
 %fixed-width-at-tablet {
     @include media-bp-min(tablet) {
         width: $tablet;
@@ -37,43 +82,5 @@
 %fixed-width-at-desktop-xl {
     @include media-bp-min(desktop-xl) {
         width: $desktop-xl;
-    }
-}
-
-%flex-center-horizontal {
-    flex-direction: row;
-    justify-content: center;
-}
-
-%flex-center-vertical {
-    flex-direction: column;
-    align-items: center;
-}
-
-%flex-two-columns {
-    flex-direction: row;
-    align-items: stretch;
-    flex-wrap: nowrap;
-    .column {
-        flex: 1 1 auto;
-        width: 50%;
-    }
-}
-%flex-three-columns {
-    flex-direction: row;
-    align-items: stretch;
-    flex-wrap: nowrap;
-    .column {
-        flex: 1 1 auto;
-        width: 33.33%;
-    }
-}
-%flex-four-columns {
-    flex-direction: row;
-    align-items: stretch;
-    flex-wrap: nowrap;
-    .column {
-        flex: 1 1 auto;
-        width: 25%;
     }
 }
