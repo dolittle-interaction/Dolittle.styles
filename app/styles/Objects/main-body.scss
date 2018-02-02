@@ -19,6 +19,7 @@ main {
 .code-example {
     @extend %flex-two-columns;
     border: .0625rem solid #ccc;
+    margin-bottom: $grid-gutter;
     >div {
         padding: $grid-gutter/2;
     }
