@@ -14,6 +14,9 @@ main {
     border-top: .0625rem solid #ccc;
     margin: 3rem 0;
     padding: 2rem 0;
+    p {
+        font-size: 1.125rem;
+    }
 }
 
 .code-example {
@@ -22,5 +25,8 @@ main {
     margin-bottom: $grid-gutter;
     >div {
         padding: $grid-gutter/2;
+    }
+    .code {
+        @extend %flex-container;
     }
 }

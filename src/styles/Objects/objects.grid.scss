@@ -1,6 +1,5 @@
 %grid-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax($grid-container-grid-columns-width, 1fr));
     grid-column-gap: $grid-gutter;
 }
 

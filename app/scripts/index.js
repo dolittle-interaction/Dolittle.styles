@@ -1,17 +1,37 @@
-function escapeHtmlTags() {
-    var codeBlocks = document.querySelectorAll("code");
-    codeBlocks.forEach(function (element) {
-        element.innerHTML = element.innerHTML.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#039;");
-    });
-}
+const CodeMirror = require("codemirror");
+require('codemirror/mode/htmlmixed/htmlmixed');
+require('codemirror/mode/sass/sass');
 
-function fetchPreviewHtmlCode() {
+function generateCodePreviews() {
     var previewBlocks = document.querySelectorAll("div.preview");
     previewBlocks.forEach(function (element) {
-        var elementCode = element.innerHTML.replace(/  /g, '');
-        var siblingCodeBlock = element.parentElement.querySelector("code");
-        siblingCodeBlock.innerHTML = elementCode.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#039;");
+        var elementCode = element.innerHTML;
+        var siblingCodeBlock = element.parentElement.querySelector("textarea");
+        var codemode = siblingCodeBlock.dataset.codemode;
+
+        siblingCodeBlock.value = elementCode.replace(/  /g, '').replace(/^\s+|\s+$/g, '');
+        var readOnlyCodeMirror = CodeMirror.fromTextArea(siblingCodeBlock, {
+            mode: codemode,
+            lineNumbers: true,
+            readOnly: true
+        });
     });
 }
 
-fetchPreviewHtmlCode();
+function makeCodeLookPretty() {
+    var codeBlocks = document.querySelectorAll("textarea.codemirror-me");
+    codeBlocks.forEach(function (element) {
+        var codeMode = element.dataset.codemode;
+        
+        element.value = element.value.replace(/^\s+|\s+$/g, '');
+        CodeMirror.fromTextArea(element, {
+            mode: codeMode,
+            lineNumbers: true,
+            readOnly: true
+        });
+    });
+}
+
+
+generateCodePreviews();
+makeCodeLookPretty();

@@ -1,7 +1,7 @@
 <section class="site-section" id="settings">
     <div class="definition">
         <h1>Settings</h1>
-        <p>TSettings is basically a set of variables that the underlying layers are using. All the variables have got default
+        <p>Settings is basically a set of variables that the underlying layers are using. All the variables have got default
             set values. It's marked
             <code>!default</code> so that the preprocessor build, will say this:
             <em>"If no other value is set to this variable by now, this is what it'll get."</em>
@@ -12,26 +12,30 @@
         <h3>Breakpoints</h3>
         <div class="code-example">
             <div class="code column">
-                <pre><code class="scss">$phone:             0 !default;
+                    <textarea name="settings-breakpoints-variables" data-codemode="sass" class="codemirror-me">
+$phone:             0 !default;
 $tablet:            37.5rem !default;
 $tablet-landscape:  56.25rem !default;
 $desktop:           64rem !default;
 $desktop-lg:        85.375rem !default;
-$desktop-xl:        120rem !default;</code></pre>
+$desktop-xl:        120rem !default;
+                    </textarea>
             </div>
         </div>
         <h3>Colors</h3>
         <div class="code-example">
             <div class="code column">
-                <pre><code class="scss">$color-dark-grey:           #404040 !default;
-$color-medium-grey:         #ddd !default;
+<textarea name="settings-breakpoints-variables" data-codemode="sass" class="codemirror-me">
+$color-dark-grey:           #404040 !default;
+$color-medium-grey:         #dddddd !default;
 $color-light-grey:          #f8f8f8 !default;
 
 $color-brand-orange:        #ff4b00 !default;
 $color-brand-dark-blue:     #004366 !default;
 $color-brand-light-blue:    #33b9e6 !default;
 $color-brand-yellow:        #ffcf00 !default;
-$color-brand-grey:          #525a63 !default;</code></pre>
+$color-brand-grey:          #525a63 !default;
+</textarea>
             </div>
         </div>
     </div>
