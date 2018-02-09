@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dolittle.styles</title>
+</head>
+
+<body>
+    <header class="main-header">
+        <a href="/" class="site-logo">
+            ${require('./images/Logos/dolittle_positiv_horisontal.svg')}
+        </a>
+        ${require('./Components/main-navigation.html')}
+    </header>
+    <main>
+
+        ${require('./Pages/'+htmlWebpackPlugin.options.filename)}
+    </main>
+
+</body>
+
+</html>

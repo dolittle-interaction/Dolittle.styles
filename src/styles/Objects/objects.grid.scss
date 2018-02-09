@@ -9,15 +9,23 @@
     max-width: 100%;
 }
 
-%flex-center-horizontal {
+%flex-container-horizontal {
     @extend %flex-container;
     flex-direction: row;
+}
+
+%flex-container-vertical {
+    @extend %flex-container;
+    flex-direction: column;
+}
+
+%flex-container-horizontal-center {
+    @extend %flex-container-horizontal;
     justify-content: center;
 }
 
-%flex-center-vertical {
-    @extend %flex-container;
-    flex-direction: column;
+%flex-container-vertical-center {
+    @extend %flex-container-vertical;
     align-items: center;
 }
 

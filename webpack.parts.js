@@ -12,7 +12,7 @@ module.exports = {
     loaders: {
         htmlLoader: {
             test: /\.html$/,
-            exclude: /index.html/,
+            exclude: /layout.html/,
             use: [
                 {
                     loader: 'html-loader',
@@ -61,9 +61,30 @@ module.exports = {
         }
     },
     plugins: {
-        cleanDistFolderAndIndexfile: new CleanWebpackPlugin(["dist/*"]),
+        cleanDistFolder: new CleanWebpackPlugin(["dist/*"]),
         buildHtmlIndex: new HtmlWebpackPlugin({
-            template: "./app/index.html"
+            template: "./app/layout.html",
+            filename: "index.html"
+        }),
+        buildHtmlSettings: new HtmlWebpackPlugin({
+            template: "./app/layout.html",
+            filename: "settings/index.html"
+        }),
+        buildHtmlTools: new HtmlWebpackPlugin({
+            template: "./app/layout.html",
+            filename: "tools/index.html"
+        }),
+        buildHtmlGeneric: new HtmlWebpackPlugin({
+            template: "./app/layout.html",
+            filename: "generic/index.html"
+        }),
+        buildHtmlElements: new HtmlWebpackPlugin({
+            template: "./app/layout.html",
+            filename: "elements/index.html"
+        }),
+        buildHtmlObjects: new HtmlWebpackPlugin({
+            template: "./app/layout.html",
+            filename: "objects/index.html"
         }),
         sassBuilder: sassBuilder
     }

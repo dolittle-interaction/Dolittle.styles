@@ -1,10 +1,13 @@
 .main-header {
     @extend %flex-container;
+    align-items: center;
     background: #fff;
-    padding: $grid-gutter;
     border-bottom: 0.0625rem solid $color-brand-orange;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: $grid-gutter;
     .site-logo {
-        width: 15rem;
         display: block;
+        flex: 0 0 15rem;
     }
 }
