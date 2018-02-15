@@ -1,4 +1,10 @@
-body>main {
+.main-content {
     padding: $grid-gutter;
 }
 
+#main-body {
+    transition: padding $menu-transition-timing;
+    &.menu-active {
+        padding-left: 20rem;
+    }
+}

@@ -9,17 +9,23 @@
 </head>
 
 <body>
-    <header class="main-header">
-        <a href="/" class="site-logo">
-            ${require('./images/Logos/dolittle_positiv_horisontal.svg')}
-        </a>
-        ${require('./Components/main-navigation.html')}
-    </header>
-    <main>
+    ${require('./Components/main-navigation.html')}
+    <div id="main-body">
+        <header class="main-header">
+            <div class="hamburger" id="main-nav-trigger">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+            </div>
+            <a href="/" class="site-logo">
+                ${require('./images/Logos/dolittle_positiv_horisontal.svg')}
+            </a>
 
-        ${require('./Pages/'+htmlWebpackPlugin.options.filename)}
-    </main>
-
+        </header>
+        <main class="main-content">
+            ${require('./Pages/'+htmlWebpackPlugin.options.filename)}
+        </main>
+    </div>
 </body>
 
 </html>

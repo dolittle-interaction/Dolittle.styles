@@ -12,7 +12,174 @@
             class names, and in the scss, you extend placeholders that fits your needs. Examåles will follow.
             <a href="http://thesassway.com/intermediate/understanding-placeholder-selectors" target="_blank">You can read more about placeholders and extend here.</a>
         </p>
+    </div>
+    <div class="example-box">
+        <h3>Containers</h3>
+        <p>When you need an element to be a flexbox element, vertical direction and aligned center </p>
+        <div class="code-example">
+            <div class="code column">
+                <textarea name="elements-variable" data-codemode="sass" class="codemirror-me">
+main {
+    @extend %flex-container-vertical-center
+}
+                </textarea>
+            </div>
+        </div>
+    </div>
+    <div class="example-box">
+        <h3>Fluid/Fixed</h3>
+        <p>If you want a container to be 100% wide up to a certain point, you can extend one of the fixed width placeholders</p>
+        <div class="code-example">
+            <div class="code column">
+                <textarea name="elements-variable" data-codemode="sass" class="codemirror-me">
+.site-section {
+    @extend %fixed-width-at-desktop;
+    padding: $grid-gutter;
+    margin: $grid-gutter 0;
+}
+                </textarea>
+            </div>
+        </div>
+    </div>
+    <div class="example-box">
+        <h3>Columns</h3>
+        <p>To set columns, you can set to the columns container how many columns you'd like:</p>
+        <div class="code-example">
+            <div class="code column">
+                <textarea name="elements-variable" data-codemode="sass" class="codemirror-me">
+.code-example {
+    @extend %flex-two-columns;
+    border: .0625rem solid #ccc;
+    margin-bottom: $grid-gutter;
+    >div {
+        padding: $grid-gutter/2;
+    }
+    .code {
+        @extend %flex-container;
+    }
+}
+                </textarea>
+            </div>
+        </div>
+        <p>The above code will work nice, if it's only one direct child element of the container, it will will the width. As
+            you can see on this particular column, that actually uses the code above.</p>
+    </div>
+    <div class="example-box">
 
+
+        <h3>Placeholders</h3>
+        <div class="code-example">
+            <div class="code column">
+                <textarea name="elements-variable" data-codemode="sass" class="codemirror-me">
+/* Containers */
+
+%flex-container {
+    display: flex;
+    width: 100%;
+    max-width: 100%;
+}
+
+%flex-container-horizontal {
+    @extend %flex-container;
+    flex-direction: row;
+}
+
+%flex-container-horizontal-center {
+    @extend %flex-container-horizontal;
+    justify-content: center;
+}
+
+%flex-container-vertical {
+    @extend %flex-container;
+    flex-direction: column;
+}
+
+%flex-container-vertical-center {
+    @extend %flex-container-vertical;
+    align-items: center;
+}
+
+
+/* Columns*/
+
+%flex-two-columns {
+    @extend %flex-container;
+    flex-direction: row;
+    align-items: stretch;
+    flex-wrap: nowrap;
+    .column {
+        flex: 1 1 auto;
+        width: 50%;
+    }
+}
+
+%flex-three-columns {
+    @extend %flex-container;
+    flex-direction: row;
+    align-items: stretch;
+    flex-wrap: nowrap;
+    .column {
+        flex: 1 1 auto;
+        width: 33.33%;
+    }
+}
+
+%flex-four-columns {
+    @extend %flex-container;
+    flex-direction: row;
+    align-items: stretch;
+    flex-wrap: nowrap;
+    .column {
+        flex: 1 1 auto;
+        width: 25%;
+    }
+}
+
+
+/*Fixed widths*/
+
+%fixed-width-at-tablet {
+    width: 100%;
+    max-width: 100%;
+    @include media-bp-min(tablet) {
+        width: $tablet;
+    }
+}
+
+%fixed-width-at-tablet-landscape {
+    width: 100%;
+    max-width: 100%;
+    @include media-bp-min(tablet-landscape) {
+        width: $tablet-landscape;
+    }
+}
+
+%fixed-width-at-desktop {
+    width: 100%;
+    max-width: 100%;
+    @include media-bp-min(desktop) {
+        width: $desktop;
+    }
+}
+
+%fixed-width-at-desktop-lg {
+    width: 100%;
+    max-width: 100%;
+    @include media-bp-min(desktop-lg) {
+        width: $desktop-lg;
+    }
+}
+
+%fixed-width-at-desktop-xl {
+    width: 100%;
+    max-width: 100%;
+    @include media-bp-min(desktop-xl) {
+        width: $desktop-xl;
+    }
+}
+            </textarea>
+            </div>
+        </div>
     </div>
 
 </section>

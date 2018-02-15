@@ -1,7 +1,4 @@
-%grid-container {
-    display: grid;
-    grid-column-gap: $grid-gutter;
-}
+/* Containers */
 
 %flex-container {
     display: flex;
@@ -14,20 +11,23 @@
     flex-direction: row;
 }
 
-%flex-container-vertical {
-    @extend %flex-container;
-    flex-direction: column;
-}
-
 %flex-container-horizontal-center {
     @extend %flex-container-horizontal;
     justify-content: center;
+}
+
+%flex-container-vertical {
+    @extend %flex-container;
+    flex-direction: column;
 }
 
 %flex-container-vertical-center {
     @extend %flex-container-vertical;
     align-items: center;
 }
+
+
+/* Columns*/
 
 %flex-two-columns {
     @extend %flex-container;
@@ -62,31 +62,44 @@
     }
 }
 
+
+/*Fixed widths*/
+
 %fixed-width-at-tablet {
+    width: 100%;
+    max-width: 100%;
     @include media-bp-min(tablet) {
         width: $tablet;
     }
 }
 
 %fixed-width-at-tablet-landscape {
+    width: 100%;
+    max-width: 100%;
     @include media-bp-min(tablet-landscape) {
         width: $tablet-landscape;
     }
 }
 
 %fixed-width-at-desktop {
+    width: 100%;
+    max-width: 100%;
     @include media-bp-min(desktop) {
         width: $desktop;
     }
 }
 
 %fixed-width-at-desktop-lg {
+    width: 100%;
+    max-width: 100%;
     @include media-bp-min(desktop-lg) {
         width: $desktop-lg;
     }
 }
 
 %fixed-width-at-desktop-xl {
+    width: 100%;
+    max-width: 100%;
     @include media-bp-min(desktop-xl) {
         width: $desktop-xl;
     }
