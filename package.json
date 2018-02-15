@@ -1,6 +1,6 @@
 {
   "name": "dolittle.styles",
-  "version": "0.9.0",
+  "version": "1.0.0",
   "description": "The styles from Dolittle",
   "main": "main.js",
   "author": "Dolittle",
@@ -14,6 +14,7 @@
   ],
   "devDependencies": {
     "clean-webpack-plugin": "^0.1.17",
+    "codemirror": "^5.34.0",
     "css-loader": "^0.28.8",
     "extract-text-webpack-plugin": "^3.0.2",
     "file-loader": "^1.1.6",
@@ -27,5 +28,6 @@
     "svg-inline-loader": "^0.8.0",
     "webpack": "^3.10.0",
     "webpack-dev-server": "^2.11.0"
-  }
+  },
+  "dependencies": {}
 }

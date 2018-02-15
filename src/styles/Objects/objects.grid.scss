@@ -1,10 +1,4 @@
-$grid-gutter:1.5rem !default;
-$grid-container-grid-columns-width: 32rem !default;
-%grid-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax($grid-container-grid-columns-width, 1fr));
-    grid-column-gap: $grid-gutter;
-}
+/* Containers */
 
 %flex-container {
     display: flex;
@@ -12,47 +6,31 @@ $grid-container-grid-columns-width: 32rem !default;
     max-width: 100%;
 }
 
-%fixed-width-at-tablet {
-    @include media-bp-min(tablet) {
-        width: $tablet;
-    }
-}
-
-%fixed-width-at-tablet-landscape {
-    @include media-bp-min(tablet-landscape) {
-        width: $tablet-landscape;
-    }
-}
-
-%fixed-width-at-desktop {
-    @include media-bp-min(desktop) {
-        width: $desktop;
-    }
-}
-
-%fixed-width-at-desktop-lg {
-    @include media-bp-min(desktop-lg) {
-        width: $desktop-lg;
-    }
-}
-
-%fixed-width-at-desktop-xl {
-    @include media-bp-min(desktop-xl) {
-        width: $desktop-xl;
-    }
-}
-
-%flex-center-horizontal {
+%flex-container-horizontal {
+    @extend %flex-container;
     flex-direction: row;
+}
+
+%flex-container-horizontal-center {
+    @extend %flex-container-horizontal;
     justify-content: center;
 }
 
-%flex-center-vertical {
+%flex-container-vertical {
+    @extend %flex-container;
     flex-direction: column;
+}
+
+%flex-container-vertical-center {
+    @extend %flex-container-vertical;
     align-items: center;
 }
 
+
+/* Columns*/
+
 %flex-two-columns {
+    @extend %flex-container;
     flex-direction: row;
     align-items: stretch;
     flex-wrap: nowrap;
@@ -61,7 +39,9 @@ $grid-container-grid-columns-width: 32rem !default;
         width: 50%;
     }
 }
+
 %flex-three-columns {
+    @extend %flex-container;
     flex-direction: row;
     align-items: stretch;
     flex-wrap: nowrap;
@@ -70,12 +50,57 @@ $grid-container-grid-columns-width: 32rem !default;
         width: 33.33%;
     }
 }
+
 %flex-four-columns {
+    @extend %flex-container;
     flex-direction: row;
     align-items: stretch;
     flex-wrap: nowrap;
     .column {
         flex: 1 1 auto;
         width: 25%;
+    }
+}
+
+
+/*Fixed widths*/
+
+%fixed-width-at-tablet {
+    width: 100%;
+    max-width: 100%;
+    @include media-bp-min(tablet) {
+        width: $tablet;
+    }
+}
+
+%fixed-width-at-tablet-landscape {
+    width: 100%;
+    max-width: 100%;
+    @include media-bp-min(tablet-landscape) {
+        width: $tablet-landscape;
+    }
+}
+
+%fixed-width-at-desktop {
+    width: 100%;
+    max-width: 100%;
+    @include media-bp-min(desktop) {
+        width: $desktop;
+    }
+}
+
+%fixed-width-at-desktop-lg {
+    width: 100%;
+    max-width: 100%;
+    @include media-bp-min(desktop-lg) {
+        width: $desktop-lg;
+    }
+}
+
+%fixed-width-at-desktop-xl {
+    width: 100%;
+    max-width: 100%;
+    @include media-bp-min(desktop-xl) {
+        width: $desktop-xl;
     }
 }

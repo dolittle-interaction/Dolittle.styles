@@ -1,0 +1,32 @@
+main {
+    @extend %flex-container-vertical-center
+}
+
+.site-section {
+    @extend %fixed-width-at-desktop;
+    background-color: #fff;
+    padding: $grid-gutter;
+    box-shadow: 0 0 .25rem rgba(0, 0, 0, .3);
+    margin: $grid-gutter 0;
+}
+
+.example-box {
+    border-top: .0625rem solid #ccc;
+    margin: 3rem 0;
+    padding: 2rem 0;
+    p {
+        font-size: 1.125rem;
+    }
+}
+
+.code-example {
+    @extend %flex-two-columns;
+    border: .0625rem solid #ccc;
+    margin-bottom: $grid-gutter;
+    >div {
+        padding: $grid-gutter/2;
+    }
+    .code {
+        @extend %flex-container;
+    }
+}
