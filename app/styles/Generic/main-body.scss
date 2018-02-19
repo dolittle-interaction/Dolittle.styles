@@ -1,10 +1,18 @@
-.main-content {
-    padding: $grid-gutter;
-}
-
 #main-body {
-    transition: padding $menu-transition-timing;
+    @extend %flex-container-vertical-center;
+    overflow: hidden;
+
+    .main-header,
+    .main-content {
+        transition: transform $menu-transition-timing;
+    }
     &.menu-active {
-        padding-left: 20rem;
+        .main-header,
+        .main-content {
+            transform: translateX(70vw);
+            @include media-bp-min(tablet) {
+                transform: translateX(20rem);
+            }
+        }
     }
 }

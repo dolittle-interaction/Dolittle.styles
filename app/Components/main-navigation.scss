@@ -6,13 +6,11 @@
     left: 0;
     z-index: 100;
     width: 70vw;
-    max-width: 20rem;
     height: 100%;
     opacity: 1;
     transform: translate(-100%, 0);
     overflow-y: auto;
     &.expanded {
-        visibility: visible;
         box-shadow: 0.0625rem 0 1rem rgba(0, 0, 0, .4);
         transform: translate(0, 0);
     }
@@ -31,4 +29,13 @@
     header {
         padding: $grid-gutter/2;
     }
+    
+    @include media-bp-min(tablet) {
+        width: 20rem;
+    }
+    @include media-bp-min(desktop) {
+        transform: translate(0, 0);
+        top:6.875rem;
+    }
+
 }

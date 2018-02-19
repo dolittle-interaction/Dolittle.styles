@@ -1,5 +1,11 @@
-main {
-    @extend %flex-container-vertical-center
+.main-content {
+    @extend %flex-container-vertical-center;
+    padding: $grid-gutter;
+    @include media-bp-min(desktop) {
+        padding-top: 6.875rem;
+        padding-left: 20rem+$grid-gutter;
+        align-items: flex-start;
+    }
 }
 
 .site-section {
@@ -21,10 +27,12 @@ main {
 
 .code-example {
     @extend %flex-two-columns;
+    flex-wrap: wrap;
     border: .0625rem solid #ccc;
     margin-bottom: $grid-gutter;
-    >div {
+    .column {
         padding: $grid-gutter/2;
+        width: 18rem;
     }
     .code {
         @extend %flex-container;

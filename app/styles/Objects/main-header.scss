@@ -5,6 +5,10 @@
     border-bottom: 0.0625rem solid $color-brand-orange;
     padding: $grid-gutter;
     overflow: hidden;
+    height: 6.875rem;
+    @include media-bp-min(desktop) {
+        position: fixed;
+    }
     .site-logo {
         display: block;
         flex: 0 1 15rem;
@@ -17,6 +21,9 @@
         width: 2.5rem;
         flex: 0 0 auto;
         transition: transform $menu-transition-timing;
+        @include media-bp-min(tablet-landscape) {
+            display: none;
+        }
         &:hover {
             cursor: pointer;
         }
