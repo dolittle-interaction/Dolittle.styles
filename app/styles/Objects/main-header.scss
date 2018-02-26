@@ -8,6 +8,7 @@
     height: 6.875rem;
     @include media-bp-min(desktop) {
         position: fixed;
+        z-index: 100;
     }
     .site-logo {
         display: block;
