@@ -12,9 +12,9 @@
           name: styles
       spec:
         containers:
-        - name: mooring
+        - name: styles
           image: dolittle/styles
-          imagePullPolicy: IfNotPresent
+          imagePullPolicy: Always
           ports:
           - containerPort: 80
 ---

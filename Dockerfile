@@ -1,6 +1,7 @@
 FROM node:9.5.0 AS build
 WORKDIR /build
 RUN ["npm", "install", "-g", "webpack"]
+RUN ["npm", "install", "-g", "webpack-cli"]
 COPY ./package.json /build
 RUN ["npm", "install"]
 
