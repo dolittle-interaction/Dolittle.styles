@@ -1,0 +1,24 @@
+$select-default-border: 0.0625rem solid darken($color-medium-grey, 15%) !default;
+$select-default-box-shadow: 0.125rem 0.125rem 0 darken($color-medium-grey, 15%) !default;
+$select-default-height: 2.7rem !default;
+$select-default-margin: $grid-gutter/3 0 $grid-gutter/2 !default;
+$select-default-max-width: 100% !default;
+$select-default-padding: 0.5rem 1rem !default;
+$select-default-transition: transform 0.05s !default;
+$select-default-width: 18.75rem !default;
+$select-default-focus-transform: scale(1.02) !default;
+
+select {
+    border: $select-default-border;
+    box-shadow: $select-default-box-shadow;
+    height: $select-default-height;
+    margin: $select-default-margin;
+    max-width: $select-default-max-width;
+    padding: $select-default-padding;
+    transition: $select-default-transition;
+    width: $select-default-width;
+    &:active,
+    &:focus {
+        transform: $select-default-focus-transform;
+    }
+}

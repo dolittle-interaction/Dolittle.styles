@@ -1,0 +1,26 @@
+$options-list-margin: 0 !default;
+$options-list-padding: 0 !default;
+$options-list-item-bg-color: $color-light-grey !default;
+$options-list-item-border: .0625rem solid $color-medium-grey !default;
+$options-list-item-border-radius: .125rem !default;
+$options-list-item-link-display: flex !default;
+$options-list-item-link-align-items: center !default;
+$options-list-item-link-padding: $grid-gutter/2 !default;
+$options-list-item-link-width: 100% !default;
+
+.options-list {
+    margin: $options-list-margin;
+    padding: $options-list-padding;
+    li {
+        background-color: $options-list-item-bg-color;
+        border: $options-list-item-border;
+        border-radius: $options-list-item-border-radius;
+        margin-bottom: $grid-gutter;
+        a {
+            display: $options-list-item-link-display;
+            align-items: $options-list-item-link-align-items;
+            padding: $options-list-item-link-padding;
+            width: $options-list-item-link-width;
+        }
+    }
+}

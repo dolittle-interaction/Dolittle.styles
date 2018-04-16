@@ -1,10 +1,11 @@
-$margin-bottom-paragraph: 1em !default;
+$margin-bottom-paragraph: $grid-gutter !default;
 $margin-bottom-h1: $margin-bottom-paragraph !default;
 $margin-bottom-h2: $margin-bottom-paragraph !default;
 $margin-bottom-h3: $margin-bottom-paragraph !default;
 $margin-bottom-h4: $margin-bottom-paragraph !default;
 $margin-bottom-h5: $margin-bottom-paragraph !default;
-$line-height-heading: 1.3em !default;
+$line-height-heading: 1.6em !default;
+$paragrph-font-size: 1.2rem;
 
 
 h1 {
@@ -45,4 +46,5 @@ h5 {
 p {
     margin-bottom: $margin-bottom-paragraph;
     line-height: $line-height-heading;
+    font-size: $paragrph-font-size;
 }

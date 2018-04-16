@@ -1,0 +1,36 @@
+$input-default-border-width: .0625rem !default;
+$input-default-border-style: solid !default;
+$input-default-border-color: darken($color-medium-grey, 15%) !default;
+$input-default-border-radius: .375rem !default;
+$input-default-display: block !default;
+$input-default-font-size: 1.5rem !default;
+$input-default-font-weight: 400 !default;
+$input-default-margin: $grid-gutter/3 0 !default;
+$input-default-width: 18.75rem !default;
+$input-default-padding: .5rem 1rem !default;
+$input-default-transition: transform .05s !default;
+$input-default-max-width: 100% !default;
+$input-default-focus-transform: scale(1.02) !default;
+$input-checkbox-active-transform: scale(.9) !default;
+
+input {
+    border: $input-border-width $input-border-style $input-border-color;
+    border-radius: $input-border-radius;
+    display: $input-default-display;
+    font-size: $input-default-font-size;
+    font-weight: $input-default-font-weight;
+    margin: $input-default-margin;
+    max-width: $input-default-max-width;
+    padding: $input-default-padding;
+    transition: $input-default-transition;
+    width: $input-default-width;
+    &:active,
+    &:focus {
+        transform: $input-default-focus-transform;
+    }
+    &[type="checkbox"] {
+        &:active {
+            transform: $input-checkbox-active-transform;
+        }
+    }
+}

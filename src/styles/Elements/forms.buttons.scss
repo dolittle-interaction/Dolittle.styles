@@ -1,0 +1,39 @@
+$button-default-bg-color: $color-light-grey !default;
+$button-default-border: none !default;
+$button-default-border-radius: .375rem !default;
+$button-default-box-shadow: .125rem .125rem 0 darken($color-medium-grey, 15%) !default;
+$button-default-font-size: 1.2rem !default;
+$button-default-font-weight: 400 !default;
+$button-default-margin: $grid-gutter/3 0 !default;
+$button-default-padding: .5rem 1rem !default;
+$button-default-transition: transform .1s !default;
+$button-default-active-transform: scale(.975) !default;
+$button-primary-bg-color: $color-brand-light-blue !default;
+$button-primary-box-shadow: .125rem .125rem 0 darken($color-brand-light-blue, 20%) !default;
+$button-primary-text-color: #fff !default;
+$button-alert-bg-color: $color-brand-yellow !default;
+$button-alert-box-shadow: .125rem .125rem 0 darken($color-brand-yellow, 20%) !default;
+
+button {
+    background-color: $button-default-bg-color;
+    border: $button-default-border;
+    border-radius: $button-default-border-radius;
+    box-shadow: $button-default-box-shadow;
+    font-size: $button-default-font-size;
+    font-weight: $button-default-font-weight;
+    margin: $button-default-margin;
+    padding: $button-default-padding;
+    transition: $button-default-transition;
+    &:active {
+        transform: $button-default-active-transform;
+    }
+    &.primary {
+        background-color: $button-default-primary-bg-color;
+        box-shadow: $button-default-primary-box-shadow;
+        color: $button-primary-text-color;
+    }
+    &.alert{
+        background-color: $button-alert-bg-color;
+        box-shadow: $button-alert-box-shadow;
+    }
+}

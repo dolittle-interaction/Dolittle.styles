@@ -1,0 +1,9 @@
+@import "forms.input";
+@import "forms.buttons";
+@import "forms.select";
+
+$label-default-display: block !default;
+
+label {
+    display: $label-default-display;
+}
