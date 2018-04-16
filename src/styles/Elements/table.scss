@@ -13,9 +13,9 @@ $table-default-cell-text-align: left !default;
 $table-default-cell-border: none !default;
 
 table {
-    width: $table-width;
-    max-width: $table-max-width;
-    margin-top: $table-margin-top;
+    width: $table-default-width;
+    max-width: $table-default-max-width;
+    margin-top: $table-default-margin-top;
     border-collapse: $table-default-border-collapse;
     thead {
         tr {

@@ -2,47 +2,65 @@
 These cool functions and mixins are inspired/stolen from Bootstrap v4
 */
 
-$grid-breakpoints: ( phone: $phone, tablet: $tablet, tablet-landscape: $tablet-landscape, desktop: $desktop, desktop-lg: $desktop-lg, desktop-xl: $desktop-xl) !default;
+$grid-breakpoints: (
+    phone: $phone,
+    tablet: $tablet,
+    tablet-landscape: $tablet-landscape,
+    desktop: $desktop,
+    desktop-lg: $desktop-lg,
+    desktop-xl: $desktop-xl
+) !default;
+
 @mixin media-bp-min($bp-key) {
-  $break-point: map-get($map: $grid-breakpoints, $key: $bp-key) + 0.0625rem;
-  @media (min-width: $break-point) {
-    @content;
-  }
+    $break-point: map-get($map: $grid-breakpoints, $key: $bp-key) + 0.0625rem;
+    @media (min-width: $break-point) {
+        @content;
+    }
 }
 
 @mixin media-bp-max($bp-key) {
-  $max-break: breakpoint-next($bp-key);
-  $break-point: map-get($map: $grid-breakpoints, $key: $max-break);
-  @media (max-width: $break-point) {
-    @content;
-  }
+    $max-break: breakpoint-next($bp-key);
+    $break-point: map-get($map: $grid-breakpoints, $key: $max-break);
+    @media (max-width: $break-point) {
+        @content;
+    }
 }
 
 @mixin media-bp-only($bp-key) {
-  $break-point-min: map-get($map: $grid-breakpoints, $key: $bp-key) + 0.0625rem;
-  $break-point-max: map-get($map: $grid-breakpoints, $key: breakpoint-next($bp-key));
-  @media (min-width: $break-point-min) and (max-width: $break-point-max) {
-    @content;
-  }
+    $break-point-min: map-get($map: $grid-breakpoints, $key: $bp-key) +
+        0.0625rem;
+    $break-point-max: map-get(
+        $map: $grid-breakpoints,
+        $key: breakpoint-next($bp-key)
+    );
+    @media (min-width: $break-point-min) and (max-width: $break-point-max) {
+        @content;
+    }
 }
 
 @mixin media-breakpoint-between($lower, $upper) {
-  $break-point-min: map-get($map: $grid-breakpoints, $key: $lower);
-  $break-point-max: map-get($map: $grid-breakpoints, $key: breakpoint-next($upper)) - 0.0625rem;
-  @if $break-point-max {
-    @media (min-width: $break-point-min) and (max-width: $break-point-max) {
-      @content;
+    $break-point-min: map-get($map: $grid-breakpoints, $key: $lower);
+    $break-point-max: map-get(
+            $map: $grid-breakpoints,
+            $key: breakpoint-next($upper)
+        ) - 0.0625rem;
+    @if $break-point-max {
+        @media (min-width: $break-point-min) and (max-width: $break-point-max) {
+            @content;
+        }
+    } @else {
+        @media (min-width: $break-point-min) {
+            @content;
+        }
     }
-  }
-  @else {
-    @media (min-width: $break-point-min) {
-      @content;
-    }
-  }
 }
 
 @function breakpoint-next($bp-key) {
-  $breakpoint-names: map-keys($grid-breakpoints);
-  $n: index($breakpoint-names, $bp-key);
-  @return if($n < length($breakpoint-names), nth($breakpoint-names, $n + 1), null);
+    $breakpoint-names: map-keys($grid-breakpoints);
+    $n: index($breakpoint-names, $bp-key);
+    @return if(
+        $n < length($breakpoint-names),
+        nth($breakpoint-names, $n + 1),
+        null
+    );
 }

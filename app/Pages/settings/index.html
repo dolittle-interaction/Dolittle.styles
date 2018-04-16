@@ -8,24 +8,30 @@
         </p>
     </div>
     <div class="example-box">
-            <h2>Base variables</h2>
-        <h3>Breakpoints</h3>
+        <h2>Base variables
+            <small>(base.scss)</small>
+        </h2>
+        <h3>Breakpoints
+            <small>(breakpoints.scss)</small>
+        </h3>
         <div class="code-example">
             <div class="code column">
-                    <textarea name="settings-breakpoints-variables" data-codemode="sass" class="codemirror-me">
+                <textarea name="settings-breakpoints-variables" data-codemode="sass" class="codemirror-me">
 $phone:             0 !default;
 $tablet:            37.5rem !default;
 $tablet-landscape:  56.25rem !default;
 $desktop:           64rem !default;
 $desktop-lg:        85.375rem !default;
 $desktop-xl:        120rem !default;
-                    </textarea>
+                </textarea>
             </div>
         </div>
-        <h3>Colors</h3>
+        <h3>Colors
+            <small>(colors.scss)</small>
+        </h3>
         <div class="code-example">
             <div class="code column">
-<textarea name="settings-breakpoints-variables" data-codemode="sass" class="codemirror-me">
+                <textarea name="settings-breakpoints-variables" data-codemode="sass" class="codemirror-me">
 $color-dark-grey:           #404040 !default;
 $color-medium-grey:         #dddddd !default;
 $color-light-grey:          #f8f8f8 !default;
@@ -35,7 +41,70 @@ $color-brand-dark-blue:     #004366 !default;
 $color-brand-light-blue:    #33b9e6 !default;
 $color-brand-yellow:        #ffcf00 !default;
 $color-brand-grey:          #525a63 !default;
-</textarea>
+                </textarea>
+            </div>
+        </div>
+    </div>
+    <div class="example-box">
+        <h2>Generic
+            <small>(generic.scss)</small>
+        </h2>
+        <h3>Design
+            <small>(generic.design.scss)</small>
+        </h3>
+        <div class="code-example">
+            <div class="code column">
+                <textarea name="settings-breakpoints-variables" data-codemode="sass" class="codemirror-me">
+$body-background-color:     $color-light-grey !default;
+$body-text-color:           $color-dark-grey !default;
+$background-body:           $body-background-color no-repeat !default;                        
+                </textarea>
+            </div>
+        </div>
+    </div>
+    <div class="example-box">
+        <h2>Elements
+            <small>(elements.scss)</small>
+        </h2>
+        <h3>Typography.scss
+            <small>(elements.typography.scss)</small>
+        </h3>
+        <div class="code-example">
+            <div class="code column">
+                <textarea name="settings-breakpoints-variables" data-codemode="sass" class="codemirror-me">
+$font-family-default:    "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$font-family-default-sm: "SF Pro Display", "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+
+$font-size-default:      100% !default;
+$font-size-h1:           1.75rem !default;
+$font-size-h2:           1.6rem !default;
+$font-size-h3:           1.3rem !default;
+$font-size-h4:           1.0rem !default;
+$font-size-h5:           1.0rem !default;
+$font-wight-h1:          500 !default;
+$font-wight-h2:          500 !default;
+$font-wight-h3:          500 !default;
+$font-wight-h4:          500 !default;
+$font-wight-h5:          400 !default;
+
+$body-line-height:       1.15 !default;
+                </textarea>
+            </div>
+        </div>
+    </div>
+    <div class="example-box">
+        <h2>Objects
+            <small>(objects.scss)</small>
+        </h2>
+        <h3>Grid
+            <small>objects.grid.scss</small>
+        </h3>
+        <div class="code-example">
+            <div class="code column">
+                <textarea name="settings-breakpoints-variables" data-codemode="sass" class="codemirror-me">
+$grid-gutter:1.5rem !default;
+$grid-container-grid-columns-width: 32rem !default;                        
+                </textarea>
             </div>
         </div>
     </div>

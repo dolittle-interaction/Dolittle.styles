@@ -27,9 +27,9 @@ button {
     &:active {
         transform: $button-default-active-transform;
     }
-    &.primary {
-        background-color: $button-default-primary-bg-color;
-        box-shadow: $button-default-primary-box-shadow;
+    &.call-to-action {
+        background-color: $button-primary-bg-color;
+        box-shadow: $button-primary-box-shadow;
         color: $button-primary-text-color;
     }
     &.alert{

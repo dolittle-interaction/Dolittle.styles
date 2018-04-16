@@ -19,6 +19,7 @@ module.exports = {
                     options: {
                         attrs: ["img:src", "link:href"],
                         interpolate: true,
+                        collapseWhitespace: false
                     }
                 }],
         },

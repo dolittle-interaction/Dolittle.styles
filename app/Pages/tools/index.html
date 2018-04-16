@@ -1,6 +1,280 @@
 <section id="tools" class="site-section">
     <div class="defination">
         <h1>Tools</h1>
-        <p>more will come</p>
+    </div>
+
+    <div class="example-box">
+        <h2>Calculators
+            <small>(calculators.scss)</small>
+        </h2>
+        <p>In the dev environments, you sometimes need some support for calculations.</p>
+        <div class="code-example">
+            <div class="code column">
+                <textarea name="calculatores" data-codemode="sass" class="codemirror-me">
+@function calculateRem($size, $base-size:16px) {
+               $remSize: $size / $base-size;
+       @return #{$remSize}rem;
+}
+                </textarea>
+            </div>
+        </div>
+    </div>
+    <div class="example-box">
+        <h2>Responsive
+            <small>(responsive.scss)</small>
+        </h2>
+        <p>These are the mixins for media queries</p>
+        <h3>Usage</h3>
+        <div class="code-example">
+            <div class="code column">
+                <textarea name="responsive-usage" data-codemode="sass" class="codemirror-me">
+@include media-bp-min(tablet) {
+    ...
+}
+                </textarea>
+            </div>
+        </div>
+        <h3>Mixins</h3>
+        <div class="code-example">
+            <div class="code column">
+                <textarea name="responsive-mixins" data-codemode="sass" class="codemirror-me">
+$grid-breakpoints: (
+    phone: $phone,
+    tablet: $tablet,
+    tablet-landscape: $tablet-landscape,
+    desktop: $desktop,
+    desktop-lg: $desktop-lg,
+    desktop-xl: $desktop-xl
+) !default;
+
+@mixin media-bp-min($bp-key) {
+  $break-point: map-get($map: $grid-breakpoints, $key: $bp-key) + 0.0625rem;
+  @media (min-width: $break-point) {
+    @content;
+  }
+}
+
+@mixin media-bp-max($bp-key) {
+  $max-break: breakpoint-next($bp-key);
+  $break-point: map-get($map: $grid-breakpoints, $key: $max-break);
+  @media (max-width: $break-point) {
+    @content;
+  }
+}
+
+@mixin media-bp-only($bp-key) {
+  $break-point-min: map-get($map: $grid-breakpoints, $key: $bp-key) + 0.0625rem;
+  $break-point-max: map-get($map: $grid-breakpoints, $key: breakpoint-next($bp-key));
+  @media (min-width: $break-point-min) and (max-width: $break-point-max) {
+    @content;
+  }
+}
+
+@mixin media-breakpoint-between($lower, $upper) {
+  $break-point-min: map-get($map: $grid-breakpoints, $key: $lower);
+  $break-point-max: map-get($map: $grid-breakpoints, $key: breakpoint-next($upper)) - 0.0625rem;
+  @if $break-point-max {
+    @media (min-width: $break-point-min) and (max-width: $break-point-max) {
+      @content;
+    }
+  }
+  @else {
+    @media (min-width: $break-point-min) {
+      @content;
+    }
+  }
+}
+
+@function breakpoint-next($bp-key) {
+  $breakpoint-names: map-keys($grid-breakpoints);
+  $n: index($breakpoint-names, $bp-key);
+  @return if($n < length($breakpoint-names), nth($breakpoint-names, $n + 1), null);
+}
+                </textarea>
+            </div>
+        </div>
+    </div>
+    <div class="example-box">
+        <h2>Grid
+            <small>(grid.scss)</small>
+        </h2>
+        <p>The grid is a bit unlike the ones you are used to in other big frameworks. Since this is aiming for creating as less
+            style as possible and only ouput the styles you actually uses.</p>
+        <p>So instead of outputing 100ish lines of predefined column sets and different grid tools that you never use, this
+            grid is a set of placeholders. What you'll do is that you write your styles and semantically give your elements
+            class names, and in the scss, you extend placeholders that fits your needs. Examåles will follow.
+            <a href="http://thesassway.com/intermediate/understanding-placeholder-selectors" target="_blank">You can read more about placeholders and extend here.</a>
+        </p>
+        <h3>Containers</h3>
+        <p>When you need an element to be a flexbox element, vertical direction and aligned center </p>
+        <h4>Placeholders</h4>
+        <div class="code-example">
+            <div class="code column">
+                <textarea name="containers-placeholders" data-codemode="sass" class="codemirror-me">
+/* Containers */
+
+%flex-container {
+    display: flex;
+    width: 100%;
+    max-width: 100%;
+}
+
+%flex-container-horizontal {
+    @extend %flex-container;
+    flex-direction: row;
+}
+
+%flex-container-horizontal-center {
+    @extend %flex-container-horizontal;
+    justify-content: center;
+}
+
+%flex-container-vertical {
+    @extend %flex-container;
+    flex-direction: column;
+}
+
+%flex-container-vertical-center {
+    @extend %flex-container-vertical;
+    align-items: center;
+}                    
+               </textarea>
+            </div>
+        </div>
+        <h4>Usage</h4>
+        <div class="code-example">
+            <div class="code column">
+                <textarea name="containers-usage" data-codemode="sass" class="codemirror-me">
+main {
+    @extend %flex-container-vertical-center
+}
+                </textarea>
+            </div>
+        </div>
+        <h3>Fluid/Fixed</h3>
+        <p>If you want a container to be 100% wide up to a certain point, you can extend one of the fixed width placeholders</p>
+        <h4>Placeholders</h4>
+        <div class="code-example">
+            <div class="code column">
+                <textarea name="Fluidity-usage" data-codemode="sass" class="codemirror-me">
+/*Fixed widths*/
+
+%fixed-width-at-tablet {
+    width: 100%;
+    max-width: 100%;
+    @include media-bp-min(tablet) {
+        width: $tablet;
+    }
+}
+
+%fixed-width-at-tablet-landscape {
+    width: 100%;
+    max-width: 100%;
+    @include media-bp-min(tablet-landscape) {
+        width: $tablet-landscape;
+    }
+}
+
+%fixed-width-at-desktop {
+    width: 100%;
+    max-width: 100%;
+    @include media-bp-min(desktop) {
+        width: $desktop;
+    }
+}
+
+%fixed-width-at-desktop-lg {
+    width: 100%;
+    max-width: 100%;
+    @include media-bp-min(desktop-lg) {
+        width: $desktop-lg;
+    }
+}
+
+%fixed-width-at-desktop-xl {
+    width: 100%;
+    max-width: 100%;
+    @include media-bp-min(desktop-xl) {
+        width: $desktop-xl;
+    }
+}
+                </textarea>
+            </div>
+        </div>
+        <h4>Usage</h4>
+        <div class="code-example">
+            <div class="code column">
+                <textarea name="Fluidity-usage" data-codemode="sass" class="codemirror-me">
+.site-section {
+    @extend %fixed-width-at-desktop;
+    padding: $grid-gutter;
+    margin: $grid-gutter 0;
+}
+                </textarea>
+            </div>
+        </div>
+        <h3>Columns</h3>
+        <p>To set columns, you can set to the columns container how many columns you'd like:</p>
+        <h4>Placeholders</h4>
+        <div class="code-example">
+            <div class="code column">
+                <textarea name="columns-placeholders" data-codemode="sass" class="codemirror-me">
+/* Columns*/
+
+%flex-two-columns {
+    @extend %flex-container;
+    flex-direction: row;
+    align-items: stretch;
+    flex-wrap: nowrap;
+    .column {
+        flex: 1 1 auto;
+        width: 50%;
+    }
+}
+
+%flex-three-columns {
+    @extend %flex-container;
+    flex-direction: row;
+    align-items: stretch;
+    flex-wrap: nowrap;
+    .column {
+        flex: 1 1 auto;
+        width: 33.33%;
+    }
+}
+
+%flex-four-columns {
+    @extend %flex-container;
+    flex-direction: row;
+    align-items: stretch;
+    flex-wrap: nowrap;
+    .column {
+        flex: 1 1 auto;
+        width: 25%;
+    }
+}
+                </textarea>
+            </div>
+        </div>
+        <h4>Usage</h4>
+        <div class="code-example">
+            <div class="code column">
+                <textarea name="columns-usage" data-codemode="sass" class="codemirror-me">
+.code-example {
+    @extend %flex-two-columns;
+    border: .0625rem solid #ccc;
+    margin-bottom: $grid-gutter;
+    >div {
+        padding: $grid-gutter/2;
+    }
+    .code {
+        @extend %flex-container;
+    }
+}
+                    </textarea>
+            </div>
+        </div>
+        <p>The above code will work nice, if it's only one direct child element of the container, it will will the width. As
+            you can see on this particular column, that actually uses the code above.</p>
     </div>
 </section>
