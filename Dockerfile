@@ -1,7 +1,5 @@
 FROM node:9.5.0 AS build
 WORKDIR /build
-RUN ["npm", "install", "-g", "webpack"]
-RUN ["npm", "install", "-g", "webpack-cli"]
 COPY ./package.json /build
 RUN ["npm", "install"]
 
@@ -11,7 +9,7 @@ COPY ./webpack.config.js /build
 COPY ./webpack.parts.js /build
 COPY ./.npmignore /build
 
-RUN ["webpack","-p"]
+RUN ["node node_modules/webpack/bin/webpack.js","-p"]
 
 FROM nginx
 WORKDIR /app

@@ -1,9 +1,8 @@
 const CleanWebpackPlugin = require("clean-webpack-plugin");
-const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
-
-let sassBuilder = new ExtractTextPlugin({
+let sassBuilder = new MiniCssExtractPlugin({
     filename: "style.bundle.[hash:5].css",
     allChunks: true
 });
@@ -15,49 +14,50 @@ module.exports = {
             exclude: /layout.html/,
             use: [
                 {
-                    loader: 'html-loader',
+                    loader: "html-loader",
                     options: {
                         attrs: ["img:src", "link:href"],
                         interpolate: true,
-                        collapseWhitespace: false
+                        minimize: false
                     }
-                }],
+                }
+            ]
         },
         sassLoader: {
             test: /\.scss$/,
-            loader: sassBuilder.extract([
+            use: [
+                MiniCssExtractPlugin.loader,
                 "css-loader",
-                "sass-loader",
                 {
                     loader: "postcss-loader",
                     options: {
-                        plugins: () => ([
-                            require("autoprefixer")()
-                        ])
+                        plugins: () => [require("autoprefixer")()]
                     }
-                }])
+                },
+                "sass-loader"
+            ]
         },
         svgLoader: {
             test: /\.svg/,
             use: {
-                loader: 'svg-inline-loader',
+                loader: "svg-inline-loader",
                 options: {
                     removeTags: true,
-                    removingTags: ['title', 'desc'],
-                    removingTagAttrs: ['id', 'data-name']
-
+                    removingTags: ["title", "desc"],
+                    removingTagAttrs: ["id", "data-name"]
                 }
             }
         },
         imageLoader: {
             test: /\.(png|jpe?g|gif)(\?.*)?$/,
-            use: [{
-                loader: 'file-loader',
-                options: {
-                    name: "[name]-[hash:5].[ext]",
-                    outputPath: "images/"
+            use: [
+                {
+                    loader: "file-loader",
+                    options: {
+                        name: "[name]-[hash:5].[ext]",
+                        outputPath: "images/"
+                    }
                 }
-            }
             ]
         }
     },
@@ -89,4 +89,4 @@ module.exports = {
         }),
         sassBuilder: sassBuilder
     }
-}
+};
