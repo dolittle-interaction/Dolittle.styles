@@ -1,8 +1,7 @@
 $input-default-border-width: 0.0625rem !default;
 $input-default-border-style: solid !default;
 $input-default-border-color: darken($color-medium-grey, 15%) !default;
-$input-default-border: $input-default-border-width $input-default-border-style
-    $input-default-border-color;
+$input-default-border: $input-default-border-width $input-default-border-style $input-default-border-color;
 $input-default-border-radius: 0.375rem !default;
 $input-default-display: block !default;
 $input-default-font-size: 1.5rem !default;
@@ -13,29 +12,40 @@ $input-default-padding: 0.5rem 1rem !default;
 $input-default-transition: transform 0.05s !default;
 $input-default-max-width: 100% !default;
 $input-default-focus-transform: scale(1.02) !default;
-$input-checkbox-active-transform: scale(1) !default;
 
 input {
-    border: $input-default-border;
-    border-radius: $input-default-border-radius;
-    display: $input-default-display;
-    font-size: $input-default-font-size;
-    font-weight: $input-default-font-weight;
-    margin: $input-default-margin;
-    max-width: $input-default-max-width;
-    padding: $input-default-padding;
-    transition: $input-default-transition;
-    width: $input-default-width;
-    &:active,
-    &:focus {
-        transform: $input-default-focus-transform;
-    }
-    &[type="checkbox"] {
-        &:active {
-            transform: $input-checkbox-active-transform;
+    &[type="text"],
+    &[type="date"],
+    &[type="datetime"],
+    &[type="datetime-local"],
+    &[type="email"],
+    &[type="month"],
+    &[type="number"],
+    &[type="password"],
+    &[type="search"],
+    &[type="tel"],
+    &[type="time"],
+    &[type="week"],
+    &[type="url"] {
+        border: $input-default-border;
+        border-radius: $input-default-border-radius;
+        display: $input-default-display;
+        font-size: $input-default-font-size;
+        font-weight: $input-default-font-weight;
+        margin: $input-default-margin;
+        max-width: $input-default-max-width;
+        padding: $input-default-padding;
+        width: $input-default-width;
+        &:active,
+        &:focus {
+            transition: $input-default-transition;
+            transform: $input-default-focus-transform;
         }
     }
-    &[type="button"] {
+
+    &[type="button"],
+    &[type="reset"],
+    &[type="submit"] {
         @extend button;
     }
 }
