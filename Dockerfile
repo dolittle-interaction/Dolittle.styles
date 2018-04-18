@@ -9,7 +9,7 @@ COPY ./webpack.config.js /build
 COPY ./webpack.parts.js /build
 COPY ./.npmignore /build
 
-RUN ["node node_modules/webpack/bin/webpack.js","-p"]
+RUN node ./node_modules/webpack/bin/webpack.js -p
 
 FROM nginx
 WORKDIR /app
