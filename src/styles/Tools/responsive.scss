@@ -2,7 +2,7 @@
 These cool functions and mixins are inspired/stolen from Bootstrap v4
 */
 
-$grid-breakpoints: (
+$grid_breakpoints: (
     phone: $phone,
     tablet: $tablet,
     tablet-landscape: $tablet-landscape,
@@ -11,56 +11,59 @@ $grid-breakpoints: (
     desktop-xl: $desktop-xl
 ) !default;
 
-@mixin media-bp-min($bp-key) {
+@mixin media-bp-min($bp-key, $or_this...) {
     $break-point: map-get($map: $grid-breakpoints, $key: $bp-key) + 0.0625rem;
-    @media (min-width: $break-point) {
+    $media_query: '(min-width: #{$break-point})';
+    @if (length($or_this) >0) {
+        @for $i from 1 through length($or_this) {
+            $extra: nth($or_this, $i);
+            $media_query: '#{$media_query}, (#{$extra})';
+        }
+    }
+    @media #{$media_query} {
         @content;
     }
 }
 
-@mixin media-bp-max($bp-key) {
-    $max-break: breakpoint-next($bp-key);
-    $break-point: map-get($map: $grid-breakpoints, $key: $max-break);
-    @media (max-width: $break-point) {
+@mixin media-bp-max($bp_key, $or_this...) {
+    $max-break: breakpoint-next($bp_key);
+    $break_point: map-get($map: $grid_breakpoints, $key: $max-break);
+    $media_query: '(max-width: #{$break-point})';
+    @if (length($or_this) >0) {
+        @for $i from 1 through length($or_this) {
+            $extra: nth($or_this, $i);
+            $media_query: '#{$media_query}, (#{$extra})';
+        }
+    }
+    @media #{$media_query} {
         @content;
     }
 }
 
-@mixin media-bp-only($bp-key) {
-    $break-point-min: map-get($map: $grid-breakpoints, $key: $bp-key) +
-        0.0625rem;
-    $break-point-max: map-get(
-        $map: $grid-breakpoints,
-        $key: breakpoint-next($bp-key)
-    );
-    @media (min-width: $break-point-min) and (max-width: $break-point-max) {
+@mixin media-bp-only($bp_key) {
+    $break_point_min: map-get($map: $grid_breakpoints, $key: $bp_key) + 0.0625rem;
+    $break_point_max: map-get($map: $grid_breakpoints, $key: breakpoint-next($bp_key));
+    @media (min-width: $break_point_min) and (max-width: $break_point_max) {
         @content;
     }
 }
 
 @mixin media-breakpoint-between($lower, $upper) {
-    $break-point-min: map-get($map: $grid-breakpoints, $key: $lower);
-    $break-point-max: map-get(
-            $map: $grid-breakpoints,
-            $key: breakpoint-next($upper)
-        ) - 0.0625rem;
-    @if $break-point-max {
-        @media (min-width: $break-point-min) and (max-width: $break-point-max) {
+    $break_point_min: map-get($map: $grid_breakpoints, $key: $lower);
+    $break_point_max: map-get($map: $grid_breakpoints, $key: breakpoint-next($upper)) - 0.0625rem;
+    @if $break_point_max {
+        @media (min-width: $break_point_min) and (max-width: $break_point_max) {
             @content;
         }
     } @else {
-        @media (min-width: $break-point-min) {
+        @media (min-width: $break_point_min) {
             @content;
         }
     }
 }
 
-@function breakpoint-next($bp-key) {
-    $breakpoint-names: map-keys($grid-breakpoints);
-    $n: index($breakpoint-names, $bp-key);
-    @return if(
-        $n < length($breakpoint-names),
-        nth($breakpoint-names, $n + 1),
-        null
-    );
+@function breakpoint-next($bp_key) {
+    $breakpoint_names: map-keys($grid_breakpoints);
+    $n: index($breakpoint_names, $bp_key);
+    @return if($n < length($breakpoint_names), nth($breakpoint_names, $n + 1), null);
 }

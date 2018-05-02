@@ -47,19 +47,33 @@ $grid-breakpoints: (
     desktop-xl: $desktop-xl
 ) !default;
 
-@mixin media-bp-min($bp-key) {
-  $break-point: map-get($map: $grid-breakpoints, $key: $bp-key) + 0.0625rem;
-  @media (min-width: $break-point) {
-    @content;
-  }
+@mixin media-bp-min($bp-key, $or_this...) {
+    $break-point: map-get($map: $grid-breakpoints, $key: $bp-key) + 0.0625rem;
+    $media_query: '(min-width: #{$break-point})';
+    @if (length($or_this) >0) {
+        @for $i from 1 through length($or_this) {
+            $extra: nth($or_this, $i);
+            $media_query: '#{$media_query}, (#{$extra})';
+        }
+    }
+    @media #{$media_query} {
+        @content;
+    }
 }
 
-@mixin media-bp-max($bp-key) {
-  $max-break: breakpoint-next($bp-key);
-  $break-point: map-get($map: $grid-breakpoints, $key: $max-break);
-  @media (max-width: $break-point) {
-    @content;
-  }
+@mixin media-bp-max($bp_key, $or_this...) {
+    $max-break: breakpoint-next($bp_key);
+    $break_point: map-get($map: $grid_breakpoints, $key: $max-break);
+    $media_query: '(max-width: #{$break-point})';
+    @if (length($or_this) >0) {
+        @for $i from 1 through length($or_this) {
+            $extra: nth($or_this, $i);
+            $media_query: '#{$media_query}, (#{$extra})';
+        }
+    }
+    @media #{$media_query} {
+        @content;
+    }
 }
 
 @mixin media-bp-only($bp-key) {
