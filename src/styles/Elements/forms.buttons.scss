@@ -36,7 +36,7 @@ button {
         background-color: $button-alert-bg-color;
         box-shadow: $button-alert-box-shadow;
     }
-    &[disabled='true'] {
+    &[disabled] {
         background-color: $color-light-grey;
         box-shadow: unset;
         border: 0.0625rem solid $color-medium-grey;

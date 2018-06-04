@@ -41,7 +41,7 @@ input {
             transition: $input-default-transition;
             transform: $input-default-focus-transform;
         }
-        &[disabled='true'] {
+        &[disabled] {
             background-color: $color-light-grey;
             color: $color-medium-grey;
             border-color: $color-medium-grey;
