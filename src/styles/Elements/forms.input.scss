@@ -14,19 +14,19 @@ $input-default-max-width: 100% !default;
 $input-default-focus-transform: scale(1.02) !default;
 
 input {
-    &[type="text"],
-    &[type="date"],
-    &[type="datetime"],
-    &[type="datetime-local"],
-    &[type="email"],
-    &[type="month"],
-    &[type="number"],
-    &[type="password"],
-    &[type="search"],
-    &[type="tel"],
-    &[type="time"],
-    &[type="week"],
-    &[type="url"] {
+    &[type='text'],
+    &[type='date'],
+    &[type='datetime'],
+    &[type='datetime-local'],
+    &[type='email'],
+    &[type='month'],
+    &[type='number'],
+    &[type='password'],
+    &[type='search'],
+    &[type='tel'],
+    &[type='time'],
+    &[type='week'],
+    &[type='url'] {
         border: $input-default-border;
         border-radius: $input-default-border-radius;
         display: $input-default-display;
@@ -41,11 +41,20 @@ input {
             transition: $input-default-transition;
             transform: $input-default-focus-transform;
         }
+        &[disabled='true'] {
+            background-color: $color-light-grey;
+            color: $color-medium-grey;
+            border-color: $color-medium-grey;
+            &:active,
+            &:focus {
+                transform: unset;
+            }
+        }
     }
 
-    &[type="button"],
-    &[type="reset"],
-    &[type="submit"] {
+    &[type='button'],
+    &[type='reset'],
+    &[type='submit'] {
         @extend button;
     }
 }
