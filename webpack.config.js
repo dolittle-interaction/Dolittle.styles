@@ -6,7 +6,8 @@ module.exports = [{
     entry: ['./app/scripts/index.js', './app/styles/style.scss'],
     output: {
         filename: 'bundle.[hash:5].js',
-        path: path.resolve(__dirname, 'dist')
+        path: path.resolve(__dirname, 'dist'),
+        publicPath: '/'
     },
     module: {
         rules: [
