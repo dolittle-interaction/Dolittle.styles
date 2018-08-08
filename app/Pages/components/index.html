@@ -1,0 +1,46 @@
+<section class="site-section" id="components">
+    <div class="definition">
+        <h1>Components</h1>
+        <p>Components is defined as specific styled components that you can use in your applications. Add the named class and you will get some good looking components. Below you can see how it's marked up and used</p>
+     </div>
+     <div class="example-box">
+         <h2>Acrylic
+             <small>(acrylic.scss)</small>
+         </h2>
+         <p>Add <code>'acrylic'</code> class to an container element, some CSS as shown below  and it will get a nice blurry overlay</p>
+         <h3>HTML</h3>
+         <div class="code-example">
+             <div class="preview column">
+                 <section class="some-box-with-bg-image">
+                     <div class="acrylic">
+                         <h1>This box is acrylic</h1>
+                     </div>
+                 </section>
+             </div>
+             <div class="code column">
+                 <textarea name="acrylic-code-html" data-codemode="htmlmixed"></textarea>
+             </div>
+         </div>
+         <h3>SCSS</h3>
+         <div class="code-example">
+            <div class="code column">
+                    <textarea name="acrylic-code-sass" data-codemode="sass" class="codemirror-me">
+.some-box-with-bg-image {
+    background: #333 url('https://picsum.photos/2000/1500') fixed center;
+    background-size: cover;
+    position: relative;
+    z-index: 0;
+    padding: $grid-gutter; //optional
+    .acrylic {
+        padding: $grid-gutter; //optional
+        &::before {
+            background: #333 url('https://picsum.photos/2000/1500') fixed center;
+            background-size: cover;
+        }
+    }
+}
+                    </textarea>
+            </div>
+        </div>
+     </div>
+</section>

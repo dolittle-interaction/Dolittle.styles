@@ -87,6 +87,10 @@ module.exports = {
             template: "./app/layout.html",
             filename: "objects/index.html"
         }),
+        buildHtmlComponents: new HtmlWebpackPlugin({
+            template: "./app/layout.html",
+            filename: "components/index.html"
+        }),
         sassBuilder: sassBuilder
     }
 };
