@@ -15,7 +15,7 @@
     <link rel="apple-touch-icon" sizes="152x152" href="${require('./images/favicon_152x152.png')}">
     <link rel="apple-touch-icon" sizes="167x167" href="${require('./images/favicon_167x167.png')}">
     <link rel="apple-touch-icon" sizes="180x180" href="${require('./images/favicon_180x180.png')}">
-    
+
 
 </head>
 
@@ -31,7 +31,9 @@
             <a href="/" class="site-logo">
                 ${require('./images/Logos/dolittle_positiv_horisontal.svg')}
             </a>
-
+            <aside class="wip-n-version">
+                v. <span id="version-number">0.0.0</span>
+            </aside>
         </header>
         <main class="main-content">
             ${require('./Pages/'+htmlWebpackPlugin.options.filename)}
