@@ -2,10 +2,17 @@ const CodeMirror = require('codemirror');
 require('codemirror/mode/htmlmixed/htmlmixed');
 require('codemirror/mode/sass/sass');
 require('./codemirror.formatter');
+var pjson = require('../../package.json');
 
 const hamburger = document.getElementById('main-nav-trigger');
 const mainNavigation = document.querySelectorAll('.main-navigation')[0];
 const mainBody = document.getElementById('main-body');
+const versionNumber = document.getElementById('version-number');
+
+function setVersionNumberLabel() {
+    console.log(pjson.version);
+    versionNumber.innerHTML = pjson.version;
+}
 
 function generateCodePreviews() {
     var previewBlocks = document.querySelectorAll('div.preview');
@@ -51,6 +58,7 @@ var toggleActiveMenuClass = function(element, className) {
 
 generateCodePreviews();
 makeCodeLookPretty();
+setVersionNumberLabel();
 
 hamburger.addEventListener('click', function(event) {
     toggleActiveMenuClass(event.target, 'is-active');
