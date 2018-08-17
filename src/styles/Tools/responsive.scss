@@ -1,16 +1,6 @@
 /*
 These cool functions and mixins are inspired/stolen from Bootstrap v4
 */
-
-$grid_breakpoints: (
-    phone: $phone,
-    tablet: $tablet,
-    tablet-landscape: $tablet-landscape,
-    desktop: $desktop,
-    desktop-lg: $desktop-lg,
-    desktop-xl: $desktop-xl
-) !default;
-
 @mixin media-bp-min($bp-key, $or_this...) {
     $break-point: map-get($map: $grid-breakpoints, $key: $bp-key) + 0.0625rem;
     $media_query: '(min-width: #{$break-point})';

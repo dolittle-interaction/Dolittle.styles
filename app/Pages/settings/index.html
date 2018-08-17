@@ -23,6 +23,14 @@ $tablet-landscape:  56.25rem !default;
 $desktop:           64rem !default;
 $desktop-lg:        85.375rem !default;
 $desktop-xl:        120rem !default;
+$grid_breakpoints: (
+    phone: $phone,
+    tablet: $tablet,
+    tablet-landscape: $tablet-landscape,
+    desktop: $desktop,
+    desktop-lg: $desktop-lg,
+    desktop-xl: $desktop-xl
+) !default;
                 </textarea>
             </div>
         </div>
@@ -81,22 +89,22 @@ $background-body:           $body-background-color no-repeat !default;
         <div class="code-example">
             <div class="code column">
                 <textarea name="settings-breakpoints-variables" data-codemode="sass" class="codemirror-me">
-$font-family-default:    "Helvetica Neue", Helvetica, Arial, sans-serif !default;
-$font-family-default-sm: "SF Pro Display", "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$font-family-default:       'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif !default;
+$font-family-default-sm:    'SF Pro Display', 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif !default;
 
-$font-size-default:      100% !default;
-$font-size-h1:           1.75rem !default;
-$font-size-h2:           1.6rem !default;
-$font-size-h3:           1.3rem !default;
-$font-size-h4:           1.0rem !default;
-$font-size-h5:           1.0rem !default;
-$font-wight-h1:          500 !default;
-$font-wight-h2:          500 !default;
-$font-wight-h3:          500 !default;
-$font-wight-h4:          500 !default;
-$font-wight-h5:          400 !default;
+$font-size-default:         100% !default;
+$font-size-h1:              2.875rem !default;
+$font-size-h2:              2.125rem !default;
+$font-size-h3:              1.5rem !default;
+$font-size-h4:              1.25rem !default;
+$font-size-h5:              1.125rem !default;
+$font-wight-h1:             200 !default;
+$font-wight-h2:             200 !default;
+$font-wight-h3:             300 !default;
+$font-wight-h4:             400 !default;
+$font-wight-h5:             600 !default;
 
-$body-line-height:       1.15 !default;
+$body-line-height:          1.15 !default;
                 </textarea>
             </div>
         </div>
@@ -112,7 +120,6 @@ $body-line-height:       1.15 !default;
             <div class="code column">
                 <textarea name="settings-breakpoints-variables" data-codemode="sass" class="codemirror-me">
 $grid-gutter:1.5rem !default;
-$grid-container-grid-columns-width: 32rem !default;                        
                 </textarea>
             </div>
         </div>

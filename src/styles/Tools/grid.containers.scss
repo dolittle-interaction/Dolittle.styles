@@ -1,0 +1,25 @@
+%flex-container {
+    display: flex;
+    width: 100%;
+    max-width: 100%;
+}
+
+%flex-container-horizontal {
+    @extend %flex-container;
+    flex-direction: row;
+}
+
+%flex-container-horizontal-center {
+    @extend %flex-container-horizontal;
+    justify-content: center;
+}
+
+%flex-container-vertical {
+    @extend %flex-container;
+    flex-direction: column;
+}
+
+%flex-container-vertical-center {
+    @extend %flex-container-vertical;
+    align-items: center;
+}

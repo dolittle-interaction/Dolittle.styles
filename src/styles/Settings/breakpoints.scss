@@ -4,3 +4,11 @@ $tablet-landscape: 56.25rem !default;
 $desktop: 64rem !default;
 $desktop-lg: 85.375rem !default;
 $desktop-xl: 120rem !default;
+$grid_breakpoints: (
+    phone: $phone,
+    tablet: $tablet,
+    tablet-landscape: $tablet-landscape,
+    desktop: $desktop,
+    desktop-lg: $desktop-lg,
+    desktop-xl: $desktop-xl
+) !default;
