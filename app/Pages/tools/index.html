@@ -38,15 +38,6 @@
         <div class="code-example">
             <div class="code column">
                 <textarea name="responsive-mixins" data-codemode="sass" class="codemirror-me">
-$grid-breakpoints: (
-    phone: $phone,
-    tablet: $tablet,
-    tablet-landscape: $tablet-landscape,
-    desktop: $desktop,
-    desktop-lg: $desktop-lg,
-    desktop-xl: $desktop-xl
-) !default;
-
 @mixin media-bp-min($bp-key, $or_this...) {
     $break-point: map-get($map: $grid-breakpoints, $key: $bp-key) + 0.0625rem;
     $media_query: '(min-width: #{$break-point})';
@@ -119,14 +110,14 @@ $grid-breakpoints: (
             class names, and in the scss, you extend placeholders that fits your needs. Examåles will follow.
             <a href="http://thesassway.com/intermediate/understanding-placeholder-selectors" target="_blank">You can read more about placeholders and extend here.</a>
         </p>
-        <h3>Containers</h3>
+        <h3>Containers
+            <small>(grid.containers.scss)</small>
+        </h3>
         <p>When you need an element to be a flexbox element, vertical direction and aligned center </p>
         <h4>Placeholders</h4>
         <div class="code-example">
             <div class="code column">
                 <textarea name="containers-placeholders" data-codemode="sass" class="codemirror-me">
-/* Containers */
-
 %flex-container {
     display: flex;
     width: 100%;
@@ -165,14 +156,14 @@ main {
                 </textarea>
             </div>
         </div>
-        <h3>Fluid/Fixed</h3>
+        <h3>Fluid/Fixed
+            <small>(grid.fixedwiths.scss)</small>
+        </h3>
         <p>If you want a container to be 100% wide up to a certain point, you can extend one of the fixed width placeholders</p>
         <h4>Placeholders</h4>
         <div class="code-example">
             <div class="code column">
                 <textarea name="Fluidity-usage" data-codemode="sass" class="codemirror-me">
-/*Fixed widths*/
-
 %fixed-width-at-tablet {
     width: 100%;
     max-width: 100%;
@@ -227,14 +218,12 @@ main {
                 </textarea>
             </div>
         </div>
-        <h3>Columns</h3>
+        <h3>Columns <small>(grid.columns.scss)</small></h3>
         <p>To set columns, you can set to the columns container how many columns you'd like:</p>
         <h4>Placeholders</h4>
         <div class="code-example">
             <div class="code column">
                 <textarea name="columns-placeholders" data-codemode="sass" class="codemirror-me">
-/* Columns*/
-
 %flex-two-columns {
     @extend %flex-container;
     flex-direction: row;

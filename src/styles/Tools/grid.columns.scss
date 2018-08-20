@@ -1,0 +1,32 @@
+%flex-two-columns {
+    @extend %flex-container;
+    flex-direction: row;
+    align-items: stretch;
+    flex-wrap: nowrap;
+    .column {
+        flex: 1 1 auto;
+        width: 50%;
+    }
+}
+
+%flex-three-columns {
+    @extend %flex-container;
+    flex-direction: row;
+    align-items: stretch;
+    flex-wrap: nowrap;
+    .column {
+        flex: 1 1 auto;
+        width: 33.33%;
+    }
+}
+
+%flex-four-columns {
+    @extend %flex-container;
+    flex-direction: row;
+    align-items: stretch;
+    flex-wrap: nowrap;
+    .column {
+        flex: 1 1 auto;
+        width: 25%;
+    }
+}
