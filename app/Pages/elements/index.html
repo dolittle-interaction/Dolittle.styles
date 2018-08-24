@@ -48,6 +48,26 @@
                 <textarea name="table-code" data-codemode="htmlmixed"></textarea>
             </div>
         </div>
+        <h3>Table variables</h3>
+        <div class="code-example">
+            <div class="code column">
+                <textarea name="input-variables" data-codemode="sass" class="codemirror-me">
+$table-default-width:               100% !default;
+$table-default-max-width:           100% !default;
+$table-default-margin-top:          $grid-gutter !default;
+$table-default-border-collapse:     collapse !default;
+$table-head-row-border-bottom:      .0625rem solid $color-gray-medium !default;
+$table-head-cell-font-size:         1rem !default;
+$table-head-cell-font-weight:       normal !default;
+$table-head-cell-padding-bottom:    $grid-gutter/3 !default;
+$table-head-cell-text-transform:    uppercase !default;
+$table-bode-row-alternate-bg-color: darken( $color-gray-lightest, 1%) !default;
+$table-default-cell-padding:        $grid-gutter/8 $grid-gutter/2 !default;
+$table-default-cell-text-align:     left !default;
+$table-default-cell-border:         none !default;
+                </textarea>
+            </div>
+        </div>
     </div>
     <div class="example-box">
         <h2>Forms
@@ -96,6 +116,43 @@
                 <textarea name="forms-code" data-codemode="htmlmixed"></textarea>
             </div>
         </div>
+        <h4>Input variables</h4>
+        <div class="code-example">
+            <div class="code column">
+                <textarea name="input-variables" data-codemode="sass" class="codemirror-me">
+$input-default-border-width:    0.0625rem !default;
+$input-default-border-style:    solid !default;
+$input-default-border-color:    darken($color-gray-medium, 15%) !default;
+$input-default-border:          $input-default-border-width $input-default-border-style $input-default-border-color;
+$input-default-border-radius:   0.375rem !default;
+$input-default-display:         block !default;
+$input-default-font-size:       1.5rem !default;
+$input-default-font-weight:     400 !default;
+$input-default-margin:          $grid-gutter/3 0 !default;
+$input-default-width:           18.75rem !default;
+$input-default-padding:         0.5rem 1rem !default;
+$input-default-transition:      transform 0.05s !default;
+$input-default-max-width:       100% !default;
+$input-default-focus-transform: scale(1.02) !default;
+                </textarea>
+            </div>
+        </div>
+        <h4>Select variables</h4>
+        <div class="code-example">
+            <div class="code column">
+                <textarea name="select-variables" data-codemode="sass" class="codemirror-me">
+$select-default-border:             0.0625rem solid darken($color-gray-medium, 15%) !default;
+$select-default-box-shadow:         0.125rem 0.125rem 0 darken($color-gray-medium, 15%) !default;
+$select-default-height:             2.7rem !default;
+$select-default-margin:             $grid-gutter/3 0 $grid-gutter/2 !default;
+$select-default-max-width:          100% !default;
+$select-default-padding:            0.5rem 1rem !default;
+$select-default-transition:         transform 0.05s !default;
+$select-default-width:              18.75rem !default;
+$select-default-focus-transform:    scale(1.02) !default;
+                </textarea>
+            </div>
+        </div>
         <h3>Buttons
             <small>(forms.buttons.scss)</small>
         </h3>
@@ -117,6 +174,28 @@
             </div>
             <div class="code column">
                 <textarea name="buttons-code" data-codemode="htmlmixed"></textarea>
+            </div>
+        </div>
+        <h4>Button variables</h4>
+        <div class="code-example">
+            <div class="code column">
+                <textarea name="button-variables" data-codemode="sass" class="codemirror-me">
+$button-default-bg-color:           $color-gray-lightest !default;
+$button-default-border:             none !default;
+$button-default-border-radius:      0.375rem !default;
+$button-default-box-shadow:         0.125rem 0.125rem 0 darken($color-gray-medium, 15%) !default;
+$button-default-font-size:          1.2rem !default;
+$button-default-font-weight:        400 !default;
+$button-default-margin:             $grid-gutter/3 0 !default;
+$button-default-padding:            0.5rem 1rem !default;
+$button-default-transition:         transform 0.1s, background-color 0.2s ease-in-out, color 0.2s ease-in-out, box-shadow 0.2s ease-in-out !default;
+$button-default-active-transform:   scale(0.975) !default;
+$button-primary-bg-color:           $color-brand-light-blue !default;
+$button-primary-box-shadow:         0.125rem 0.125rem 0 darken($color-brand-light-blue, 20%) !default;
+$button-primary-text-color:         #fff !default;
+$button-alert-bg-color:             $color-brand-yellow !default;
+$button-alert-box-shadow:           0.125rem 0.125rem 0 darken($color-brand-yellow, 20%) !default;
+                </textarea>
             </div>
         </div>
     </div>

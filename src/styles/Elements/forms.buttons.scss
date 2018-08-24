@@ -24,9 +24,9 @@ button {
     margin: $button-default-margin;
     padding: $button-default-padding;
     transition: $button-default-transition;
-    &:active {
-        transform: $button-default-active-transform;
-    }
+    // &:active {
+    //     transform: $button-default-active-transform;
+    // }
     &.call-to-action {
         background-color: $button-primary-bg-color;
         box-shadow: $button-primary-box-shadow;
