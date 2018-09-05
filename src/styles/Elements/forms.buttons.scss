@@ -2,44 +2,68 @@ $button-default-bg-color: $color-gray-lightest !default;
 $button-default-border: none !default;
 $button-default-border-radius: 0.375rem !default;
 $button-default-box-shadow: 0.125rem 0.125rem 0 darken($color-gray-medium, 15%) !default;
-$button-default-font-size: 1.2rem !default;
+$button-default-font-size: 1rem !default;
 $button-default-font-weight: 400 !default;
 $button-default-margin: $grid-gutter/3 0 !default;
-$button-default-padding: 0.5rem 1rem !default;
-$button-default-transition: transform 0.1s, background-color 0.2s ease-in-out, color 0.2s ease-in-out, box-shadow 0.2s ease-in-out !default;
+$button-default-padding: 0 1rem !default;
+$button-default-transition: transform 0.1s;
+$button-default-transform: scale(1) !default;
 $button-default-active-transform: scale(0.975) !default;
 $button-primary-bg-color: $color-brand-light-blue !default;
 $button-primary-box-shadow: 0.125rem 0.125rem 0 darken($color-brand-light-blue, 20%) !default;
 $button-primary-text-color: #fff !default;
 $button-alert-bg-color: $color-brand-yellow !default;
 $button-alert-box-shadow: 0.125rem 0.125rem 0 darken($color-brand-yellow, 20%) !default;
+$button-default-height: 2.5rem !default;
+$button-default-height-active: 2.4rem !default;
+$button-default-letter-spacing: 0.03125rem !default;
 
 button {
     background-color: $button-default-bg-color;
     border: $button-default-border;
     border-radius: $button-default-border-radius;
     box-shadow: $button-default-box-shadow;
+    display: inline-block;
     font-size: $button-default-font-size;
     font-weight: $button-default-font-weight;
+    height: $button-default-height;
+    line-height: $button-default-height;
+    letter-spacing: $button-default-letter-spacing;
+    text-transform: uppercase;
     margin: $button-default-margin;
     padding: $button-default-padding;
+    vertical-align: middle;
+    text-align: center;
     transition: $button-default-transition;
-    // &:active {
-    //     transform: $button-default-active-transform;
-    // }
+    transform: $button-default-transform;
+    -webkit-tap-highlight-color: transparent; // Gets rid of tap active state
+
+    &:active {
+        transform: $button-default-active-transform;
+        background-color: darken($button-default-bg-color, 7%);
+        color: inherit;
+    }
+
     &.call-to-action {
         background-color: $button-primary-bg-color;
         box-shadow: $button-primary-box-shadow;
         color: $button-primary-text-color;
+        &:active {
+            background-color: darken($button-primary-bg-color, 7%);
+        }
     }
     &.alert {
         background-color: $button-alert-bg-color;
         box-shadow: $button-alert-box-shadow;
+        &:active {
+            background-color: darken($button-alert-bg-color, 7%);
+        }
     }
-    &[disabled] {
+    &[disabled],
+    &.disabled {
         background-color: $color-gray-light;
         box-shadow: unset;
-        border: 0.0625rem solid $color-gray-medium;
         color: $color-gray-medium;
+        pointer-events: none;
     }
 }
