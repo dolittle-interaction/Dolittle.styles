@@ -1,5 +1,5 @@
 ---
-title: About Dolittle Styles
+title: Styles
 description: A summmary of what Dolittle Styles are.
 author: Vidar A. Westrum
 keywords: styles, design, css
@@ -13,6 +13,7 @@ We have our own frontend style framework. 'Yet another framework!?' you say? Yes
 The framework will aim for styling LOB applications in a quick way, at the same time not blocking you from adding more of your own flavour upon it. It's based on an architecture/methodology called ITCSS, by [Harry Robberts](https://csswizardry.com). ITCSS is a way of structuring your (S)CSS files that makes it easier to maintaine and manage large or long living projects.
 
 ## ITCSS
+
 It's recommended that you take a couple of minutes to get to know ITCSS. Here's a list for you.
 
 - [ITCSS: SCALABLE AND MAINTAINABLE CSS ARCHITECTURE](https://www.xfive.co/blog/itcss-scalable-maintainable-css-architecture/)

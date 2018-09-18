@@ -58,8 +58,8 @@ If you want a container to be 100% wide up to a certain point, you can extend on
 
 ```css
 .site-section {
-    @extend %fixed-width-at-desktop;
-    padding: $grid-gutter;
-    margin: $grid-gutter 0;
+    @extend     %fixed-width-at-desktop;
+    padding:    $grid-gutter;
+    margin:     $grid-gutter 0;
 }
 ```
