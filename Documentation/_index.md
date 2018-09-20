@@ -6,7 +6,7 @@ keywords: styles, design, css
 weight: 1
 ---
 
-# Styles Are awesome!
+## Styles Are awesome!
 
 We have our own frontend style framework. 'Yet another framework!?' you say? Yes. True enough. What will make this different from the other frameworks you know, is that this will be smaller, contain less components, and be more opiniated on styling directly on elements. Thus, you don't need to add classes to every single element you are using, to get it styled.
 
