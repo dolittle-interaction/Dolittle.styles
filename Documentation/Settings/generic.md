@@ -11,6 +11,6 @@ weight: 12
 
 ```scss
 $body-background-color: $color-gray-lightest !default;
-$body-text-color: $color-gray-darkest !default;
-$background-body: $body-background-color no-repeat !default;
+$body-text-color:       $color-gray-darkest !default;
+$background-body:       $body-background-color no-repeat !default;
 ```
