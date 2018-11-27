@@ -1,4 +1,9 @@
 .vscode
 app
-yarn.lock
+Documentation
+node_modules
+deploy*
+Dockerfile
+dockerize.sh
 webpack*
+yarn.lock
