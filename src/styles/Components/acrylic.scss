@@ -1,4 +1,4 @@
-$acrylic-bg-color: rgba(255, 255, 255, 0.6) !default;
+$acrylic-bg-color: rgba(0, 0, 0, 0.6) !default;
 $acrylic-filter: blur(5rem) !default;
 $acrylic-filter-blur-amount: 8px !default;
 $acrylic-filter-ie-hack: 8 !default;
@@ -7,6 +7,7 @@ $acrylic-box-shadow: 0 0 3px rgba(#000, 0.1) !default;
 .acrylic {
     position: relative;
     overflow: hidden;
+    padding: $grid-gutter;
 
     &::before {
         content: '';

@@ -1,23 +1,23 @@
+
+
 .main-content {
     @extend %flex-container-vertical-center;
     padding: $grid-gutter;
     @include media-bp-min(desktop) {
-        padding-top: 6.875rem;
-        padding-left: 20rem+$grid-gutter;
+        padding-top: $grid-gutter * 2;
+        padding-left: 20rem + $grid-gutter;
         align-items: flex-start;
     }
 }
 
 .site-section {
-    @extend %fixed-width-at-desktop;
-    background-color: #fff;
+    width: 100%;
     padding: $grid-gutter;
-    box-shadow: 0 0 .25rem rgba(0, 0, 0, .3);
     margin: $grid-gutter 0;
 }
 
 .example-box {
-    border-top: .0625rem solid #ccc;
+    border-top: 0.0625rem solid #ccc;
     margin: 3rem 0;
     padding: 2rem 0;
     p {
@@ -28,7 +28,7 @@
 .code-example {
     @extend %flex-two-columns;
     flex-wrap: wrap;
-    border: .0625rem solid #ccc;
+    
     margin-bottom: $grid-gutter;
     .column {
         padding: $grid-gutter/2;

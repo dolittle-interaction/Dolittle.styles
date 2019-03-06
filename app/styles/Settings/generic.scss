@@ -1,1 +1,4 @@
-$body-background-color: $color-gray-light;
+$body-background-color: $color-gray-dark;
+$body-background-image-url:'https://picsum.photos/2560/1440?image=914';
+$body-background-image: url($body-background-image-url) fixed center;
+$body-background-size: cover;
