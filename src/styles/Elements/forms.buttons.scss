@@ -1,67 +1,69 @@
-$button-default-bg-color: rgba(255, 255, 255, 0.2) !default;
+$button-color-white-40: rgba(255, 255, 255, 0.4) !default;
+$button-color-white-20: rgba(255, 255, 255, 0.2) !default;
+
+$button-default-bg-color: $button-color-white-20 !default;
 $button-default-border: none !default;
+$button-default-outline-width: 0.0625rem;
 $button-default-border-radius: 0 !default;
 $button-default-font-size: 1rem !default;
-$button-default-font-weight: 400 !default;
-$button-default-margin: $grid-gutter/3 0 !default;
-$button-default-padding: 0 1rem !default;
-$button-default-transition: transform 0.1s;
-$button-default-transform: scale(1) !default;
-$button-default-active-transform: scale(0.975) !default;
-$button-primary-bg-color: $color-brand-light-blue !default;
-$button-primary-box-shadow: 0.125rem 0.125rem 0 darken($color-brand-light-blue, 20%) !default;
-$button-primary-text-color: #fff !default;
-$button-alert-bg-color: $color-brand-yellow !default;
-$button-alert-box-shadow: 0.125rem 0.125rem 0 darken($color-brand-yellow, 20%) !default;
-$button-default-height: 2.5rem !default;
-$button-default-height-active: 2.4rem !default;
+$button-default-padding: $grid-gutter/3 $grid-gutter !default;
 $button-default-letter-spacing: 0.03125rem !default;
+$button-default-text-color: $color-gray-lightest !default;
+
+$button-default-hover-outline: $button-default-outline-width solid $button-color-white-40 !default;
+$button-default-active-bg-color: $button-color-white-40 !default;
+
+$button-cta-bg-color: rgba($color-brand-dark-blue, 0.5) !default;
+$button-cta-hover-outline: $button-default-outline-width solid $button-color-white-20 !default;
+
+$button-alert-bg-color: $color-brand-yellow !default;
+$button-alert-color: $color-gray-darkest !default;
+$button-disabled-bg-color: $button-default-bg-color !default;
+$button-disabled-text-color: $button-color-white-40 !default;
+$button-active-outline: none !default;
 
 button {
     background-color: $button-default-bg-color;
     border: $button-default-border;
     border-radius: $button-default-border-radius;
+    color: $button-default-text-color;
     display: inline-block;
     font-size: $button-default-font-size;
-    font-weight: $button-default-font-weight;
-    height: $button-default-height;
-    line-height: $button-default-height;
     letter-spacing: $button-default-letter-spacing;
-    text-transform: uppercase;
-    margin: $button-default-margin;
     padding: $button-default-padding;
     vertical-align: middle;
-    text-align: center;
-    transition: $button-default-transition;
-    transform: $button-default-transform;
     -webkit-tap-highlight-color: transparent; // Gets rid of tap active state
 
+    &:hover {
+        outline: $button-default-hover-outline;
+        outline-offset: -$button-default-outline-width;
+    }
+    &:focus {
+        outline: $button-default-hover-outline;
+    }
     &:active {
-        transform: $button-default-active-transform;
-        background-color: darken($button-default-bg-color, 7%);
+        background-color: $button-default-active-bg-color;
+        outline: $button-active-outline;
         color: inherit;
     }
 
     &.call-to-action {
-        background-color: $button-primary-bg-color;
-        box-shadow: $button-primary-box-shadow;
-        color: $button-primary-text-color;
+        background-color: $button-cta-bg-color;
         &:active {
-            background-color: darken($button-primary-bg-color, 7%);
+            background-color: $button-cta-hover-outline;
         }
     }
     &.alert {
         background-color: $button-alert-bg-color;
-        box-shadow: $button-alert-box-shadow;
+        color: $button-alert-color;
         &:active {
             background-color: darken($button-alert-bg-color, 7%);
         }
     }
     &[disabled],
     &.disabled {
-        background-color: $color-gray-light;
-        box-shadow: unset;
-        color: $color-gray-medium;
+        background-color: $button-disabled-bg-color;
+        color: $button-disabled-text-color;
         pointer-events: none;
     }
 }
