@@ -4,6 +4,66 @@
         <p>This is the section to present the generic styles and how to use them</p>
     </div>
     <div class="example-box">
+        <h2>Typography
+            <small>(typography.scss)</small>
+        </h2>
+        <div class="code-example">
+            <div class="preview column">
+                <h1>This is Heading 1</h1>
+                <h2>This is Heading 2</h2>
+                <h3>This is Heading 3</h3>
+                <h4>This is Heading 4</h4>
+                <h5>This is Heading 5</h5>
+                <p>And last, but not least, I'm a paragraph. You can see some more text here.</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab quidem dolorem, impedit ad deserunt nostrum
+                    quos nisi, atque illum blanditiis nulla, reiciendis ipsa illo nesciunt eius eos pariatur autem expedita.</p>
+            </div>
+            <div class="code column">
+                <textarea name="elements-code" data-codemode="htmlmixed"></textarea>
+            </div>
+        </div>
+        <h3>Typography variables</h3>
+        <div class="code-example">
+            <div class="code column">
+                <textarea name="elements-variable" data-codemode="sass" class="codemirror-me">
+/* Variables from Settings/elements.typography.scss */
+
+$font-family-default:       'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif !default;
+$font-family-default-sm:    "SF Pro Display", "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+
+$font-size-default:         100% !default;
+$font-size-h1:              2.875rem !default;
+$font-size-h2:              2.125rem !default;
+$font-size-h3:              1.5rem !default;
+$font-size-h4:              1.25rem !default;
+$font-size-h5:              1.125rem !default;
+$font-size-p:               1rem !default;
+$font-wight-h1:             200 !default;
+$font-wight-h2:             200 !default;
+$font-wight-h3:             300 !default;
+$font-wight-h4:             400 !default;
+$font-wight-h5:             400 !default;
+$font-wight-p:              400 !default;
+
+$body-line-height:          1.15 !default;
+
+$margin-bottom-paragraph:   $grid-gutter !default;
+$margin-bottom-h1:          $margin-bottom-paragraph !default;
+$margin-bottom-h2:          $margin-bottom-paragraph !default;
+$margin-bottom-h3:          $margin-bottom-paragraph !default;
+$margin-bottom-h4:          $margin-bottom-paragraph !default;
+$margin-bottom-h5:          $margin-bottom-paragraph !default;
+$line-height-heading:       1.6em !default;
+$paragrph-font-size:        1rem !default;
+
+/* -------------------------------------  */
+                </textarea>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="example-box">
         <h2>Tables
             <small>(table.scss)</small>
         </h2>
@@ -202,66 +262,5 @@ $button-default-letter-spacing:     0.03125rem !default;
                 </textarea>
             </div>
         </div>
-    </div>
-    <div class="example-box">
-        <h2>Typography
-            <small>(typography.scss)</small>
-        </h2>
-        <div class="code-example">
-            <div class="preview column">
-                <h1>This is Heading 1</h1>
-                <h2>This is Heading 2</h2>
-                <h3>This is Heading 3</h3>
-                <h4>This is Heading 4</h4>
-                <h5>This is Heading 5</h5>
-                <p>And last, but not least, I'm a paragraph. You can see some more text here.</p>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab quidem dolorem, impedit ad deserunt nostrum
-                    quos nisi, atque illum blanditiis nulla, reiciendis ipsa illo nesciunt eius eos pariatur autem expedita.</p>
-            </div>
-            <div class="code column">
-                <textarea name="elements-code" data-codemode="htmlmixed"></textarea>
-            </div>
-        </div>
-        <h3>Typography variables</h3>
-        <div class="code-example">
-            <div class="code column">
-                <textarea name="elements-variable" data-codemode="sass" class="codemirror-me">
-/* Variables from Settings/elements.typography.scss */
-
-$font-family-default:       'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif !default;
-$font-family-default-sm:    "SF Pro Display", "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
-
-$font-size-default:         100% !default;
-$font-size-h1:              2.875rem !default;
-$font-size-h2:              2.125rem !default;
-$font-size-h3:              1.5rem !default;
-$font-size-h4:              1.25rem !default;
-$font-size-h5:              1.125rem !default;
-$font-wight-h1:             200 !default;
-$font-wight-h2:             200 !default;
-$font-wight-h3:             300 !default;
-$font-wight-h4:             400 !default;
-$font-wight-h5:             600 !default;
-
-$body-line-height:          1.15 !default;
-
-/* -------------------------------------  */
-
-/* Variables in Elements/typography.scss */
-
-$margin-bottom-paragraph:   $grid-gutter !default;
-$margin-bottom-h1:          $margin-bottom-paragraph !default;
-$margin-bottom-h2:          $margin-bottom-paragraph !default;
-$margin-bottom-h3:          $margin-bottom-paragraph !default;
-$margin-bottom-h4:          $margin-bottom-paragraph !default;
-$margin-bottom-h5:          $margin-bottom-paragraph !default;
-$line-height-heading:       1.6em !default;
-$paragrph-font-size:        1rem !default;
-
-/* -------------------------------------  */
-                </textarea>
-            </div>
-        </div>
-
     </div>
 </section>

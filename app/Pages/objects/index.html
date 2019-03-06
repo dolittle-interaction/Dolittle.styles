@@ -4,7 +4,76 @@
         <p>In objects you can find some cool stuff like grid and other handy objects.</p>
     </div>
     <div class="example-box">
-        <h2>Layout
+        <h2>
+            Typography
+            <small>(typography.scss)</small>
+        </h2>
+        <h3>Variables</h3>
+        <div class="code-example">
+            <div class="code column">
+                <textarea name="settings-breakpoints-variables" data-codemode="sass" class="codemirror-me">
+$font-size-base:            1rem !default;
+$font-wight-base:           600 !default;
+$font-size-base-alt:        1rem !default;
+$font-wight-base-alt:       700 !default;
+$font-size-caption:         0.75rem !default;
+$font-wight-caption:        300 !default;
+$font-size-caption-alt:     0.8125rem !default;
+$font-wight-caption-alt:    300 !default;
+                </textarea>
+            </div>
+        </div>
+        <h3>Usage</h3>
+        <div class="code-example">
+            <div class="preview column">
+                <p class="base">This is a parabraph with <code>base</code> class</p>
+                <p class="base-alt">This is a parabraph with <code>base-alt</code> class</p>
+                <p class="caption">This is a parabraph with <code>caption</code> class</p>
+                <p class="caption-alt">This is a parabraph with <code>caption-alt</code> class</p>
+                <p>
+                    You can inline <code>span</code> elements with <span class="base">base class</span> and you can have a <code>span</code> with
+                    <span class="base-alt">base-alt class</span>.
+                </p>
+                <p>
+                    You can inline <code>span</code> elements with <span class="caption">caption class</span> and you can have a <code>span</code> with
+                    <span class="caption-alt">caption-alt class</span>.
+                </p>
+            </div>
+            <div class="code column">
+                <textarea name="contentbox-code" data-codemode="htmlmixed"></textarea>
+            </div>
+        </div>
+        <h3>Styls</h3>
+        <div class="code-example">
+            <div class="code column">
+                <textarea name="settings-breakpoints-variables" data-codemode="sass" class="codemirror-me">
+.base{
+    font-size:      $font-size-base;
+    font-weight:    $font-wight-base;
+}
+
+.base-alt{
+    font-size:      $font-size-base-alt;
+    font-weight:    $font-wight-base-alt;
+}
+
+.caption{
+    font-size:      $font-size-caption;
+    font-weight:    $font-wight-caption;
+}
+
+.caption-alt{
+    font-size:      $font-size-caption-alt;
+    font-weight:    $font-wight-caption-alt;
+}                        
+                </textarea>
+            </div>
+        </div>
+    </div>
+
+    <div class="example-box">
+        <h2>
+            Layout
             <small>(layout.scss)</small>
         </h2>
         <h3>Variables</h3>
@@ -98,7 +167,6 @@ $button-row-centered-justify-content:       center !default;
                 </textarea>
             </div>
         </div>
-
     </div>
     <div class="example-box">
         <h2>Media</h2>
@@ -106,13 +174,12 @@ $button-row-centered-justify-content:       center !default;
         <div class="code-example">
             <div class="preview column">
                 <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/SRqrBZLx5Kc?rel=0" 
-                    frameborder="0" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/SRqrBZLx5Kc?rel=0" frameborder="0" allowfullscreen></iframe>
                 </div>
             </div>
             <div class="code column">
-                    <textarea name="video-code" data-codemode="htmlmixed"></textarea>
-            </div>    
+                <textarea name="video-code" data-codemode="htmlmixed"></textarea>
+            </div>
         </div>
     </div>
 </section>
