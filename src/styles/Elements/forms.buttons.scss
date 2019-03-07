@@ -1,7 +1,4 @@
-$button-color-white-40: rgba(255, 255, 255, 0.4) !default;
-$button-color-white-20: rgba(255, 255, 255, 0.2) !default;
-
-$button-default-bg-color: $button-color-white-20 !default;
+$button-default-bg-color: $color-white-20 !default;
 $button-default-border: none !default;
 $button-default-outline-width: 0.0625rem;
 $button-default-border-radius: 0 !default;
@@ -10,16 +7,16 @@ $button-default-padding: $grid-gutter/3 $grid-gutter !default;
 $button-default-letter-spacing: 0.03125rem !default;
 $button-default-text-color: $color-gray-lightest !default;
 
-$button-default-hover-outline: $button-default-outline-width solid $button-color-white-40 !default;
-$button-default-active-bg-color: $button-color-white-40 !default;
+$button-default-hover-outline: $button-default-outline-width solid $color-white-40 !default;
+$button-default-active-bg-color: $color-white-40 !default;
 
 $button-cta-bg-color: rgba($color-brand-dark-blue, 0.5) !default;
-$button-cta-hover-outline: $button-default-outline-width solid $button-color-white-20 !default;
+$button-cta-hover-outline: $button-default-outline-width solid $color-white-20 !default;
 
 $button-alert-bg-color: $color-brand-yellow !default;
 $button-alert-color: $color-gray-darkest !default;
 $button-disabled-bg-color: $button-default-bg-color !default;
-$button-disabled-text-color: $button-color-white-40 !default;
+$button-disabled-text-color: $color-white-40 !default;
 $button-active-outline: none !default;
 
 button {
