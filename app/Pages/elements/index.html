@@ -223,48 +223,34 @@ $button-active-outline:             none !default;
                 <input type="url" placeholder="Type of url" />
                 <input type="week" placeholder="Type of week" />
 
+                <input type="checkbox" id="neutral-check" placeholder="Type of checkbox" />
+                <label for="neutral-check">Unchecked</label>
+                <input type="checkbox" id="checked-check" checked="true" placeholder="Type of checkbox" />
+                <label for="checked-check">Checked</label>
+                <input type="checkbox" disabled="disabled" placeholder="Type of checkbox" />
+                <label>Disabled</label>
+                <input type="checkbox" checked="true" disabled="disabled" placeholder="Type of checkbox" />
+                <label>Disabled checked</label>
 
-
-                <div class="checkbox">
-                    <input type="checkbox" id="neutral" placeholder="Type of checkbox" /> 
-                    <label for="neutral">Unchecked</label>
-                </div>
-                <div class="checkbox">
-                    <input type="checkbox" id="checked" checked="true" placeholder="Type of checkbox" /> 
-                    <label for="checked">Checked</label>
-                </div>
-                <div class="checkbox">
-                    <input type="checkbox" disabled="disabled" placeholder="Type of checkbox" /> 
-                    <label>Disabled</label> 
-                </div>
-                <div class="checkbox">
-                    <input type="checkbox" checked="true" disabled="disabled" placeholder="Type of checkbox" /> 
-                    <label>Disabled checked</label> 
+                <div>
+                    <input type="radio" id="banana" name="fruit" value="banana" />
+                    <label for="banana">Banana</label>
                 </div>
 
-
-
-
-                <div class="radio-button">
-                    <input type="radio" name="styles" />
-                    <label>Radio button 1</label>
+                <div>
+                    <input type="radio" id="apple" name="fruit" value="apple" checked />
+                    <label for="apple">Apple</label>
                 </div>
-                <div class="radio-button">
-                    <input type="radio" checked="true" name="styles" />
-                    <label>Radio button 2</label>
+                
+                <div>
+                    <input type="radio" id="ham" name="meat" value="ham" disabled />
+                    <label for="ham">Ham</label>
                 </div>
-                <div class="radio-button">
-                    <input type="radio" disabled="true" name="styles" />
-                    <label>Radio button 3</label>
+                <div>
+                    <input type="radio" id="steak" name="meat" value="steak" checked disabled />
+                    <label for="steak">Steak</label>
                 </div>
-
-
-
-
-
             </div>
-
-
 
             <div class="code column">
                 <textarea name="forms-code" data-codemode="htmlmixed"></textarea>
