@@ -1,9 +1,9 @@
-const CleanWebpackPlugin = require("clean-webpack-plugin");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
+const CleanWebpackPlugin = require('clean-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 let sassBuilder = new MiniCssExtractPlugin({
-    filename: "style.bundle.[hash:5].css",
+    filename: 'style.bundle.[hash:5].css',
     allChunks: true
 });
 
@@ -14,9 +14,9 @@ module.exports = {
             exclude: /layout.html/,
             use: [
                 {
-                    loader: "html-loader",
+                    loader: 'html-loader',
                     options: {
-                        attrs: ["img:src", "link:href"],
+                        attrs: ['img:src', 'link:href'],
                         interpolate: true,
                         minimize: false
                     }
@@ -27,24 +27,24 @@ module.exports = {
             test: /\.scss$/,
             use: [
                 MiniCssExtractPlugin.loader,
-                "css-loader",
+                'css-loader',
                 {
-                    loader: "postcss-loader",
+                    loader: 'postcss-loader',
                     options: {
-                        plugins: () => [require("autoprefixer")()]
+                        plugins: () => [require('autoprefixer')()]
                     }
                 },
-                "sass-loader"
+                'sass-loader'
             ]
         },
         svgLoader: {
             test: /\.svg/,
             use: {
-                loader: "svg-inline-loader",
+                loader: 'svg-inline-loader',
                 options: {
                     removeTags: true,
-                    removingTags: ["title", "desc"],
-                    removingTagAttrs: ["id", "data-name"]
+                    removingTags: ['title', 'desc'],
+                    removingTagAttrs: ['id', 'data-name']
                 }
             }
         },
@@ -52,44 +52,44 @@ module.exports = {
             test: /\.(png|jpe?g|gif)(\?.*)?$/,
             use: [
                 {
-                    loader: "file-loader",
+                    loader: 'file-loader',
                     options: {
-                        name: "[name]-[hash:5].[ext]",
-                        outputPath: "images/"
+                        name: '[name]-[hash:5].[ext]',
+                        outputPath: 'images/'
                     }
                 }
             ]
         }
     },
     plugins: {
-        cleanDistFolder: new CleanWebpackPlugin(["dist/*"]),
+        cleanDistFolder: new CleanWebpackPlugin({ verbose: true }),
         buildHtmlIndex: new HtmlWebpackPlugin({
-            template: "./app/layout.html",
-            filename: "index.html"
+            template: './app/layout.html',
+            filename: 'index.html'
         }),
         buildHtmlSettings: new HtmlWebpackPlugin({
-            template: "./app/layout.html",
-            filename: "settings/index.html"
+            template: './app/layout.html',
+            filename: 'settings/index.html'
         }),
         buildHtmlTools: new HtmlWebpackPlugin({
-            template: "./app/layout.html",
-            filename: "tools/index.html"
+            template: './app/layout.html',
+            filename: 'tools/index.html'
         }),
         buildHtmlGeneric: new HtmlWebpackPlugin({
-            template: "./app/layout.html",
-            filename: "generic/index.html"
+            template: './app/layout.html',
+            filename: 'generic/index.html'
         }),
         buildHtmlElements: new HtmlWebpackPlugin({
-            template: "./app/layout.html",
-            filename: "elements/index.html"
+            template: './app/layout.html',
+            filename: 'elements/index.html'
         }),
         buildHtmlObjects: new HtmlWebpackPlugin({
-            template: "./app/layout.html",
-            filename: "objects/index.html"
+            template: './app/layout.html',
+            filename: 'objects/index.html'
         }),
         buildHtmlComponents: new HtmlWebpackPlugin({
-            template: "./app/layout.html",
-            filename: "components/index.html"
+            template: './app/layout.html',
+            filename: 'components/index.html'
         }),
         sassBuilder: sassBuilder
     }

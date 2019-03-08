@@ -1,10 +1,73 @@
-<section class="site-section" id="elements">
+<section class="site-section acrylic" id="elements">
     <div class="definition">
         <h1>Elements</h1>
         <p>This is the section to present the generic styles and how to use them</p>
     </div>
     <div class="example-box">
-        <h2>Tables
+        <h2>
+            Typography
+            <small>(typography.scss)</small>
+        </h2>
+        <div class="code-example">
+            <div class="preview column">
+                <h1>This is Heading 1</h1>
+                <h2>This is Heading 2</h2>
+                <h3>This is Heading 3</h3>
+                <h4>This is Heading 4</h4>
+                <h5>This is Heading 5</h5>
+                <p>And last, but not least, I'm a paragraph. You can see some more text here.</p>
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab quidem dolorem, impedit ad deserunt nostrum quos nisi, atque illum blanditiis
+                    nulla, reiciendis ipsa illo nesciunt eius eos pariatur autem expedita.
+                </p>
+            </div>
+            <div class="code column">
+                <textarea name="elements-code" data-codemode="htmlmixed"></textarea>
+            </div>
+        </div>
+        <h3>Typography variables</h3>
+        <div class="code-example">
+            <div class="code column">
+                <textarea name="elements-variable" data-codemode="sass" class="codemirror-me">
+/* Variables from Settings/elements.typography.scss */
+
+$font-family-default:       'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif !default;
+$font-family-default-sm:    "SF Pro Display", "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+
+$font-size-default:         100% !default;
+$font-size-h1:              2.875rem !default;
+$font-size-h2:              2.125rem !default;
+$font-size-h3:              1.5rem !default;
+$font-size-h4:              1.25rem !default;
+$font-size-h5:              1.125rem !default;
+$font-size-p:               1rem !default;
+$font-wight-h1:             200 !default;
+$font-wight-h2:             200 !default;
+$font-wight-h3:             300 !default;
+$font-wight-h4:             400 !default;
+$font-wight-h5:             400 !default;
+$font-wight-p:              400 !default;
+
+$body-line-height:          1.15 !default;
+
+$margin-bottom-paragraph:   $grid-gutter !default;
+$margin-bottom-h1:          $margin-bottom-paragraph !default;
+$margin-bottom-h2:          $margin-bottom-paragraph !default;
+$margin-bottom-h3:          $margin-bottom-paragraph !default;
+$margin-bottom-h4:          $margin-bottom-paragraph !default;
+$margin-bottom-h5:          $margin-bottom-paragraph !default;
+$line-height-heading:       1.6em !default;
+$paragrph-font-size:        1rem !default;
+
+/* -------------------------------------  */
+                </textarea>
+            </div>
+        </div>
+    </div>
+
+    <div class="example-box">
+        <h2>
+            Tables
             <small>(table.scss)</small>
         </h2>
         <div class="code-example">
@@ -70,48 +133,125 @@ $table-default-cell-border:         none !default;
         </div>
     </div>
     <div class="example-box">
-        <h2>Forms
+        <h2>
+            Forms
             <small>(forms.scss)</small>
         </h2>
-        <h3>Inputs
+        <h3>
+            Buttons
+            <small>(forms.buttons.scss)</small>
+        </h3>
+        <h4>Enabled</h4>
+        <div class="code-example">
+            <div class="preview column">
+                <button>Button</button>
+                <button class="call-to-action">Call to action</button>
+                <button class="alert">Alert</button>
+            </div>
+            <div class="code column">
+                <textarea name="buttons-code" data-codemode="htmlmixed"></textarea>
+            </div>
+        </div>
+        <h4>Disabled</h4>
+        <div class="code-example">
+            <div class="preview column">
+                <button disabled="true">Button</button>
+                <button disabled="true" class="call-to-action">Call to action</button>
+                <button disabled="true" class="alert">lert</button>
+            </div>
+            <div class="code column">
+                <textarea name="buttons-code" data-codemode="htmlmixed"></textarea>
+            </div>
+        </div>
+        <h4>Button variables</h4>
+        <div class="code-example">
+            <div class="code column">
+                <textarea name="button-variables" data-codemode="sass" class="codemirror-me">
+$button-default-bg-color:           $color-white-20 !default;
+$button-default-border:             none !default;
+$button-default-outline-width:      0.0625rem;
+$button-default-border-radius:      0 !default;
+$button-default-font-size:          1rem !default;
+$button-default-padding:            $grid-gutter/3 $grid-gutter !default;
+$button-default-letter-spacing:     0.03125rem !default;
+$button-default-text-color:         $color-gray-lightest !default;
+
+$button-default-hover-outline:      $button-default-outline-width solid $color-white-40 !default;
+$button-default-active-bg-color:    $color-white-40 !default;
+
+$button-cta-bg-color:               rgba($color-brand-dark-blue, 0.5) !default;
+$button-cta-hover-outline:          $button-default-outline-width solid $color-white-20 !default;
+
+$button-alert-bg-color:             $color-brand-yellow !default;
+$button-alert-color:                $color-gray-darkest !default;
+$button-disabled-bg-color:          $button-default-bg-color !default;
+$button-disabled-text-color:        $color-white-40 !default;
+$button-active-outline:             none !default;
+                    </textarea
+                >
+            </div>
+        </div>
+
+        <h3>
+            Inputs
             <small>(forms.input.scss)</small>
         </h3>
         <div class="code-example">
             <div class="preview column">
-                <label>This is a label for the below text field
-                    <input type="text" placeholder="Type of text">
+                <label>
+                    This is a label for the below text field
+                    <input type="text" placeholder="Type of text" />
                 </label>
-                <input type="text" placeholder="Type of text" disabled="true">
-                <input type="button" placeholder="Type of button" value="Button">
-                <input type="reset" placeholder="Type of reset">
-                <input type="submit" placeholder="Type of submit">
-                <input type="checkbox" placeholder="Type of checkbox">
-                <input type="color" placeholder="Type of color">
-                <input type="date" placeholder="Type of date">
-                <input type="datetime" placeholder="Type of datetime">
-                <input type="datetime-local" placeholder="Type of datetime-local">
-                <input type="email" placeholder="Type of email">
-                <input type="file" placeholder="Type of file">
-                <input type="image" placeholder="Type of image">
-                <input type="month" placeholder="Type of month">
-                <input type="number" placeholder="Type of number">
-                <input type="password" placeholder="Type of password">
-                <label>
-                    <input type="radio" name="styles">Styles 1</label>
-                <label>
-                    <input type="radio" name="styles">Styles 2</label>
-                <label>
-                    <input type="radio" name="styles">Styles 3</label>
+                <input type="text" placeholder="Type of text" disabled="true" />
+                <input type="button" placeholder="Type of button" value="Button" />
+                <input type="reset" placeholder="Type of reset" />
+                <input type="submit" placeholder="Type of submit" />
+                <input type="color" placeholder="Type of color" />
+                <input type="date" placeholder="Type of date" />
+                <input type="datetime" placeholder="Type of datetime" />
+                <input type="datetime-local" placeholder="Type of datetime-local" />
+                <input type="email" placeholder="Type of email" />
+                <input type="file" placeholder="Type of file" />
+                <input type="image" placeholder="Type of image" />
+                <input type="month" placeholder="Type of month" />
+                <input type="number" placeholder="Type of number" />
+                <input type="password" placeholder="Type of password" />
+                <input type="range" placeholder="Type of range" />
+                <input type="search" placeholder="Type of search" />
+                <input type="tel" placeholder="Type of tel" />
+                <input type="time" placeholder="Type of time" />
+                <input type="url" placeholder="Type of url" />
+                <input type="week" placeholder="Type of week" />
 
+                <input type="checkbox" id="neutral-check" placeholder="Type of checkbox" />
+                <label for="neutral-check">Unchecked</label>
+                <input type="checkbox" id="checked-check" checked="true" placeholder="Type of checkbox" />
+                <label for="checked-check">Checked</label>
+                <input type="checkbox" disabled="disabled" placeholder="Type of checkbox" />
+                <label>Disabled</label>
+                <input type="checkbox" checked="true" disabled="disabled" placeholder="Type of checkbox" />
+                <label>Disabled checked</label>
 
+                <div>
+                    <input type="radio" id="banana" name="fruit" value="banana" />
+                    <label for="banana">Banana</label>
+                </div>
 
-                <input type="range" placeholder="Type of range">
-                <input type="search" placeholder="Type of search">
-                <input type="tel" placeholder="Type of tel">
-                <input type="time" placeholder="Type of time">
-                <input type="url" placeholder="Type of url">
-                <input type="week" placeholder="Type of week">
+                <div>
+                    <input type="radio" id="apple" name="fruit" value="apple" checked />
+                    <label for="apple">Apple</label>
+                </div>
+                
+                <div>
+                    <input type="radio" id="ham" name="meat" value="ham" disabled />
+                    <label for="ham">Ham</label>
+                </div>
+                <div>
+                    <input type="radio" id="steak" name="meat" value="steak" checked disabled />
+                    <label for="steak">Steak</label>
+                </div>
             </div>
+
             <div class="code column">
                 <textarea name="forms-code" data-codemode="htmlmixed"></textarea>
             </div>
@@ -120,20 +260,37 @@ $table-default-cell-border:         none !default;
         <div class="code-example">
             <div class="code column">
                 <textarea name="input-variables" data-codemode="sass" class="codemirror-me">
-$input-default-border-width:    0.0625rem !default;
-$input-default-border-style:    solid !default;
-$input-default-border-color:    darken($color-gray-medium, 15%) !default;
-$input-default-border:          $input-default-border-width $input-default-border-style $input-default-border-color;
-$input-default-border-radius:   0.375rem !default;
-$input-default-display:         block !default;
-$input-default-font-size:       1.5rem !default;
-$input-default-font-weight:     400 !default;
-$input-default-margin:          $grid-gutter/3 0 !default;
-$input-default-width:           18.75rem !default;
-$input-default-padding:         0.5rem 1rem !default;
-$input-default-transition:      transform 0.05s !default;
-$input-default-max-width:       100% !default;
-$input-default-focus-transform: scale(1.02) !default;
+$input-default-border-width:                0.0625rem !default;
+$input-default-border-style:                solid !default;
+$input-default-border-color:                $color-gray-dark !default;
+$input-default-border:                      $input-default-border-width $input-default-border-style $input-default-border-color;
+$input-default-border-radius:               0 !default;
+$input-default-display:                     block !default;
+$input-default-font-size: 1                 rem !default;
+$input-default-font-weight:                 400 !default;
+$input-default-margin:                      $grid-gutter/3 0 !default;
+$input-default-width:                       18.75rem !default;
+$input-default-padding:                     0.5rem 1rem !default;
+$input-default-max-width:                   100% !default;
+$input-default-text-color:                  $color-white-60 !default;
+$input-default-placeholder-color:           $color-white-40 !default;
+$input-default-bg-color:                    $color-black-40 !default;
+
+$input-hover-bg-color:                      $color-black-60 !default;
+$input-hover-border-color:                  $color-white-solid !default;
+$input-hover-text-color:                    $color-white-80 !default;
+
+$input-focus-bg-color:                      $color-white-solid !default;
+$input-focus-text-color:                    $color-black-80 !default;
+
+$input-active-bg-color:                     $color-white-20 !default;
+$input-active-border-color:                 $color-white-40 !default;
+$input-active-text-color:                   $color-white-80 !default;
+
+$input-disabled-bg-color:                   $color-black-20 !default;
+$input-disabled-text-color:                 $color-black-40 !default;
+$input-disabled-border-color:               $color-gray-dark !default;
+$input-disabled-placeholder-text-color:     $color-black-40 !default;
                 </textarea>
             </div>
         </div>
@@ -153,115 +310,5 @@ $select-default-focus-transform:    scale(1.02) !default;
                 </textarea>
             </div>
         </div>
-        <h3>Buttons
-            <small>(forms.buttons.scss)</small>
-        </h3>
-        <div class="code-example">
-            <div class="preview column">
-                <button>Standard</button>
-                <button class="call-to-action">Standard</button>
-                <button class="alert">Standard</button>
-            </div>
-            <div class="code column">
-                <textarea name="buttons-code" data-codemode="htmlmixed"></textarea>
-            </div>
-        </div>
-        <div class="code-example">
-            <div class="preview column">
-                <button disabled="true">Standard</button>
-                <button disabled="true" class="call-to-action">Standard</button>
-                <button disabled="true" class="alert">Standard</button>
-            </div>
-            <div class="code column">
-                <textarea name="buttons-code" data-codemode="htmlmixed"></textarea>
-            </div>
-        </div>
-        <h4>Button variables</h4>
-        <div class="code-example">
-            <div class="code column">
-                <textarea name="button-variables" data-codemode="sass" class="codemirror-me">
-$button-default-bg-color:           $color-gray-lightest !default;
-$button-default-border:             none !default;
-$button-default-border-radius:      0.375rem !default;
-$button-default-box-shadow:         0.125rem 0.125rem 0 darken($color-gray-medium, 15%) !default;
-$button-default-font-size:          1rem !default;
-$button-default-font-weight:        400 !default;
-$button-default-margin:             $grid-gutter/3 0 !default;
-$button-default-padding:            0 1rem !default;
-$button-default-transition:         transform 0.1s;
-$button-default-transform:          scale(1) !default;
-$button-default-active-transform:   scale(0.975) !default;
-$button-primary-bg-color:           $color-brand-light-blue !default;
-$button-primary-box-shadow:         0.125rem 0.125rem 0 darken($color-brand-light-blue, 20%) !default;
-$button-primary-text-color:         #fff !default;
-$button-alert-bg-color:             $color-brand-yellow !default;
-$button-alert-box-shadow:           0.125rem 0.125rem 0 darken($color-brand-yellow, 20%) !default;
-$button-default-height:             2.5rem !default;
-$button-default-height-active:      2.4rem !default;
-$button-default-letter-spacing:     0.03125rem !default;
-                </textarea>
-            </div>
-        </div>
-    </div>
-    <div class="example-box">
-        <h2>Typography
-            <small>(typography.scss)</small>
-        </h2>
-        <div class="code-example">
-            <div class="preview column">
-                <h1>This is Heading 1</h1>
-                <h2>This is Heading 2</h2>
-                <h3>This is Heading 3</h3>
-                <h4>This is Heading 4</h4>
-                <h5>This is Heading 5</h5>
-                <p>And last, but not least, I'm a paragraph. You can see some more text here.</p>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab quidem dolorem, impedit ad deserunt nostrum
-                    quos nisi, atque illum blanditiis nulla, reiciendis ipsa illo nesciunt eius eos pariatur autem expedita.</p>
-            </div>
-            <div class="code column">
-                <textarea name="elements-code" data-codemode="htmlmixed"></textarea>
-            </div>
-        </div>
-        <h3>Typography variables</h3>
-        <div class="code-example">
-            <div class="code column">
-                <textarea name="elements-variable" data-codemode="sass" class="codemirror-me">
-/* Variables from Settings/elements.typography.scss */
-
-$font-family-default:       'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif !default;
-$font-family-default-sm:    "SF Pro Display", "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
-
-$font-size-default:         100% !default;
-$font-size-h1:              2.875rem !default;
-$font-size-h2:              2.125rem !default;
-$font-size-h3:              1.5rem !default;
-$font-size-h4:              1.25rem !default;
-$font-size-h5:              1.125rem !default;
-$font-wight-h1:             200 !default;
-$font-wight-h2:             200 !default;
-$font-wight-h3:             300 !default;
-$font-wight-h4:             400 !default;
-$font-wight-h5:             600 !default;
-
-$body-line-height:          1.15 !default;
-
-/* -------------------------------------  */
-
-/* Variables in Elements/typography.scss */
-
-$margin-bottom-paragraph:   $grid-gutter !default;
-$margin-bottom-h1:          $margin-bottom-paragraph !default;
-$margin-bottom-h2:          $margin-bottom-paragraph !default;
-$margin-bottom-h3:          $margin-bottom-paragraph !default;
-$margin-bottom-h4:          $margin-bottom-paragraph !default;
-$margin-bottom-h5:          $margin-bottom-paragraph !default;
-$line-height-heading:       1.6em !default;
-$paragrph-font-size:        1rem !default;
-
-/* -------------------------------------  */
-                </textarea>
-            </div>
-        </div>
-
     </div>
 </section>

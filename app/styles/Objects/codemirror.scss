@@ -1,7 +1,16 @@
-@import "~codemirror/lib/codemirror";
+@import '~codemirror/lib/codemirror';
+@import '~codemirror/theme/zenburn';
 .CodeMirror {
-    border: 1px solid #ddd;
     font-size: 16px;
     height: auto;
     width: 100%;
+    padding: $grid-gutter/2;
+}
+.cm-s-zenburn {
+    background-color: rgba(0, 0, 0, 0.25);
+    padding: 0;
+    border-radius: 0.5rem;
+    .CodeMirror-gutters {
+        background-color: #222 !important;
+    }
 }

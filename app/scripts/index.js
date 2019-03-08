@@ -40,7 +40,8 @@ function generateEditor(element, codeMode, format) {
     var editor = CodeMirror.fromTextArea(element, {
         mode: codeMode,
         lineNumbers: true,
-        readOnly: true
+        readOnly: true,
+        theme: 'zenburn'
     });
     if (format) {
         editor.autoFormatRange({ line: 0, ch: 0 }, { line: editor.lineCount() });

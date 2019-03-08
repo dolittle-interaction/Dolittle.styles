@@ -1,20 +1,24 @@
 .main-header {
     @extend %flex-container;
     align-items: center;
-    background: #fff;
-    border-bottom: 0.0625rem solid $color-brand-orange;
+    background: $color-gray-darkest;
     padding: $grid-gutter;
     overflow: hidden;
-    height: 6.875rem;
+    height: 3rem;
     position: relative;
-    @include media-bp-min(desktop) {
-        position: fixed;
-        z-index: 100;
-    }
+    position: fixed;
+    z-index: 100;
+
     .site-logo {
         display: block;
-        flex: 0 1 15rem;
+        flex: 0 1 auto;
         max-width: 100%;
+        height: 1.75rem;
+        img,
+        svg {
+            max-height: 100%;
+            height: 100%;
+        }
     }
     .hamburger {
         margin-right: 2rem;
@@ -32,7 +36,7 @@
         .line {
             width: 100%;
             height: 0.125rem;
-            background-color: $color-brand-dark-blue;
+            background-color: $color-white-solid;
             display: block;
             margin: 0.375rem auto 0;
             transition: all 0.3s ease-in-out;
@@ -57,11 +61,11 @@
         position: absolute;
         text-align: center;
         font-family: 'Courier New', Courier, monospace;
-        top: $grid-gutter;
-        right: -$grid-gutter*2;
-        background-color: $color-brand-light-blue;
-        color: #fff;
-        padding: $grid-gutter/2 $grid-gutter*5;
-        transform: rotate(45deg);      
+        top: 0.25rem;
+        right: $grid-gutter;
+        background-color: $color-brand-yellow;
+        color: $color-gray-darkest;
+        font-size: 1rem;
+        padding: $grid-gutter/3 $grid-gutter;
     }
 }
