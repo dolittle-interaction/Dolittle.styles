@@ -95,3 +95,62 @@ input {
         @extend button;
     }
 }
+.checkbox {
+    input[type='checkbox'] {
+        visibility: hidden;
+        position: absolute;
+        + label {
+            display: inline-block;
+            position: relative;
+            line-height: 1.75rem;
+            vertical-align: middle;
+            &::before {
+                content: '';
+                border: 0.125rem solid $color-white-80;
+                display: inline-block;
+                height: 1.25rem;
+                margin-right: 0.4rem;
+                transform: translateY(0.25rem);
+                width: 1.25rem;
+            }
+        }
+        &:checked {
+            + label {
+                &::before {
+                    border: none;
+                    background: $color-secondary-blue no-repeat center center;
+                    background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTIiIHZpZXdCb3g9IjAgMCAxNiAxMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTE1LjA2MDUgMC41NjA1NDdMMTUuOTM5NSAxLjQzOTQ1TDUuNSAxMS44ODg3TDAuMDYwNTQ2OSA2LjQzOTQ1TDAuOTM5NDUzIDUuNTYwNTVMNS41IDEwLjExMTNMMTUuMDYwNSAwLjU2MDU0N1oiIGZpbGw9IndoaXRlIi8+PC9zdmc+);
+                }
+            }
+        }
+        &[disabled] {
+            + label {
+                color: $color-white-40;
+                &::before {
+                    border-color: $color-white-40;
+                }
+            }
+            &:checked {
+                + label {
+                    &::before {
+                        border: 0.125rem solid $color-white-solid;
+                        background-color: transparent;
+                        opacity: 0.4;
+                    }
+                }
+            }
+        }
+    }
+}
+.radio-button {
+    input[type='radio'] {
+        display: inline-block;
+        &[checked] {
+        }
+        &[disabled] {
+        }
+        + label {
+            display: inline-block;
+        }
+    }
+}

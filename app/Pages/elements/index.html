@@ -206,7 +206,6 @@ $button-active-outline:             none !default;
                 <input type="button" placeholder="Type of button" value="Button" />
                 <input type="reset" placeholder="Type of reset" />
                 <input type="submit" placeholder="Type of submit" />
-                <input type="checkbox" placeholder="Type of checkbox" />
                 <input type="color" placeholder="Type of color" />
                 <input type="date" placeholder="Type of date" />
                 <input type="datetime" placeholder="Type of datetime" />
@@ -217,17 +216,56 @@ $button-active-outline:             none !default;
                 <input type="month" placeholder="Type of month" />
                 <input type="number" placeholder="Type of number" />
                 <input type="password" placeholder="Type of password" />
-                <label> <input type="radio" name="styles" />Styles 1</label>
-                <label> <input type="radio" name="styles" />Styles 2</label>
-                <label> <input type="radio" name="styles" />Styles 3</label>
-
                 <input type="range" placeholder="Type of range" />
                 <input type="search" placeholder="Type of search" />
                 <input type="tel" placeholder="Type of tel" />
                 <input type="time" placeholder="Type of time" />
                 <input type="url" placeholder="Type of url" />
                 <input type="week" placeholder="Type of week" />
+
+
+
+                <div class="checkbox">
+                    <input type="checkbox" id="neutral" placeholder="Type of checkbox" /> 
+                    <label for="neutral">Unchecked</label>
+                </div>
+                <div class="checkbox">
+                    <input type="checkbox" id="checked" checked="true" placeholder="Type of checkbox" /> 
+                    <label for="checked">Checked</label>
+                </div>
+                <div class="checkbox">
+                    <input type="checkbox" disabled="disabled" placeholder="Type of checkbox" /> 
+                    <label>Disabled</label> 
+                </div>
+                <div class="checkbox">
+                    <input type="checkbox" checked="true" disabled="disabled" placeholder="Type of checkbox" /> 
+                    <label>Disabled checked</label> 
+                </div>
+
+
+
+
+                <div class="radio-button">
+                    <input type="radio" name="styles" />
+                    <label>Radio button 1</label>
+                </div>
+                <div class="radio-button">
+                    <input type="radio" checked="true" name="styles" />
+                    <label>Radio button 2</label>
+                </div>
+                <div class="radio-button">
+                    <input type="radio" disabled="true" name="styles" />
+                    <label>Radio button 3</label>
+                </div>
+
+
+
+
+
             </div>
+
+
+
             <div class="code column">
                 <textarea name="forms-code" data-codemode="htmlmixed"></textarea>
             </div>
