@@ -30,6 +30,28 @@ $input-disabled-text-color: $color-black-40 !default;
 $input-disabled-border-color: $color-gray-dark !default;
 $input-disabled-placeholder-text-color: $color-black-40 !default;
 
+$track-w: 100%;
+$track-h: 0.125rem;
+$thumb-w: 0.5rem;
+$thumb-h: 1.5rem;
+
+@mixin track() {
+    box-sizing: border-box;
+    border: none;
+    width: $track-w;
+    height: $track-h;
+    background: $color-white-40;
+    position: relative;
+}
+
+@mixin thumb() {
+    height: $thumb-h;
+    width: $thumb-w;
+    border-radius: 0.25rem;
+    background: $color-secondary-blue;
+    cursor: pointer;
+}
+
 input {
     &[type='text'],
     &[type='date'],
@@ -94,6 +116,7 @@ input {
     &[type='submit'] {
         @extend button;
     }
+
     &[type='checkbox'],
     &[type='radio'] {
         visibility: hidden;
@@ -177,6 +200,54 @@ input {
                     }
                 }
             }
+        }
+    }
+
+    &[type='range'] {
+        &,
+        &::-webkit-slider-thumb {
+            -webkit-appearance: none;
+        }
+        width: $track-w; /* Specific width is required for Firefox. */
+        height: $thumb-h;
+        background: transparent; /* Otherwise white in Chrome */
+        outline: none;
+        padding: 0;
+        font: 1em/1 arial, sans-serif;
+
+        &::-webkit-slider-runnable-track {
+            @include track;
+        }
+        &::-moz-range-track {
+            @include track;
+        }
+        &::-ms-track {
+            @include track;
+        }
+        &::-webkit-slider-thumb {
+            margin-top: -0.7rem;
+            @include thumb;
+        }
+        &::-moz-range-thumb {
+            @include thumb;
+        }
+        &::-ms-thumb {
+            @include thumb;
+        }
+        &:focus {
+            outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+        }
+        &::-ms-tooltip {
+            display: none;
+        }
+        &::-ms-track {
+            width: 100%;
+            cursor: pointer;
+
+            /* Hides the slider so custom styles can be added */
+            background: transparent;
+            border-color: transparent;
+            color: transparent;
         }
     }
 }
