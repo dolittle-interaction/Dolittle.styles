@@ -6,3 +6,11 @@
     width: 100%;
     padding: $grid-gutter/2;
 }
+.cm-s-zenburn {
+    background-color: rgba(0, 0, 0, 0.25);
+    padding: 0;
+    border-radius: 0.5rem;
+    .CodeMirror-gutters {
+        background-color: #222 !important;
+    }
+}
