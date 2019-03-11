@@ -11,19 +11,23 @@ weight: 401
 ## Variables for SCSS
 
 ```scss
-$table-default-width:               100% !default;
-$table-default-max-width:           100% !default;
-$table-default-margin-top:          $grid-gutter !default;
-$table-default-border-collapse:     collapse !default;
-$table-head-row-border-bottom:      0.0625rem solid $color-gray-medium !default;
-$table-head-cell-font-size:         1rem !default;
-$table-head-cell-font-weight:       normal !default;
-$table-head-cell-padding-bottom:    $grid-gutter/3 !default;
-$table-head-cell-text-transform:    uppercase !default;
-$table-bode-row-alternate-bg-color: darken($color-gray-lightest, 1%) !default;
-$table-default-cell-padding:        $grid-gutter/8 $grid-gutter/2 !default;
-$table-default-cell-text-align:     left !default;
-$table-default-cell-border:         none !default;
+$table-default-width:                   100% !default;
+$table-default-max-width:               100% !default;
+$table-default-margin-top:              $grid-gutter !default;
+$table-default-border-collapse:         collapse !default;
+
+$table-head-row-border-bottom:          .0625rem solid $color-gray-medium !default;
+$table-head-cell-font-size:             1rem !default;
+$table-head-cell-font-weight:           normal !default;
+$table-head-cell-padding-bottom:        $grid-gutter/3 !default;
+$table-head-cell-text-transform:        uppercase !default;
+
+$table-body-row-bg-color:               $color-black-20 !default;
+$table-body-row-alternate-bg-color:     $color-black-60 !default;
+
+$table-default-cell-padding:            $grid-gutter/8 $grid-gutter/2 !default;
+$table-default-cell-text-align:         left !default;
+$table-default-cell-border:             none !default;
 ```
 
 ## Example markup
