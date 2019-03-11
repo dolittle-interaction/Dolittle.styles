@@ -11,8 +11,8 @@
         <h2>Base variables
             <small>(base.scss)</small>
         </h2>
-        <h3>Breakpoints
-            <small>(breakpoints.scss)</small>
+        <h3>Layout
+            <small>(base.layout.scss)</small>
         </h3>
         <div class="code-example">
             <div class="code column">
@@ -24,27 +24,39 @@ $desktop:           64rem !default;
 $desktop-lg:        85.375rem !default;
 $desktop-xl:        120rem !default;
 $grid_breakpoints: (
-    phone: $phone,
-    tablet: $tablet,
-    tablet-landscape: $tablet-landscape,
-    desktop: $desktop,
-    desktop-lg: $desktop-lg,
-    desktop-xl: $desktop-xl
-) !default;
+                    phone: $phone,
+                    tablet: $tablet,
+                    tablet-landscape: $tablet-landscape,
+                    desktop: $desktop,
+                    desktop-lg: $desktop-lg,
+                    desktop-xl: $desktop-xl
+                   ) !default;
+
+$grid-gutter:       1.5rem !default;
                 </textarea>
             </div>
         </div>
         <h3>Colors
-            <small>(colors.scss)</small>
+            <small>(base.colors.scss)</small>
         </h3>
         <div class="code-example">
             <div class="code column">
                 <textarea name="settings-breakpoints-variables" data-codemode="sass" class="codemirror-me">
-$color-gray-darkest:            #222222  !default;
+$color-gray-darkest:            #222222 !default;
 $color-gray-dark:               #828282 !default;
 $color-gray-medium:             #bdbdbd !default;
 $color-gray-light:              #e0e0e0 !default;
 $color-gray-lightest:           #f2f2f2 !default;
+
+$color-black-20:                rgba(0, 0, 0, 0.4);
+$color-black-40:                rgba(0, 0, 0, 0.4);
+$color-black-60:                rgba(0, 0, 0, 0.6);
+$color-black-80:                rgba(0, 0, 0, 0.8);
+$color-white-20:                rgba(255, 255, 255, 0.2);
+$color-white-40:                rgba(255, 255, 255, 0.4);
+$color-white-60:                rgba(255, 255, 255, 0.6);
+$color-white-80:                rgba(255, 255, 255, 0.8);
+$color-white-solid:             rgba(255, 255, 255, 1);
 
 $color-brand-orange:            #ff4b00 !default;
 $color-brand-dark-blue:         #004366 !default;
@@ -54,10 +66,10 @@ $color-brand-gray:              #525a63 !default;
 
 $color-secondary-dark-green:    #219653 !default;
 $color-secondary-light-greeen:  #6fcf97 !default;
-$color-secondary-blue:          #2d9cdb !default;
+$color-secondary-blue:          #0078D7 !default;
 $color-secondary-purple:        #bb6bd9 !default;
 $color-secondary-dark-red:      #a81414 !default;
-$color-secondary-light-red:     #ec4c4c !default;
+$color-secondary-light-red:     #ec4c4c !default;                    
                 </textarea>
             </div>
         </div>
@@ -73,8 +85,10 @@ $color-secondary-light-red:     #ec4c4c !default;
             <div class="code column">
                 <textarea name="settings-breakpoints-variables" data-codemode="sass" class="codemirror-me">
 $body-background-color:     $color-gray-lightest !default;
-$body-text-color:           $color-gray-darkest !default;
-$background-body:           $body-background-color no-repeat !default;                        
+$body-background-image:     none !default;
+$body-background-size:      unset !default;
+$body-text-color:           $color-gray-lightest !default;
+$background-body:           $body-background-color $body-background-image no-repeat !default;
                 </textarea>
             </div>
         </div>
@@ -98,13 +112,24 @@ $font-size-h2:              2.125rem !default;
 $font-size-h3:              1.5rem !default;
 $font-size-h4:              1.25rem !default;
 $font-size-h5:              1.125rem !default;
+$font-size-p:               1rem !default;
 $font-wight-h1:             200 !default;
 $font-wight-h2:             200 !default;
 $font-wight-h3:             300 !default;
 $font-wight-h4:             400 !default;
-$font-wight-h5:             600 !default;
+$font-wight-h5:             400 !default;
+$font-wight-p:              400 !default;
 
 $body-line-height:          1.15 !default;
+
+$margin-bottom-paragraph:   $grid-gutter !default;
+$margin-bottom-h1:          $margin-bottom-paragraph !default;
+$margin-bottom-h2:          $margin-bottom-paragraph !default;
+$margin-bottom-h3:          $margin-bottom-paragraph !default;
+$margin-bottom-h4:          $margin-bottom-paragraph !default;
+$margin-bottom-h5:          $margin-bottom-paragraph !default;
+$line-height-heading:       1.6em !default;
+$paragraph-font-size:       1rem !default;
                 </textarea>
             </div>
         </div>
@@ -114,12 +139,19 @@ $body-line-height:          1.15 !default;
             <small>(objects.scss)</small>
         </h2>
         <h3>Grid
-            <small>objects.grid.scss</small>
+            <small>objects.typography.scss</small>
         </h3>
         <div class="code-example">
             <div class="code column">
                 <textarea name="settings-breakpoints-variables" data-codemode="sass" class="codemirror-me">
-$grid-gutter:1.5rem !default;
+$font-size-base:            1rem !default;
+$font-wight-base:           600 !default;
+$font-size-base-alt:        1rem !default;
+$font-wight-base-alt:       700 !default;
+$font-size-caption:         0.75rem !default;
+$font-wight-caption:        300 !default;
+$font-size-caption-alt:     0.8125rem !default;
+$font-wight-caption-alt:    300 !default;
                 </textarea>
             </div>
         </div>
