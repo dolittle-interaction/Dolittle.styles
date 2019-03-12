@@ -12,6 +12,10 @@ We have our own frontend style framework. 'Yet another framework!?' you say? Yes
 
 The framework will aim for styling LOB applications in a quick way, at the same time not blocking you from adding more of your own flavour upon it. It's based on an architecture/methodology called ITCSS, by [Harry Robberts](https://csswizardry.com). ITCSS is a way of structuring your (S)CSS files that makes it easier to maintaine and manage large or long living projects.
 
+{{%notice warning %}}
+This documentation is still work in progress. For complete documentation on Styles, please visit [Dolittle styles demo page](https://styles.dolittle.io)
+{{%/notice%}}
+
 ## ITCSS
 
 It's recommended that you take a couple of minutes to get to know ITCSS. Here's a list for you.

@@ -53,21 +53,35 @@ These styles are added directly on the different elements without any classes or
 ### Variables for SCSS
 
 ```scss
-$input-default-border-width:    0.0625rem !default;
-$input-default-border-style:    solid !default;
-$input-default-border-color:    darken($color-gray-medium, 15%) !default;
-$input-default-border:          $input-default-border-width $input-default-border-style $input-default-border-color;
-$input-default-border-radius:   0.375rem !default;
-$input-default-display:         block !default;
-$input-default-font-size:       1.5rem !default;
-$input-default-font-weight:     400 !default;
-$input-default-margin:          $grid-gutter/3 0 !default;
-$input-default-width:           18.75rem !default;
-$input-default-padding:         0.5rem 1rem !default;
-$input-default-transition:      transform 0.05s !default;
-$input-default-max-width:       100% !default;
-$input-default-focus-transform: scale(1.02) !default;
+$input-default-border-width: 0.0625rem !default;
+$input-default-border-style: solid !default;
+$input-default-border-color: $color-gray-dark !default;
+$input-default-border: $input-default-border-width $input-default-border-style $input-default-border-color;
+$input-default-border-radius: 0 !default;
+$input-default-display: block !default;
+$input-default-font-size: 1rem !default;
+$input-default-font-weight: 400 !default;
+$input-default-margin: $grid-gutter/3 0 !default;
+$input-default-width: 18.75rem !default;
+$input-default-padding: 0.5rem 1rem !default;
+$input-default-max-width: 100% !default;
+$input-default-text-color: $color-white-60 !default;
+$input-default-placeholder-color: $color-white-40 !default;
+$input-default-bg-color: $color-black-40 !default;
+
+$input-hover-bg-color: $color-black-60 !default;
+$input-hover-border-color: $color-white-solid !default;
+$input-hover-text-color: $color-white-80 !default;
+
+$input-focus-bg-color: $color-white-solid !default;
+$input-focus-text-color: $color-black-80 !default;
+
+$input-active-bg-color: $color-white-20 !default;
+$input-active-border-color: $color-white-40 !default;
+$input-active-text-color: $color-white-80 !default;
+
+$input-disabled-bg-color: $color-black-20 !default;
+$input-disabled-text-color: $color-black-40 !default;
+$input-disabled-border-color: $color-gray-dark !default;
+$input-disabled-placeholder-text-color: $color-black-40 !default;
 ```
-
-## Buttons
-

@@ -10,7 +10,9 @@ weight: 12
 ### Design <small>(generic.design.scss)</small>
 
 ```scss
-$body-background-color: $color-gray-lightest !default;
-$body-text-color:       $color-gray-darkest !default;
-$background-body:       $body-background-color no-repeat !default;
+$body-background-color:     $color-gray-lightest !default;
+$body-background-image:     none !default;
+$body-background-size:      unset !default;
+$body-text-color:           $color-gray-lightest !default;
+$background-body:           $body-background-color $body-background-image no-repeat !default;
 ```
