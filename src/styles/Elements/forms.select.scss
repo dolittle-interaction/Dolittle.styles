@@ -1,24 +1,96 @@
-$select-default-border: 0.0625rem solid darken($color-gray-medium, 15%) !default;
-$select-default-box-shadow: 0.125rem 0.125rem 0 darken($color-gray-medium, 15%) !default;
-$select-default-height: 2.7rem !default;
-$select-default-margin: $grid-gutter/3 0 $grid-gutter/2 !default;
-$select-default-max-width: 100% !default;
-$select-default-padding: 0.5rem 1rem !default;
-$select-default-transition: transform 0.05s !default;
+$select-default-border-width: 0.0625rem !default;
+$select-default-border-style: solid !default;
+$select-default-border-color: $color-white-40 !default;
+$select-default-border: $select-default-border-width $select-default-border-style $select-default-border-color !default;
+$select-default-bg-color: $color-black-40 !default;
+$select-default-bg-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iOCIgdmlld0JveD0iMCAwIDEyIDgiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTYgNi4wOTc2NkwxMS4zNjEzIDAuNzM2MzI4TDExLjg4ODcgMS4yNjM2N0w2IDcuMTUyMzRMMC4xMTEzMjggMS4yNjM2N0wwLjYzODY3MiAwLjczNjMyOEw2IDYuMDk3NjZaIiBmaWxsPSJ3aGl0ZSIgZmlsbC1vcGFjaXR5PSIwLjgiLz48L3N2Zz4=) !default;
+$select-default-border-radius: 0 !default;
+$select-default-display: block !default;
+$select-default-font-size: 1rem !default;
+$select-default-font-weight: 400 !default;
+$select-default-margin: $grid-gutter/3 0 !default;
 $select-default-width: 18.75rem !default;
-$select-default-focus-transform: scale(1.02) !default;
+$select-default-padding: 0.75rem 1rem !default;
+$select-default-max-width: 100% !default;
+$select-default-text-color: $color-white-60 !default;
+
+$select-hover-bg-color: $color-black-60 !default;
+$select-hover-bg-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iNyIgdmlld0JveD0iMCAwIDEyIDciIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik02IDUuMzYxMzNMMTEuMzYxMyAwTDExLjg4ODcgMC41MjczNDRMNiA2LjQxNjAyTDAuMTExMzI4IDAuNTI3MzQ0TDAuNjM4NjcyIDBMNiA1LjM2MTMzWiIgZmlsbD0id2hpdGUiLz48L3N2Zz4=) !default;
+$select-hover-border-color: $color-white-60 !default;
+$select-hover-text-color: $color-white-solid !default;
+
+$select-focus-bg-color: $color-white-20 !default;
+$select-focus-border-color: $color-white-40 !default;
+$select-focus-text-color: $color-white-80 !default;
+
+$select-active-bg-color: $color-white-20 !default;
+$select-active-border-color: $color-white-40 !default;
+$select-active-text-color: $color-white-80 !default;
+
+$select-disabled-bg-color: $color-white-20 !default;
+$select-disabled-bg-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iOCIgdmlld0JveD0iMCAwIDEyIDgiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik02IDYuMDk3NjZMMTEuMzYxMyAwLjczNjMyOEwxMS44ODg3IDEuMjYzNjdMNiA3LjE1MjM0TDAuMTExMzI4IDEuMjYzNjdMMC42Mzg2NzIgMC43MzYzMjhMNiA2LjA5NzY2WiIgZmlsbD0id2hpdGUiIGZpbGwtb3BhY2l0eT0iMC40Ii8+PC9zdmc+) !default;
+$select-disabled-text-color: $color-white-40 !default;
+$select-disabled-border-color: $color-white-20 !default;
+
+$optgroup-bg-color: $color-gray-darkest !default;
+$optgroup-text-color: $select-default-text-color !default;
+
+$option-bg-color: $color-gray-darkest !default;
+$option-text-color: $select-default-text-color !default;
 
 select {
+    appearance: none; /* remove default arrow */
+    background: $select-default-bg-color 96% center no-repeat; /* add custom arrow */
+    background-image: $select-default-bg-image;
     border: $select-default-border;
-    box-shadow: $select-default-box-shadow;
-    height: $select-default-height;
+    border-radius: $select-default-border-radius;
+    color: $select-default-text-color;
+    display: $select-default-display;
+    font-size: $select-default-font-size;
+    font-weight: $select-default-font-weight;
     margin: $select-default-margin;
     max-width: $select-default-max-width;
     padding: $select-default-padding;
-    transition: $select-default-transition;
     width: $select-default-width;
-    &:active,
-    &:focus {
-        transform: $select-default-focus-transform;
+    
+    &::-ms-expand {
+        display: none; /* hide the default arrow in ie10 and ie11 */
     }
+    
+    &:hover {
+        background-color: $select-hover-bg-color;
+        background-image: $select-hover-bg-image;
+        border-color: $select-hover-border-color;
+        color: $select-hover-text-color;
+    }
+    
+    &:focus,
+    &:hover:focus {
+        background-color: $select-focus-bg-color;
+        border-color: $select-focus-border-color;
+        color: $select-focus-text-color;
+    }
+    
+    &:active,
+    &:hover:active,
+    &:focus:hover:active {
+        background-color: $select-active-bg-color;
+        border-color: $select-active-border-color;
+        color: $select-active-text-color;
+    }
+    &[disabled] {
+        background-color: $select-disabled-bg-color;
+        background-image: $select-disabled-bg-image;
+        color: $select-disabled-text-color;
+        border-color: $select-disabled-border-color;
+    }
+}
+optgroup{
+    background-color: $optgroup-bg-color;
+    color: $optgroup-text-color;
+    
+}
+option {
+    background-color: $option-bg-color;
+    color: $option-text-color;
 }

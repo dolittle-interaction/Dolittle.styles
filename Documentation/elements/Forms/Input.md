@@ -1,20 +1,14 @@
 ---
-title: Forms
-description: Styling for form elements.
+title: Input
+description: Styling for input elements.
 author: Vidar A. Westrum
-keywords: styles, design, css
-weight: 402
+keywords: styles, design, css, input
+weight: 4001
 ---
 
-# Forms <small>(forms.scss)</small>
+# Inputs <small>(forms.input.scss)</small>
 
-forms.scss imports the following partials.
-
-These styles are added directly on the different elements without any classes or modifications.
-
-## Inputs <small>(forms.input.scss)</small>
-
-### Example markup
+## Example markup
 
 ```html
 <label>This is a label for the below text field
@@ -50,7 +44,7 @@ These styles are added directly on the different elements without any classes or
 <input type="week" placeholder="Type of week">
 ```
 
-### Variables for SCSS
+## Variables for SCSS
 
 ```scss
 $input-default-border-width: 0.0625rem !default;
@@ -63,7 +57,7 @@ $input-default-font-size: 1rem !default;
 $input-default-font-weight: 400 !default;
 $input-default-margin: $grid-gutter/3 0 !default;
 $input-default-width: 18.75rem !default;
-$input-default-padding: 0.5rem 1rem !default;
+$input-default-padding: 0.75rem 1rem !default;
 $input-default-max-width: 100% !default;
 $input-default-text-color: $color-white-60 !default;
 $input-default-placeholder-color: $color-white-40 !default;

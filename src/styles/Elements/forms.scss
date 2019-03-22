@@ -3,7 +3,11 @@
 @import "forms.select";
 
 $label-default-display: block !default;
+$label-disabled-text-color: $color-white-40 !default;
 
 label {
     display: $label-default-display;
+    &.disabled{
+        color: $label-disabled-text-color;
+    }
 }
