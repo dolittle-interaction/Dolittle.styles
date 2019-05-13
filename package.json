@@ -1,14 +1,14 @@
 {
     "name": "@dolittle/styles",
     "version": "3.0.2",
-    "description": "The styles from Dolittle",
+    "description": "A base style set from Dolittle",
     "homepage": "https://dolittle.io",
     "main": "main.js",
     "author": "Dolittle",
     "license": "MIT",
     "repository": {
         "type": "git",
-        "url": "https://github.com/dolittle-interaction/Dolittle.styles"
+        "url": "https://github.com/dolittle-interaction/Styles"
     },
     "scripts": {
         "start": "node node_modules/webpack-dev-server/bin/webpack-dev-server.js"
