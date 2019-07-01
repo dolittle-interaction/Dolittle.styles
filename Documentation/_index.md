@@ -11,7 +11,7 @@ repository: https://github.com/dolittle-interaction/Styles
 
 We have our own frontend style framework. 'Yet another framework!?' you say? Yes. True enough. What will make this different from the other frameworks you know, is that this will be smaller, contain less components, and be more opiniated on styling directly on elements. Thus, you don't need to add classes to every single element you are using, to get it styled.
 
-The framework will aim for styling LOB applications in a quick way, at the same time not blocking you from adding more of your own flavour upon it. It's based on an architecture/methodology called ITCSS, by [Harry Robberts](https://csswizardry.com). ITCSS is a way of structuring your (S)CSS files that makes it easier to maintaine and manage large or long living projects.
+The framework will aim for styling LOB applications in a quick way, at the same time not blocking you from adding more of your own flavour upon it. It's based on an architecture/methodology called ITCSS, by [Harry Roberts](https://csswizardry.com). ITCSS is a way of structuring your (S)CSS files that makes it easier to maintaine and manage large or long living projects.
 
 {{%notice warning %}}
 This documentation is still work in progress. For complete documentation on Styles, please visit [Dolittle styles demo page](https://styles.dolittle.io)
