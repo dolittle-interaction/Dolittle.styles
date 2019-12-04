@@ -1,4 +1,6 @@
 $acrylic-bg-color: rgba(0, 0, 0, 0.6) !default;
+$acrylic-bg-image: url('https://picsum.photos/2000/1500') !default;
+$acrylic-bg:  $acrylic-bg-color $acrylic-bg-image fixed center !default;
 $acrylic-filter: blur(5rem) !default;
 $acrylic-filter-blur-amount: 8px !default;
 $acrylic-filter-ie-hack: 8 !default;
@@ -10,6 +12,9 @@ $acrylic-box-shadow: 0 0 3px rgba(#000, 0.1) !default;
     padding: $grid-gutter;
 
     &::before {
+        background:$acrylic-bg;
+        background-blend-mode: exclusion;
+        background-size: cover;
         content: '';
         position: absolute;
         left: -$acrylic-filter-blur-amount;
@@ -17,19 +22,18 @@ $acrylic-box-shadow: 0 0 3px rgba(#000, 0.1) !default;
         right: -$acrylic-filter-blur-amount;
         bottom: -$acrylic-filter-blur-amount;
         z-index: -1;
-        background-blend-mode: exclusion;
         filter: blur($acrylic-filter-blur-amount);
         filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius='$acrylic-filter-ie-hack');
     }
     &::after {
         content: '';
+        box-shadow: $acrylic-box-shadow;
+        background-color: $acrylic-bg-color;
         position: absolute;
         left: 0;
         top: 0;
         right: 0;
         bottom: 0;
         z-index: -1;
-        box-shadow: $acrylic-box-shadow;
-        background-color: $acrylic-bg-color;
     }
 }
