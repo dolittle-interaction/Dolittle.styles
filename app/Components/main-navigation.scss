@@ -1,4 +1,4 @@
-$side_bar-width: 20rem;
+$side_bar-width: 0;
 $side_bar-expanded-width: 20rem;
 .main-navigation {
     position: fixed;
@@ -16,6 +16,7 @@ $side_bar-expanded-width: 20rem;
     &.expanded {
         box-shadow: 0.0625rem 0 1rem rgba(0, 0, 0, 0.4);
         transform: translate(0, 0);
+        width: $side_bar-expanded-width;
     }
     a {
         color: $color-gray-lightest;
@@ -31,12 +32,9 @@ $side_bar-expanded-width: 20rem;
     header {
         padding: $grid-gutter/2;
     }
-
-    @include media-bp-min(tablet) {
-        width: 20rem;
-    }
+    
     @include media-bp-min(desktop) {
+        width: $side_bar-expanded-width;
         transform: translate(0, 0);
-        top: 3rem;
     }
 }

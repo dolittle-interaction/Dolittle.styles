@@ -1,8 +1,7 @@
 body {
     .acrylic {
         &::before {
-            background: #333 $body-background-image;
-            background-size: cover;
+            background-image:$body-background-image-url;
         }
     }
 }
@@ -15,7 +14,7 @@ body {
         transition: transform $menu-transition-timing;
     }
     &.menu-active {
-        .main-header,
+
         .main-content {
             transform: translateX(70vw);
             @include media-bp-min(tablet) {
