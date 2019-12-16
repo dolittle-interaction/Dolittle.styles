@@ -11,10 +11,16 @@ weight: 4001
 ## Example markup
 
 ```html
-<label>This is a label for the below text field
+<label>This is a label wrapping the text field
     <input type="text" placeholder="Type of text">
 </label>
-<input type="text" placeholder="Type of text" disabled="true">
+<label for="textFor">This is a label using the 'for' attribute</label>
+<input type="text" placeholder="Type of text" id="textFor">
+<label for="textRequired">This text input is required<span>*</span></label>
+<input type="text" placeholder="Type of text" required id="textRequired">
+<label for="textDisabled">This is a label using the 'for' attribute</label>
+<input type="text" placeholder="Type of text" disabled="true" id="textDisabled" />
+<input type="text" placeholder="Type of text" >
 <input type="button" placeholder="Type of button" value="Button">
 <input type="reset" placeholder="Type of reset">
 <input type="submit" placeholder="Type of submit">
@@ -47,35 +53,40 @@ weight: 4001
 ## Variables for SCSS
 
 ```scss
-$input-default-border-width: 0.0625rem !default;
-$input-default-border-style: solid !default;
-$input-default-border-color: $color-gray-dark !default;
-$input-default-border: $input-default-border-width $input-default-border-style $input-default-border-color;
-$input-default-border-radius: 0 !default;
-$input-default-display: block !default;
-$input-default-font-size: 1rem !default;
-$input-default-font-weight: 400 !default;
-$input-default-margin: $grid-gutter/3 0 !default;
-$input-default-width: 18.75rem !default;
-$input-default-padding: 0.75rem 1rem !default;
-$input-default-max-width: 100% !default;
-$input-default-text-color: $color-white-60 !default;
-$input-default-placeholder-color: $color-white-40 !default;
-$input-default-bg-color: $color-black-40 !default;
+$input-default-bg-color:                    $color-black-40 !default;
+$input-default-border-width:                0.0625rem !default;
+$input-default-border-style:                solid !default;
+$input-default-border-color:                $color-gray-dark !default;
+$input-default-border:                      $input-default-border-width $input-default-border-style $input-default-border-color;
+$input-default-border-radius:               0 !default;
+$input-default-display:                     block !default;
+$input-default-font-size:                   1rem !default;
+$input-default-font-weight:                 400 !default;
+$input-default-margin:                      $grid-gutter/3 0 !default;
+$input-default-max-width:                   100% !default;
+$input-default-padding:                     0.75rem 1rem !default;
+$input-default-placeholder-color:           $color-white-40 !default;
+$input-default-text-color:                  $color-white-60 !default;
+$input-default-transform:                   translateZ(0) !default;
+$imput-default-transition:                  border-color 0.2s ease-in-out !default;
+$input-default-width:                       18.75rem !default;
 
-$input-hover-bg-color: $color-black-60 !default;
-$input-hover-border-color: $color-white-solid !default;
-$input-hover-text-color: $color-white-80 !default;
+$input-hover-bg-color:                      $color-black-60 !default;
+$input-hover-border-color:                  $color-white-solid !default;
+$input-hover-text-color:                    $color-white-80 !default;
 
-$input-focus-bg-color: $color-white-solid !default;
-$input-focus-text-color: $color-black-80 !default;
+$input-focus-bg-color:                      $color-white-solid !default;
+$input-focus-text-color:                    $color-black-80 !default;
 
-$input-active-bg-color: $color-white-20 !default;
-$input-active-border-color: $color-white-40 !default;
-$input-active-text-color: $color-white-80 !default;
+$input-active-bg-color:                     $color-white-20 !default;
+$input-active-border-color:                 $color-white-40 !default;
+$input-active-text-color:                   $color-white-80 !default;
 
-$input-disabled-bg-color: $color-black-20 !default;
-$input-disabled-text-color: $color-black-40 !default;
-$input-disabled-border-color: $color-gray-dark !default;
-$input-disabled-placeholder-text-color: $color-black-40 !default;
+$input-disabled-bg-color:                   $color-black-20 !default;
+$input-disabled-border:                     none !default;
+$input-disabled-text-color:                 $color-black-40 !default;
+$input-disabled-placeholder-text-color:     $color-white-40 !default;
+
+$input-required-placeholder-text-color:     $color-white-60 !default;
+$input-required-placeholder-font-weight:    500 !default;
 ```

@@ -1,3 +1,8 @@
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Dolittle. All rights reserved.
+ *  Licensed under the MIT License. See LICENSE in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+$input-default-bg-color: $color-black-40 !default;
 $input-default-border-width: 0.0625rem !default;
 $input-default-border-style: solid !default;
 $input-default-border-color: $color-gray-dark !default;
@@ -7,12 +12,13 @@ $input-default-display: block !default;
 $input-default-font-size: 1rem !default;
 $input-default-font-weight: 400 !default;
 $input-default-margin: $grid-gutter/3 0 !default;
-$input-default-width: 18.75rem !default;
-$input-default-padding: 0.75rem 1rem !default;
 $input-default-max-width: 100% !default;
-$input-default-text-color: $color-white-60 !default;
+$input-default-padding: 0.75rem 1rem !default;
 $input-default-placeholder-color: $color-white-40 !default;
-$input-default-bg-color: $color-black-40 !default;
+$input-default-text-color: $color-white-60 !default;
+$input-default-transform: translateZ(0) !default;
+$imput-default-transition: border-color 0.2s ease-in-out !default;
+$input-default-width: 18.75rem !default;
 
 $input-hover-bg-color: $color-black-60 !default;
 $input-hover-border-color: $color-white-solid !default;
@@ -25,10 +31,14 @@ $input-active-bg-color: $color-white-20 !default;
 $input-active-border-color: $color-white-40 !default;
 $input-active-text-color: $color-white-80 !default;
 
-$input-disabled-bg-color: $color-black-20 !default;
+$input-disabled-bg-color: $color-white-20 !default;
+$input-disabled-border: none !default;
 $input-disabled-text-color: $color-black-40 !default;
-$input-disabled-border-color: $color-gray-dark !default;
-$input-disabled-placeholder-text-color: $color-black-40 !default;
+$input-disabled-placeholder-text-color: $color-white-40 !default;
+
+$input-required-placeholder-text-color: $color-white-60 !default;
+$input-required-placeholder-font-weight: 500 !default;
+
 
 $track-w: 100%;
 $track-h: 0.125rem;
@@ -36,218 +46,224 @@ $thumb-w: 0.5rem;
 $thumb-h: 1.5rem;
 
 @mixin track() {
-    box-sizing: border-box;
-    border: none;
-    width: $track-w;
-    height: $track-h;
-    background: $color-white-40;
-    position: relative;
+  box-sizing: border-box;
+  border: none;
+  width: $track-w;
+  height: $track-h;
+  background: $color-white-40;
+  position: relative;
 }
 
 @mixin thumb() {
-    height: $thumb-h;
-    width: $thumb-w;
-    border-radius: 0.25rem;
-    background: $color-secondary-blue;
-    cursor: pointer;
+  height: $thumb-h;
+  width: $thumb-w;
+  border-radius: 0.25rem;
+  background: $color-secondary-blue;
+  cursor: pointer;
 }
 
 input {
-    &[type='text'],
-    &[type='date'],
-    &[type='datetime'],
-    &[type='datetime-local'],
-    &[type='email'],
-    &[type='month'],
-    &[type='number'],
-    &[type='password'],
-    &[type='search'],
-    &[type='tel'],
-    &[type='time'],
-    &[type='week'],
-    &[type='url'] {
-        background-color: $input-default-bg-color;
-        border: $input-default-border;
-        border-radius: $input-default-border-radius;
-        color: $input-default-text-color;
-        display: $input-default-display;
-        font-size: $input-default-font-size;
-        font-weight: $input-default-font-weight;
-        margin: $input-default-margin;
-        max-width: $input-default-max-width;
-        padding: $input-default-padding;
-        width: $input-default-width;
+  &[type="text"],
+  &[type="date"],
+  &[type="datetime"],
+  &[type="datetime-local"],
+  &[type="email"],
+  &[type="month"],
+  &[type="number"],
+  &[type="password"],
+  &[type="search"],
+  &[type="tel"],
+  &[type="time"],
+  &[type="week"],
+  &[type="url"] {
+    background-color: $input-default-bg-color;
+    border: $input-default-border;
+    border-radius: $input-default-border-radius;
+    color: $input-default-text-color;
+    display: $input-default-display;
+    font-size: $input-default-font-size;
+    font-weight: $input-default-font-weight;
+    margin: $input-default-margin;
+    max-width: $input-default-max-width;
+    padding: $input-default-padding;
+    transform: $input-default-transform;
+    transition: $imput-default-transition;
+    width: $input-default-width;
 
-        &::placeholder {
-            color: $input-default-placeholder-color;
-        }
-        &:hover {
-            background-color: $input-hover-bg-color;
-            border-color: $input-hover-border-color;
-            color: $input-hover-text-color;
-        }
-
-        &:focus,
-        &:hover:focus {
-            background-color: $input-focus-bg-color;
-            color: $input-focus-text-color;
-        }
-
-        &:active,
-        &:hover:active,
-        &:focus:hover:active {
-            background-color: $input-active-bg-color;
-            border-color: $input-active-border-color;
-            color: $input-active-text-color;
-        }
-        &[disabled] {
-            background-color: $input-disabled-bg-color;
-            color: $input-disabled-text-color;
-            border-color: $input-disabled-border-color;
-
-            &::placeholder {
-                color: $input-disabled-placeholder-text-color;
-            }
-        }
+    &::placeholder {
+      color: $input-default-placeholder-color;
+    }
+    &:hover {
+      background-color: $input-hover-bg-color;
+      border-color: $input-hover-border-color;
+      color: $input-hover-text-color;
     }
 
-    &[type='button'],
-    &[type='reset'],
-    &[type='submit'] {
-        @extend button;
+    &:focus,
+    &:hover:focus {
+      background-color: $input-focus-bg-color;
+      color: $input-focus-text-color;
     }
 
-    &[type='checkbox'],
-    &[type='radio'] {
-        visibility: hidden;
-        position: absolute;
+    &:active,
+    &:hover:active,
+    &:focus:hover:active {
+      background-color: $input-active-bg-color;
+      border-color: $input-active-border-color;
+      color: $input-active-text-color;
+    }
+    &[disabled] {
+      background-color: $input-disabled-bg-color;
+      color: $input-disabled-text-color;
+      border: $input-disabled-border;
+
+      &::placeholder {
+        color: $input-disabled-placeholder-text-color;
+      }
+    }
+    &[required]::placeholder {
+      color: $input-required-placeholder-text-color;
+      font-weight: $input-required-placeholder-font-weight;
+    }
+  }
+
+  &[type="button"],
+  &[type="reset"],
+  &[type="submit"] {
+    @extend button;
+  }
+
+  &[type="checkbox"],
+  &[type="radio"] {
+    visibility: hidden;
+    position: absolute;
+    + label {
+      display: inline-block;
+      position: relative;
+      line-height: 1.75rem;
+      vertical-align: middle;
+      &::before {
+        content: "";
+        border: 0.125rem solid $color-white-80;
+        display: inline-block;
+        height: 1.25rem;
+        margin-right: 0.4rem;
+        transform: translateY(0.25rem);
+        width: 1.25rem;
+      }
+    }
+    &[disabled] {
+      + label {
+        color: $color-white-40;
+        &::before {
+          border-color: $color-white-40;
+        }
+      }
+    }
+  }
+
+  &[type="checkbox"] {
+    &:checked {
+      + label {
+        &::before {
+          border: none;
+          background: $color-secondary-blue no-repeat center center;
+          background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTIiIHZpZXdCb3g9IjAgMCAxNiAxMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTE1LjA2MDUgMC41NjA1NDdMMTUuOTM5NSAxLjQzOTQ1TDUuNSAxMS44ODg3TDAuMDYwNTQ2OSA2LjQzOTQ1TDAuOTM5NDUzIDUuNTYwNTVMNS41IDEwLjExMTNMMTUuMDYwNSAwLjU2MDU0N1oiIGZpbGw9IndoaXRlIi8+PC9zdmc+);
+        }
+      }
+    }
+    &[disabled] {
+      &:checked {
         + label {
-            display: inline-block;
-            position: relative;
-            line-height: 1.75rem;
-            vertical-align: middle;
-            &::before {
-                content: '';
-                border: 0.125rem solid $color-white-80;
-                display: inline-block;
-                height: 1.25rem;
-                margin-right: 0.4rem;
-                transform: translateY(0.25rem);
-                width: 1.25rem;
-            }
+          &::before {
+            border: 0.125rem solid $color-white-solid;
+            background-color: transparent;
+            opacity: 0.4;
+          }
         }
-        &[disabled] {
-            + label {
-                color: $color-white-40;
-                &::before {
-                    border-color: $color-white-40;
-                }
-            }
-        }
+      }
+    }
+  }
+
+  &[type="radio"] {
+    + label {
+      &::before {
+        border-radius: 50%;
+      }
     }
 
-    &[type='checkbox'] {
-        &:checked {
-            + label {
-                &::before {
-                    border: none;
-                    background: $color-secondary-blue no-repeat center center;
-                    background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTIiIHZpZXdCb3g9IjAgMCAxNiAxMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTE1LjA2MDUgMC41NjA1NDdMMTUuOTM5NSAxLjQzOTQ1TDUuNSAxMS44ODg3TDAuMDYwNTQ2OSA2LjQzOTQ1TDAuOTM5NDUzIDUuNTYwNTVMNS41IDEwLjExMTNMMTUuMDYwNSAwLjU2MDU0N1oiIGZpbGw9IndoaXRlIi8+PC9zdmc+);
-                }
-            }
+    &:checked {
+      + label {
+        margin-left: 0.0625rem;
+        margin-top: 0.0625rem;
+        &::before {
+          background-color: $color-white-80;
+          border: 0.25rem solid $color-black-80;
+          box-shadow: 0 0 0 0.125rem $color-secondary-blue;
+          margin-right: 0.4625rem;
+          height: 1.125rem;
+          width: 1.125rem;
         }
-        &[disabled] {
-            &:checked {
-                + label {
-                    &::before {
-                        border: 0.125rem solid $color-white-solid;
-                        background-color: transparent;
-                        opacity: 0.4;
-                    }
-                }
-            }
-        }
+      }
     }
 
-    &[type='radio'] {
+    &[disabled] {
+      &:checked {
         + label {
-            &::before {
-                border-radius: 50%;
-            }
+          &::before {
+            background-color: $color-white-40;
+            box-shadow: 0 0 0 0.125rem $color-white-40;
+          }
         }
-
-        &:checked {
-            + label {
-                margin-left: 0.0625rem;
-                margin-top: 0.0625rem;
-                &::before {
-                    background-color: $color-white-80;
-                    border: 0.25rem solid $color-black-80;
-                    box-shadow: 0 0 0 0.125rem $color-secondary-blue;
-                    margin-right: 0.4625rem;
-                    height: 1.125rem;
-                    width: 1.125rem;
-                }
-            }
-        }
-
-        &[disabled] {
-            &:checked {
-                + label {
-                    &::before {
-                        background-color: $color-white-40;
-                        box-shadow: 0 0 0 0.125rem $color-white-40;
-                    }
-                }
-            }
-        }
+      }
     }
+  }
 
-    &[type='range'] {
-        &,
-        &::-webkit-slider-thumb {
-            -webkit-appearance: none;
-        }
-        width: $track-w; /* Specific width is required for Firefox. */
-        height: $thumb-h;
-        background: transparent; /* Otherwise white in Chrome */
-        outline: none;
-        padding: 0;
-        font: 1em/1 arial, sans-serif;
-
-        &::-webkit-slider-runnable-track {
-            @include track;
-        }
-        &::-moz-range-track {
-            @include track;
-        }
-        &::-ms-track {
-            @include track;
-        }
-        &::-webkit-slider-thumb {
-            margin-top: -0.7rem;
-            @include thumb;
-        }
-        &::-moz-range-thumb {
-            @include thumb;
-        }
-        &::-ms-thumb {
-            @include thumb;
-        }
-        &:focus {
-            outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
-        }
-        &::-ms-tooltip {
-            display: none;
-        }
-        &::-ms-track {
-            width: 100%;
-            cursor: pointer;
-
-            /* Hides the slider so custom styles can be added */
-            background: transparent;
-            border-color: transparent;
-            color: transparent;
-        }
+  &[type="range"] {
+    &,
+    &::-webkit-slider-thumb {
+      -webkit-appearance: none;
     }
+    width: $track-w; /* Specific width is required for Firefox. */
+    height: $thumb-h;
+    background: transparent; /* Otherwise white in Chrome */
+    outline: none;
+    padding: 0;
+    font: 1em/1 arial, sans-serif;
+
+    &::-webkit-slider-runnable-track {
+      @include track;
+    }
+    &::-moz-range-track {
+      @include track;
+    }
+    &::-ms-track {
+      @include track;
+    }
+    &::-webkit-slider-thumb {
+      margin-top: -0.7rem;
+      @include thumb;
+    }
+    &::-moz-range-thumb {
+      @include thumb;
+    }
+    &::-ms-thumb {
+      @include thumb;
+    }
+    &:focus {
+      outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+    }
+    &::-ms-tooltip {
+      display: none;
+    }
+    &::-ms-track {
+      width: 100%;
+      cursor: pointer;
+
+      /* Hides the slider so custom styles can be added */
+      background: transparent;
+      border-color: transparent;
+      color: transparent;
+    }
+  }
 }

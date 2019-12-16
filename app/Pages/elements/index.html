@@ -1,34 +1,42 @@
 <section class="site-section acrylic" id="elements">
-    <div class="definition">
-        <h1>Elements</h1>
-        <p>This is the section to present the generic styles and how to use them</p>
+  <div class="definition">
+    <h1>Elements</h1>
+    <p>This is the section to present the generic styles and how to use them</p>
+  </div>
+  <div class="example-box">
+    <h2>
+      Typography
+      <small>(typography.scss)</small>
+    </h2>
+    <div class="code-example">
+      <div class="preview column">
+        <h1>This is Heading 1</h1>
+        <h2>This is Heading 2</h2>
+        <h3>This is Heading 3</h3>
+        <h4>This is Heading 4</h4>
+        <h5>This is Heading 5</h5>
+        <p>
+          And last, but not least, I'm a paragraph. You can see some more text
+          here.
+        </p>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab quidem
+          dolorem, impedit ad deserunt nostrum quos nisi, atque illum blanditiis
+          nulla, reiciendis ipsa illo nesciunt eius eos pariatur autem expedita.
+        </p>
+      </div>
+      <div class="code column">
+        <textarea name="elements-code" data-codemode="htmlmixed"></textarea>
+      </div>
     </div>
-    <div class="example-box">
-        <h2>
-            Typography
-            <small>(typography.scss)</small>
-        </h2>
-        <div class="code-example">
-            <div class="preview column">
-                <h1>This is Heading 1</h1>
-                <h2>This is Heading 2</h2>
-                <h3>This is Heading 3</h3>
-                <h4>This is Heading 4</h4>
-                <h5>This is Heading 5</h5>
-                <p>And last, but not least, I'm a paragraph. You can see some more text here.</p>
-                <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab quidem dolorem, impedit ad deserunt nostrum quos nisi, atque illum blanditiis
-                    nulla, reiciendis ipsa illo nesciunt eius eos pariatur autem expedita.
-                </p>
-            </div>
-            <div class="code column">
-                <textarea name="elements-code" data-codemode="htmlmixed"></textarea>
-            </div>
-        </div>
-        <h3>Typography variables</h3>
-        <div class="code-example">
-            <div class="code column">
-                <textarea name="elements-variable" data-codemode="sass" class="codemirror-me">
+    <h3>Typography variables</h3>
+    <div class="code-example">
+      <div class="code column">
+        <textarea
+          name="elements-variable"
+          data-codemode="sass"
+          class="codemirror-me"
+        >
 /* Variables from Settings/elements.typography.scss */
 
 $font-family-default:       'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif !default;
@@ -60,61 +68,66 @@ $line-height-heading:       1.6em !default;
 $paragrph-font-size:        1rem !default;
 
 /* -------------------------------------  */
-                </textarea>
-            </div>
-        </div>
+                </textarea
+        >
+      </div>
     </div>
+  </div>
 
-    <div class="example-box">
-        <h2>
-            Tables
-            <small>(table.scss)</small>
-        </h2>
-        <div class="code-example">
-            <div class="preview column">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Table</th>
-                            <th>head</th>
-                            <th>cell</th>
-                            <th>style</th>
-                            <th>FTW</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>11</td>
-                            <td>12</td>
-                            <td>13</td>
-                            <td>14</td>
-                            <td>15</td>
-                        </tr>
-                        <tr>
-                            <td>21</td>
-                            <td>22</td>
-                            <td>23</td>
-                            <td>24</td>
-                            <td>25</td>
-                        </tr>
-                        <tr>
-                            <td>31</td>
-                            <td>32</td>
-                            <td>33</td>
-                            <td>34</td>
-                            <td>35</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <div class="code column">
-                <textarea name="table-code" data-codemode="htmlmixed"></textarea>
-            </div>
-        </div>
-        <h3>Table variables</h3>
-        <div class="code-example">
-            <div class="code column">
-                <textarea name="input-variables" data-codemode="sass" class="codemirror-me">
+  <div class="example-box">
+    <h2>
+      Tables
+      <small>(table.scss)</small>
+    </h2>
+    <div class="code-example">
+      <div class="preview column">
+        <table>
+          <thead>
+            <tr>
+              <th>Table</th>
+              <th>head</th>
+              <th>cell</th>
+              <th>style</th>
+              <th>FTW</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>11</td>
+              <td>12</td>
+              <td>13</td>
+              <td>14</td>
+              <td>15</td>
+            </tr>
+            <tr>
+              <td>21</td>
+              <td>22</td>
+              <td>23</td>
+              <td>24</td>
+              <td>25</td>
+            </tr>
+            <tr>
+              <td>31</td>
+              <td>32</td>
+              <td>33</td>
+              <td>34</td>
+              <td>35</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="code column">
+        <textarea name="table-code" data-codemode="htmlmixed"></textarea>
+      </div>
+    </div>
+    <h3>Table variables</h3>
+    <div class="code-example">
+      <div class="code column">
+        <textarea
+          name="input-variables"
+          data-codemode="sass"
+          class="codemirror-me"
+        >
 $table-default-width:               100% !default;
 $table-default-max-width:           100% !default;
 $table-default-margin-top:          $grid-gutter !default;
@@ -128,45 +141,50 @@ $table-bode-row-alternate-bg-color: darken( $color-gray-lightest, 1%) !default;
 $table-default-cell-padding:        $grid-gutter/8 $grid-gutter/2 !default;
 $table-default-cell-text-align:     left !default;
 $table-default-cell-border:         none !default;
-                </textarea>
-            </div>
-        </div>
+                </textarea
+        >
+      </div>
     </div>
-    <div class="example-box">
-        <h2>
-            Forms
-            <small>(forms.scss)</small>
-        </h2>
-        <h3>
-            Buttons
-            <small>(forms.buttons.scss)</small>
-        </h3>
-        <h4>Enabled</h4>
-        <div class="code-example">
-            <div class="preview column">
-                <button>Button</button>
-                <button class="call-to-action">Call to action</button>
-                <button class="alert">Alert</button>
-            </div>
-            <div class="code column">
-                <textarea name="buttons-code" data-codemode="htmlmixed"></textarea>
-            </div>
-        </div>
-        <h4>Disabled</h4>
-        <div class="code-example">
-            <div class="preview column">
-                <button disabled="true">Button</button>
-                <button disabled="true" class="call-to-action">Call to action</button>
-                <button disabled="true" class="alert">Alert</button>
-            </div>
-            <div class="code column">
-                <textarea name="buttons-code" data-codemode="htmlmixed"></textarea>
-            </div>
-        </div>
-        <h4>Button variables</h4>
-        <div class="code-example">
-            <div class="code column">
-                <textarea name="button-variables" data-codemode="sass" class="codemirror-me">
+  </div>
+  <div class="example-box">
+    <h2>
+      Forms
+      <small>(forms.scss)</small>
+    </h2>
+    <h3>
+      Buttons
+      <small>(forms.buttons.scss)</small>
+    </h3>
+    <h4>Enabled</h4>
+    <div class="code-example">
+      <div class="preview column">
+        <button>Button</button>
+        <button class="call-to-action">Call to action</button>
+        <button class="alert">Alert</button>
+      </div>
+      <div class="code column">
+        <textarea name="buttons-code" data-codemode="htmlmixed"></textarea>
+      </div>
+    </div>
+    <h4>Disabled</h4>
+    <div class="code-example">
+      <div class="preview column">
+        <button disabled="true">Button</button>
+        <button disabled="true" class="call-to-action">Call to action</button>
+        <button disabled="true" class="alert">Alert</button>
+      </div>
+      <div class="code column">
+        <textarea name="buttons-code" data-codemode="htmlmixed"></textarea>
+      </div>
+    </div>
+    <h4>Button variables</h4>
+    <div class="code-example">
+      <div class="code column">
+        <textarea
+          name="button-variables"
+          data-codemode="sass"
+          class="codemirror-me"
+        >
 $button-default-bg-color:           $color-white-20 !default;
 $button-default-border:             none !default;
 $button-default-outline-width:      0.0625rem;
@@ -188,93 +206,130 @@ $button-disabled-bg-color:          $button-default-bg-color !default;
 $button-disabled-text-color:        $color-white-40 !default;
 $button-active-outline:             none !default;
                     </textarea
-                >
-            </div>
+        >
+      </div>
+    </div>
+
+    <h3>
+      Inputs
+      <small>(forms.input.scss)</small>
+    </h3>
+    <div class="code-example">
+      <div class="preview column">
+        <label
+          >This is a label wrapping the text field
+          <input type="text" placeholder="Type of text" />
+        </label>
+        <label for="textFor">This is a label using the 'for' attribute</label>
+        <input type="text" placeholder="Type of text" id="textFor" />
+        <label for="textRequired">This text input is required<span>*</span></label>
+        <input type="text" placeholder="Type of text" required id="textRequired" />
+        <label for="textDisabled">This is a label using the 'for' attribute</label>
+        <input type="text" placeholder="Type of text" disabled="true" id="textDisabled" />
+
+        <input type="button" placeholder="Type of button" value="Button" />
+        <input type="reset" placeholder="Type of reset" />
+        <input type="submit" placeholder="Type of submit" />
+        <input type="color" placeholder="Type of color" />
+        <input type="date" placeholder="Type of date" />
+        <input type="datetime" placeholder="Type of datetime" />
+        <input type="datetime-local" placeholder="Type of datetime-local" />
+        <input type="email" placeholder="Type of email" />
+        <input type="file" placeholder="Type of file" />
+        <input type="image" placeholder="Type of image" />
+        <input type="month" placeholder="Type of month" />
+        <input type="number" placeholder="Type of number" />
+        <input type="password" placeholder="Type of password" />
+        <input type="range" placeholder="Type of range" />
+        <input type="search" placeholder="Type of search" />
+        <input type="tel" placeholder="Type of tel" />
+        <input type="time" placeholder="Type of time" />
+        <input type="url" placeholder="Type of url" />
+        <input type="week" placeholder="Type of week" />
+
+        <input
+          type="checkbox"
+          id="neutral-check"
+          placeholder="Type of checkbox"
+        />
+        <label for="neutral-check">Unchecked</label>
+        <input
+          type="checkbox"
+          id="checked-check"
+          checked="true"
+          placeholder="Type of checkbox"
+        />
+        <label for="checked-check">Checked</label>
+        <input
+          type="checkbox"
+          disabled="disabled"
+          placeholder="Type of checkbox"
+        />
+        <label>Disabled</label>
+        <input
+          type="checkbox"
+          checked="true"
+          disabled="disabled"
+          placeholder="Type of checkbox"
+        />
+        <label>Disabled checked</label>
+
+        <div>
+          <input type="radio" id="banana" name="fruit" value="banana" />
+          <label for="banana">Banana</label>
         </div>
 
-        <h3>
-            Inputs
-            <small>(forms.input.scss)</small>
-        </h3>
-        <div class="code-example">
-            <div class="preview column">
-                <label>
-                    This is a label for the below text field
-                    <input type="text" placeholder="Type of text" />
-                </label>
-                <input type="text" placeholder="Type of text" disabled="true" />
-                <input type="button" placeholder="Type of button" value="Button" />
-                <input type="reset" placeholder="Type of reset" />
-                <input type="submit" placeholder="Type of submit" />
-                <input type="color" placeholder="Type of color" />
-                <input type="date" placeholder="Type of date" />
-                <input type="datetime" placeholder="Type of datetime" />
-                <input type="datetime-local" placeholder="Type of datetime-local" />
-                <input type="email" placeholder="Type of email" />
-                <input type="file" placeholder="Type of file" />
-                <input type="image" placeholder="Type of image" />
-                <input type="month" placeholder="Type of month" />
-                <input type="number" placeholder="Type of number" />
-                <input type="password" placeholder="Type of password" />
-                <input type="range" placeholder="Type of range" />
-                <input type="search" placeholder="Type of search" />
-                <input type="tel" placeholder="Type of tel" />
-                <input type="time" placeholder="Type of time" />
-                <input type="url" placeholder="Type of url" />
-                <input type="week" placeholder="Type of week" />
-
-                <input type="checkbox" id="neutral-check" placeholder="Type of checkbox" />
-                <label for="neutral-check">Unchecked</label>
-                <input type="checkbox" id="checked-check" checked="true" placeholder="Type of checkbox" />
-                <label for="checked-check">Checked</label>
-                <input type="checkbox" disabled="disabled" placeholder="Type of checkbox" />
-                <label>Disabled</label>
-                <input type="checkbox" checked="true" disabled="disabled" placeholder="Type of checkbox" />
-                <label>Disabled checked</label>
-
-                <div>
-                    <input type="radio" id="banana" name="fruit" value="banana" />
-                    <label for="banana">Banana</label>
-                </div>
-
-                <div>
-                    <input type="radio" id="apple" name="fruit" value="apple" checked />
-                    <label for="apple">Apple</label>
-                </div>
-
-                <div>
-                    <input type="radio" id="ham" name="meat" value="ham" disabled />
-                    <label for="ham">Ham</label>
-                </div>
-                <div>
-                    <input type="radio" id="steak" name="meat" value="steak" checked disabled />
-                    <label for="steak">Steak</label>
-                </div>
-            </div>
-
-            <div class="code column">
-                <textarea name="forms-code" data-codemode="htmlmixed"></textarea>
-            </div>
+        <div>
+          <input type="radio" id="apple" name="fruit" value="apple" checked />
+          <label for="apple">Apple</label>
         </div>
-        <h4>Input variables</h4>
-        <div class="code-example">
-            <div class="code column">
-                <textarea name="input-variables" data-codemode="sass" class="codemirror-me">
+
+        <div>
+          <input type="radio" id="ham" name="meat" value="ham" disabled />
+          <label for="ham">Ham</label>
+        </div>
+        <div>
+          <input
+            type="radio"
+            id="steak"
+            name="meat"
+            value="steak"
+            checked
+            disabled
+          />
+          <label for="steak">Steak</label>
+        </div>
+      </div>
+
+      <div class="code column">
+        <textarea name="forms-code" data-codemode="htmlmixed"></textarea>
+      </div>
+    </div>
+    <h4>Input variables</h4>
+    <div class="code-example">
+      <div class="code column">
+        <textarea
+          name="input-variables"
+          data-codemode="sass"
+          class="codemirror-me"
+        >
+$input-default-bg-color:                    $color-black-40 !default;
 $input-default-border-width:                0.0625rem !default;
 $input-default-border-style:                solid !default;
 $input-default-border-color:                $color-gray-dark !default;
 $input-default-border:                      $input-default-border-width $input-default-border-style $input-default-border-color;
 $input-default-border-radius:               0 !default;
 $input-default-display:                     block !default;
-$input-default-font-size: 1                 rem !default;
+$input-default-font-size:                   1rem !default;
 $input-default-font-weight:                 400 !default;
 $input-default-margin:                      $grid-gutter/3 0 !default;
-$input-default-width:                       18.75rem !default;
-$input-default-padding:                     0.5rem 1rem !default;
 $input-default-max-width:                   100% !default;
-$input-default-text-color:                  $color-white-60 !default;
+$input-default-padding:                     0.75rem 1rem !default;
 $input-default-placeholder-color:           $color-white-40 !default;
-$input-default-bg-color:                    $color-black-40 !default;
+$input-default-text-color:                  $color-white-60 !default;
+$input-default-transform:                   translateZ(0) !default;
+$imput-default-transition:                  border-color 0.2s ease-in-out !default;
+$input-default-width:                       18.75rem !default;
 
 $input-hover-bg-color:                      $color-black-60 !default;
 $input-hover-border-color:                  $color-white-solid !default;
@@ -288,56 +343,64 @@ $input-active-border-color:                 $color-white-40 !default;
 $input-active-text-color:                   $color-white-80 !default;
 
 $input-disabled-bg-color:                   $color-black-20 !default;
+$input-disabled-border:                     none !default;
 $input-disabled-text-color:                 $color-black-40 !default;
-$input-disabled-border-color:               $color-gray-dark !default;
-$input-disabled-placeholder-text-color:     $color-black-40 !default;
-                </textarea>
-            </div>
-        </div>
-        <h3>
-            Select
-            <small>(forms.select.scss)</small>
-        </h3>
-        <div class="code-example">
-            <div class="preview column">
-                <label for="pet-select">Choose a pet:</label>
+$input-disabled-placeholder-text-color:     $color-white-40 !default;
 
-                <select id="pet-select">
-                    <option value="">Please choose an option</option>
-                    <option value="dog">Dog</option>
-                    <option value="cat">Cat</option>
-                    <option value="hamster">Hamster</option>
-                    <option value="parrot">Parrot</option>
-                    <option value="spider">Spider</option>
-                    <option value="goldfish">Goldfish</option>
-                </select>
-                <label for="meal-select" class="disabled">Choose a meal</label>
-                <select id="meal-select" disabled="disabled">
-                    <option value="">Breakfast</option>
-                </select>
+$input-required-placeholder-text-color:     $color-white-60 !default;
+$input-required-placeholder-font-weight:    500 !default;
+                </textarea
+        >
+      </div>
+    </div>
+    <h3>
+      Select
+      <small>(forms.select.scss)</small>
+    </h3>
+    <div class="code-example">
+      <div class="preview column">
+        <label for="pet-select">Choose a pet:</label>
 
-                <label for="dino-select">Choose a dinosaur:</label>
-                <select id="dino-select">
-                    <optgroup label="Theropods">
-                        <option>Tyrannosaurus</option>
-                        <option>Velociraptor</option>
-                        <option>Deinonychus</option>
-                    </optgroup>
-                    <optgroup label="Sauropods">
-                        <option>Diplodocus</option>
-                        <option>Saltasaurus</option>
-                        <option>Apatosaurus</option>
-                    </optgroup>
-                </select>
-            </div>
-            <div class="code column">
-                <textarea name="select-code" data-codemode="htmlmixed"></textarea>
-            </div>
-        </div>
-        <h4>Select variables</h4>
-        <div class="code-example">
-            <div class="code column">
-                <textarea name="select-variables" data-codemode="sass" class="codemirror-me">
+        <select id="pet-select">
+          <option value="">Please choose an option</option>
+          <option value="dog">Dog</option>
+          <option value="cat">Cat</option>
+          <option value="hamster">Hamster</option>
+          <option value="parrot">Parrot</option>
+          <option value="spider">Spider</option>
+          <option value="goldfish">Goldfish</option>
+        </select>
+        <label for="meal-select" class="disabled">Choose a meal</label>
+        <select id="meal-select" disabled="disabled">
+          <option value="">Breakfast</option>
+        </select>
+
+        <label for="dino-select">Choose a dinosaur:</label>
+        <select id="dino-select">
+          <optgroup label="Theropods">
+            <option>Tyrannosaurus</option>
+            <option>Velociraptor</option>
+            <option>Deinonychus</option>
+          </optgroup>
+          <optgroup label="Sauropods">
+            <option>Diplodocus</option>
+            <option>Saltasaurus</option>
+            <option>Apatosaurus</option>
+          </optgroup>
+        </select>
+      </div>
+      <div class="code column">
+        <textarea name="select-code" data-codemode="htmlmixed"></textarea>
+      </div>
+    </div>
+    <h4>Select variables</h4>
+    <div class="code-example">
+      <div class="code column">
+        <textarea
+          name="select-variables"
+          data-codemode="sass"
+          class="codemirror-me"
+        >
 $select-default-border-width:   0.0625rem !default;
 $select-default-border-style:   solid !default;
 $select-default-border-color:   $color-white-40 !default;
@@ -377,8 +440,9 @@ $optgroup-text-color:           $select-default-text-color !default;
 
 $option-bg-color:               $color-gray-darkest !default;
 $option-text-color:             $select-default-text-color !default;
-                </textarea>
-            </div>
-        </div>
+                </textarea
+        >
+      </div>
     </div>
+  </div>
 </section>
