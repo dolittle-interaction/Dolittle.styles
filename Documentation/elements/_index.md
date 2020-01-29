@@ -6,7 +6,3 @@ keywords: styles, design, css
 weight: 40
 ---
 
-# Elements
-
-This is the section to present the generic styles and how to use them.
-{{% children %}}
