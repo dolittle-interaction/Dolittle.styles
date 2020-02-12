@@ -1,6 +1,5 @@
 ---
 title: Styles
-url: /interaction/styles/overview/
 description: A summmary of what Dolittle Styles are.
 author: Vidar A. Westrum
 keywords: styles, design, css
