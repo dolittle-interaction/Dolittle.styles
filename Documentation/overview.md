@@ -4,6 +4,8 @@ description: A summmary of what Dolittle Styles are.
 author: Vidar A. Westrum
 keywords: styles, design, css
 weight: 1
+aliases:
+    - /interaction/styles/overview
 ---
 
 ## Dolittle Styles

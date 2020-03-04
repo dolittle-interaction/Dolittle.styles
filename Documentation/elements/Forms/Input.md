@@ -4,6 +4,8 @@ description: Styling for input elements.
 author: Vidar A. Westrum
 keywords: styles, design, css, input
 weight: 4001
+aliases:
+    - /interaction/styles/elements/forms/input
 ---
 
 # Inputs <small>(forms.input.scss)</small>

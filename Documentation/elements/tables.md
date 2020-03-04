@@ -4,6 +4,8 @@ description: This is the section to present the generic styles and how to use th
 author: Vidar A. Westrum
 keywords: styles, design, css
 weight: 401
+aliases:
+    - /interaction/styles/elements/tables
 ---
 
 # Tables <small>(tables.scss)</small>

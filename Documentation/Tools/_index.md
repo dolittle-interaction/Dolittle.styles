@@ -4,6 +4,8 @@ description: Globally used mixins and functions. It’s important not to output 
 author: Vidar A. Westrum
 keywords: styles, design, css
 weight: 20
+aliases:
+    - /interaction/styles/tools/
 ---
 
 # Tools

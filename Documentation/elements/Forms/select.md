@@ -4,6 +4,8 @@ description: Styling for select elements.
 author: Vidar A. Westrum
 keywords: styles, design, css, select
 weight: 4002
+aliases:
+    - /interaction/styles/elements/forms/select
 ---
 # Select <small>(forms.select.scss)</small>
 

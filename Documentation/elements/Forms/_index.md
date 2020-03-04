@@ -4,6 +4,8 @@ description: Styling for form elements.
 author: Vidar A. Westrum
 keywords: styles, design, css
 weight: 402
+aliases:
+    - /interaction/styles/elements/forms
 ---
 
 # Forms <small>(forms.scss)</small>

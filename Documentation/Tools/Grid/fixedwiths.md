@@ -4,6 +4,8 @@ description: If you want a container to be 100% wide up to a certain point, you 
 author: Vidar A. Westrum
 keywords: styles, design, css
 weight: 203
+aliases:
+    - /interaction/styles/tools/grid/fixedwiths
 ---
 
 # Fluid/Fixed <small>(grid.fixedwiths.scss)</small>

@@ -4,6 +4,8 @@ description: In the dev environments, you sometimes need some support for calcul
 author: Vidar A. Westrum
 keywords: styles, design, css
 weight: 21
+aliases:
+    - /interaction/styles/tools/calculators
 ---
 
 # Calculators <small>(calculators.scss)</small>

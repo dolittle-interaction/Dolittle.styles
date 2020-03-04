@@ -4,6 +4,8 @@ description: These are the mixins for media queries
 author: Vidar A. Westrum
 keywords: styles, design, css
 weight: 22
+aliases:
+    - /interaction/styles/tools/responsive
 ---
 
 # Responsive <small>(responsive.scss)</small>

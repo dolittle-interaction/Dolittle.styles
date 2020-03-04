@@ -4,6 +4,8 @@ description: Placeholders for column setup
 author: Vidar A. Westrum
 keywords: styles, design, css
 weight: 202
+aliases:
+    - /interaction/styles/tools/grid/columns
 ---
 
 # Columns <small>(grid.columns.scss)</small>
