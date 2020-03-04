@@ -4,6 +4,8 @@ description: Generic level variables
 author: Vidar A. Westrum
 keywords: styles, design, css
 weight: 12
+aliases:
+    - /interaction/styles/settings/generic
 ---
 ## Generic <small>(generic.scss)</small>
 

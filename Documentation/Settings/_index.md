@@ -4,6 +4,8 @@ description: Used with preprocessors and contain font, colors definitions, etc.
 author: Vidar A. Westrum
 keywords: styles, design, css
 weight: 10
+aliases:
+    - /interaction/styles/settings
 ---
 
 # Settings

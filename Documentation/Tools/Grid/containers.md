@@ -4,6 +4,8 @@ description: When you need an element to be a flexbox element, vertical directio
 author: Vidar A. Westrum
 keywords: styles, design, css
 weight: 201
+aliases:
+    - /interaction/styles/tools/grid/containers
 ---
 
 # Containers <small>(grid.containers.scss</small>

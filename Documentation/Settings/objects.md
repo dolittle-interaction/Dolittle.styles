@@ -4,6 +4,8 @@ description: Objects level variables
 author: Vidar A. Westrum
 keywords: styles, design, css
 weight: 14
+aliases:
+    - /interaction/styles/settings/objects
 ---
 
 ## Objects <small>(objects.scss)</small>

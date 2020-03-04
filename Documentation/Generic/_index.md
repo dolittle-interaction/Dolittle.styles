@@ -4,6 +4,8 @@ description: The generic style layer is mostly just a file with styles from Norm
 author: Vidar A. Westrum
 keywords: styles, design, css
 weight: 30
+aliases:
+    - /interaction/styles/elements/generic
 ---
 
 # Generic

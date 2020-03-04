@@ -4,6 +4,8 @@ description: Elements level variables
 author: Vidar A. Westrum
 keywords: styles, design, css
 weight: 13
+aliases:
+    - /interaction/styles/settings/elements
 ---
 
 ## Elements <small>(elements.scss)</small>

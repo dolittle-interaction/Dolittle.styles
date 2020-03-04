@@ -4,6 +4,8 @@ description: Base level variables
 author: Vidar A. Westrum
 keywords: styles, design, css
 weight: 11
+aliases:
+    - /interaction/styles/settings/base
 ---
 
 # Base variables <small>(base.scss)</small>

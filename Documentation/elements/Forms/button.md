@@ -4,6 +4,8 @@ description: Styling for button elements.
 author: Vidar A. Westrum
 keywords: styles, design, css, button
 weight: 4003
+aliases:
+    - /interaction/styles/elements/forms/button
 ---
 # Button <small>(forms.button.scss)</small>
 

@@ -4,6 +4,8 @@ description: The grid is a bit unlike the ones you are used to in other big fram
 author: Vidar A. Westrum
 keywords: styles, design, css
 weight: 200
+aliases:
+    - /interaction/styles/tools/grid
 ---
 
 # Grid <small>(grid.scss)</small>
